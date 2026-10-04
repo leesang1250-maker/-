@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>일광자이푸르지오 게스트하우스</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2748;--navy2:#16355F;--gold:#E8A317;--paper:#fff;--soft:#F4F6FA;--line:#DDE3EC;--mute:#5E6B7D;--ok:#1F9D6B;--bad:#C8412F;color-scheme:light;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:#fff;color:#1B2A3F;font-family:'Noto Sans KR',system-ui,sans-serif;line-height:1.7}
+h1,h2,h3,h4{font-family:'Poppins','Noto Sans KR',sans-serif;margin:0;line-height:1.25;color:var(--navy)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:88px;gap:14px;padding-top:8px;padding-bottom:8px}
+.logo{display:flex;align-items:center;gap:10px;font:700 18px 'Poppins','Noto Sans KR';color:var(--navy);text-decoration:none}
+.logo i{width:34px;height:34px;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-style:normal;font-size:16px}
+.menu{display:flex;gap:10px;align-items:center}
+.menu a{color:var(--navy);text-decoration:none;font-weight:500;font-size:15px}.menu a:hover{color:var(--gold)}
+.btn,.tab{border:0;cursor:pointer;font:600 15px 'Noto Sans KR',sans-serif;padding:13px 26px;background:var(--gold);color:var(--navy);transition:background .2s,color .2s}
+.btn:hover:not(:disabled),.tab:hover{background:var(--navy);color:#fff}
+.btn:disabled{background:var(--line);color:#99a4b4;cursor:not-allowed}
+.btn.alt{background:var(--navy);color:#fff}.btn.alt:hover{background:var(--gold);color:var(--navy)}
+.btn.mint{background:var(--ok);color:#fff}
+.tab{background:transparent;padding:8px 14px}.tab.on{color:var(--gold)}
+
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.05) 119px 120px),repeating-linear-gradient(0deg,transparent 0 119px,rgba(255,255,255,.05) 119px 120px)}
+.hero:after{content:"";position:absolute;right:6%;top:50%;width:300px;height:300px;border:2px solid var(--gold);transform:translateY(-50%) rotate(45deg);opacity:.5}
+.slide{display:none;position:relative;z-index:1;padding:70px 0}.slide.on{display:block;animation:fade .7s}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+.tag{display:inline-block;color:var(--gold);font-weight:600;border-left:4px solid var(--gold);padding-left:10px;margin-bottom:14px}
+.hero h1{color:#fff;font-size:clamp(34px,6vw,60px);max-width:640px}
+.hero p{max-width:480px;color:#C9D4E5;font-size:18px;margin:16px 0 28px}
+.dots{position:absolute;z-index:2;bottom:22px;left:0;right:0}
+.dots span{display:inline-block;width:34px;height:4px;background:rgba(255,255,255,.3);margin-right:6px;cursor:pointer}.dots span.on{background:var(--gold)}
+section.blk{padding:80px 0}
+.sub{color:var(--gold);font-weight:600;margin-bottom:8px}
+.blk h2{font-size:clamp(26px,4vw,40px);margin-bottom:18px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+.pic{position:relative;height:340px;background:linear-gradient(135deg,var(--navy2),var(--navy));}
+.pic:before{content:"";position:absolute;left:30px;top:30px;right:60px;bottom:60px;border:2px solid rgba(255,255,255,.25)}
+.pic b{position:absolute;right:-12px;bottom:-12px;background:var(--gold);color:var(--navy);padding:18px 26px;font:700 38px 'Poppins'}
+.pic b small{display:block;font:600 14px 'Noto Sans KR'}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:0;list-style:none;margin:18px 0 26px}
+.checks li:before{content:"✓";color:var(--gold);font-weight:700;margin-right:8px}
+.soft{background:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:#fff;padding:30px 26px;border-bottom:4px solid transparent;box-shadow:0 6px 24px rgba(14,39,72,.07);transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.card .ic{width:54px;height:54px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+.card h4{font-size:19px;margin-bottom:6px}.card p{margin:0;color:var(--mute);font-size:15px}
+.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;counter-reset:s}
+.proc div{padding:24px;border:1px solid var(--line);position:relative;background:#fff}
+.proc div:before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:22px;background:var(--gold);color:var(--navy);width:36px;height:36px;display:grid;place-items:center;font:700 16px 'Poppins'}
+.proc h4{margin:8px 0 4px}.proc p{margin:0;color:var(--mute);font-size:14px}
+.cta{background:var(--gold);padding:46px 0}.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h3{font-size:clamp(22px,3vw,30px)}.cta .btn{background:var(--navy);color:#fff}.cta .btn:hover{background:#fff;color:var(--navy)}
+.panel{background:#fff;padding:28px;box-shadow:0 10px 36px rgba(14,39,72,.1);border-top:4px solid var(--gold);margin-bottom:18px}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.cal-head h2{margin:0;font-size:24px}
+.nb{background:#fff;border:1px solid var(--line);width:42px;height:42px;font-size:18px;cursor:pointer;color:var(--navy)}.nb:hover{background:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.dow{text-align:center;font-weight:600;font-size:13px;color:var(--mute)}
+.d{aspect-ratio:1;border:1px solid var(--line);background:#fff;font:600 15px 'Noto Sans KR';cursor:pointer;color:var(--navy);position:relative}
+.d:hover:not(:disabled){border-color:var(--gold)}
+.d.sel{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+.d.rng{background:#FBEFD0;border-color:#FBEFD0}
+.d.full{background:#EEF0F4;color:#9AA5B5;cursor:not-allowed}
+.d.full:after{content:"예약됨";position:absolute;bottom:2px;left:0;right:0;font-size:9px}
+.d:disabled{opacity:.4;cursor:not-allowed}
+.legend{display:flex;gap:16px;font-size:13px;margin-top:12px;flex-wrap:wrap;color:var(--mute)}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.bar b{font-size:17px;color:var(--navy)}
+.modal{position:fixed;inset:0;background:rgba(14,39,72,.7);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.modal.open{display:flex}
+.sheet{background:#fff;width:100%;max-width:520px;padding:26px 24px calc(24px + env(safe-area-inset-bottom,0px));max-height:92%;overflow:auto;border-top:4px solid var(--gold);animation:up .3s}
+@keyframes up{from{transform:translateY(50px);opacity:0}}
+@media(min-width:600px){.modal{align-items:center}}
+.sheet h2{font-size:24px;margin-bottom:2px}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input,select,textarea{width:100%;font:16px 'Noto Sans KR';padding:12px;border:1px solid var(--line);border-radius:0;color:var(--navy);background:#fff}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid rgba(232,163,23,.5);border-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.note{font-size:14px;background:var(--soft);border-left:4px solid var(--gold);padding:12px 14px;margin-top:14px;color:var(--mute)}
+.err{color:var(--bad);font-weight:600;font-size:14px;min-height:20px;margin-top:8px}
+.done{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:60;background:rgba(255,255,255,.96);flex-direction:column;text-align:center;padding:20px}
+.done.open{display:flex}.done svg{width:140px;height:140px}
+.done circle{fill:var(--navy);transform-origin:center;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+.done path{stroke:var(--gold);stroke-width:8;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:80;animation:draw .5s .3s forwards}
+@keyframes pop{from{transform:scale(0)}}@keyframes draw{to{stroke-dashoffset:0}}
+.done h2{font-size:30px;margin:14px 0 4px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{background:var(--navy);color:#fff;font-weight:600}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.hide{display:none}
+textarea.paste{height:90px;font:12px monospace}
+footer{background:var(--navy);color:#B7C4D8;padding:50px 0 24px}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+footer h4{color:#fff;margin-bottom:10px}footer a{color:#B7C4D8;text-decoration:none;display:block}footer a:hover{color:var(--gold)}
+.copy{text-align:center;font-size:13px;margin-top:34px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+
+.menu .mi{width:74px;height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;border:0;border-radius:14px;cursor:pointer;text-decoration:none;
+ background:linear-gradient(160deg,#2A4F86 0%,var(--navy2) 45%,var(--navy) 100%);color:#fff;
+ box-shadow:0 5px 0 #08172B,0 8px 14px rgba(14,39,72,.35),inset 0 2px 0 rgba(255,255,255,.28);
+ transition:transform .15s,box-shadow .15s,background .15s;position:relative;top:0}
+.menu .mi i{font-style:normal;font-size:22px;line-height:1;color:var(--gold);text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.menu .mi span{font:600 12px 'Noto Sans KR',sans-serif;letter-spacing:-.2px;white-space:nowrap}
+.menu .mi:hover{transform:translateY(-3px);box-shadow:0 8px 0 #08172B,0 12px 18px rgba(14,39,72,.35),inset 0 2px 0 rgba(255,255,255,.35);background:linear-gradient(160deg,#F6C453,var(--gold) 55%,#C98A0C);color:var(--navy)}
+.menu .mi:hover i{color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.4)}
+.menu .mi:active{transform:translateY(3px);box-shadow:0 2px 0 #08172B,inset 0 2px 0 rgba(255,255,255,.2)}
+.menu .mi.on{background:linear-gradient(160deg,#F6C453,var(--gold) 55%,#C98A0C);color:var(--navy);box-shadow:0 5px 0 #8A5E06,0 8px 14px rgba(232,163,23,.4),inset 0 2px 0 rgba(255,255,255,.5)}
+.menu .mi.on i{color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.4)}
+@media(max-width:900px){
+ header.top{position:static}
+ .top .wrap{flex-direction:column;align-items:flex-start}
+ .menu{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 8px}
+ .menu .mi{width:100%;height:60px}
+}
+
+#notice{background:var(--gold);color:var(--navy);text-align:center;font-weight:600;padding:10px 16px}
+.cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.cats .btn{padding:11px 18px}
+.cats .btn.on{background:var(--gold);color:var(--navy)}
+.sgroup{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.sgroup .btn{padding:9px 16px;font-size:14px}
+textarea{min-height:84px;resize:vertical}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#"><i>G</i>일광자이푸르지오 게스트하우스</a>
+  <nav class="menu">
+    <button class="tab mi on" data-t="book"><i>⌂</i><span>홈</span></button>
+    <a class="mi" href="#about"><i>◈</i><span>소개</span></a>
+    <a class="mi" href="#info"><i>☰</i><span>이용안내</span></a>
+    <a class="mi" href="#process"><i>➤</i><span>예약절차</span></a>
+    <a class="mi" href="#book"><i>▦</i><span>예약현황</span></a>
+    <a class="mi formlink" href="#"><i>✎</i><span>예약신청</span></a>
+    <a class="mi" href="#contact"><i>✉</i><span>문의</span></a>
+    <button class="tab mi" id="adminTab" data-t="admin"><i>⚙</i><span>관리자</span></button>
+  </nav>
+</div></header>
+<a id="formref" class="hide"></a>
+<div id="notice" class="hide"></div>
+<div id="landing">
+<section class="hero"><div class="wrap">
+  <div class="slide on"><span class="tag">방문 손님 전용 서비스</span><h1>가족과 손님을 위한 편안한 쉼터</h1><p>일광자이푸르지오 세대를 방문하시는 손님이라면 온라인으로 간편하게 예약하세요.</p><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div>
+  <div class="slide"><span class="tag">개인정보 보호</span><h1>예약자 정보는 암호화되어 보관</h1><p>예약 현황에는 날짜만 표시되고, 상세 정보는 관리자만 확인합니다.</p><a href="#book"><button class="btn">예약 현황 보기</button></a></div>
+  <div class="slide"><span class="tag">사후관리</span><h1>예약부터 퇴실까지 한 곳에서</h1><p>관리사무소가 확정·입실·퇴실 상태와 점검 메모를 꼼꼼히 관리합니다.</p><a href="#process"><button class="btn">예약절차 보기</button></a></div>
+</div><div class="dots"><div class="wrap"><span class="on"></span><span></span><span></span></div></div></section>
+
+<section class="blk" id="about"><div class="wrap about">
+  <div class="pic"><b>1실<small>2명 (최대 4명)</small></b></div>
+  <div><div class="sub">게스트하우스 소개</div><h2>세대 방문 손님을 위한 단지 내 게스트하우스</h2>
+  <p>일광자이푸르지오 세대를 방문하시는 손님을 위해 마련한 공간입니다. 달력에서 날짜를 고르고 정보를 입력하면 등록이 끝납니다.</p>
+  <ul class="checks"><li>세대 방문 손님 이용</li><li>실시간 예약 현황</li><li>간편한 날짜 선택</li><li>개인정보 암호화</li><li>상태 알림 관리</li><li>사후관리 기록</li></ul>
+  <a class="formlink" href="#"><button class="btn alt">예약 신청하기</button></a></div>
+</div></section>
+
+<section class="blk soft" id="info"><div class="wrap">
+  <div class="sub">이용안내</div><h2>한눈에 보는 이용 정보</h2>
+  <div class="cards">
+    <div class="card"><div class="ic">⌂</div><h4>이용 대상</h4><p>일광자이푸르지오 세대를 방문하시는 손님</p></div>
+    <div class="card"><div class="ic">☰</div><h4>이용 인원</h4><p>2명 (최대 4명)까지 등록 가능</p></div>
+    <div class="card"><div class="ic">▦</div><h4>실시간 현황</h4><p>예약된 날짜는 달력에 바로 표시</p></div>
+    <div class="card"><div class="ic">◈</div><h4>정보 보호</h4><p>이름·연락처는 관리자만 열람</p></div>
+  </div></div></section>
+
+<section class="blk" id="process"><div class="wrap">
+  <div class="sub">예약절차</div><h2>네 단계로 끝나는 예약</h2>
+  <div class="proc" style="margin-top:34px">
+    <div><h4>날짜 선택</h4><p>입실일과 퇴실일을 달력에서 선택합니다.</p></div>
+    <div><h4>정보 입력</h4><p>예약자 이름, 동·호, 연락처를 입력합니다.</p></div>
+    <div><h4>등록 완료</h4><p>등록번호가 발급되고 완료 아이콘이 표시됩니다.</p></div>
+    <div><h4>관리사무소 확정</h4><p>관리자가 확인 후 상태를 확정합니다.</p></div>
+  </div></div></section>
+<section class="cta"><div class="wrap"><h3>원하는 날짜가 비어 있는지 확인해 보세요</h3><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div></section>
+</div>
+<main class="wrap" style="padding-top:70px;padding-bottom:70px" id="book0">
+<section id="book">
+  <div class="panel" id="applyPanel"><div class="sub">예약 신청</div><h2 style="font-size:30px;margin-bottom:8px">신청서를 작성해 주세요</h2>
+  <p style="margin:0 0 16px;color:#5E6B7D">버튼을 누르면 예약 신청서(구글 폼)가 열립니다. 입실일·퇴실일, 방문 세대, 연락처를 입력하면 접수되고, 관리사무소가 확인 후 연락드립니다.</p>
+  <a class="formlink" href="#"><button class="btn">예약 신청서 작성하기</button></a></div>
+  <div class="sub" style="color:#E8A317;font-weight:600">예약 현황</div><h2 style="font-size:32px;margin-bottom:20px">예약 가능한 날짜 확인</h2>
+  <div class="panel">
+    <div class="cal-head"><button class="nb" id="prev" aria-label="이전 달">‹</button><h2 id="mt"></h2><button class="nb" id="next" aria-label="다음 달">›</button></div>
+    <div class="grid" id="dows"></div><div class="grid" id="cal" style="margin-top:6px"></div>
+    <div class="legend"><span><i style="background:var(--sky)"></i>선택</span><span><i style="background:#FFE0DD"></i>예약됨</span><span><i style="background:#fff;border:2px solid var(--line)"></i>예약 가능</span></div>
+    <div class="bar"><b id="sum">입실일과 퇴실일을 눌러 주세요</b><button class="btn" id="go" disabled>예약 등록하기</button></div>
+  </div>
+  <div class="note">예약 현황에는 날짜만 표시됩니다. 이름·연락처·동호수는 다른 이용자에게 보이지 않아요.</div>
+</section>
+
+<section id="admin" class="hide">
+  <div class="cats" id="acat"><button class="btn on" data-v="resv">예약 관리</button><button class="btn alt" data-v="site">홈페이지 편집</button></div>
+  <div class="panel" id="resvPanel">
+    <h2 style="margin:0 0 6px;font-size:26px">예약 관리</h2>
+    <div class="row">
+      <button class="btn alt" id="lout">로그아웃</button>
+      <button class="btn mint" id="dl">구글 시트용 CSV 저장</button>
+      <button class="btn alt" id="cp">표 복사 (시트에 붙여넣기)</button>
+      <button class="btn alt" id="kg">보안키 설정</button>
+      <button class="btn" id="sheet" style="background:#34A853;box-shadow:0 5px 0 #23783a">새 구글 시트 열기</button>
+    </div>
+    <div class="note" id="am"></div>
+    <div class="tbl" style="margin-top:12px"><table><thead><tr><th>등록번호</th><th>입실</th><th>퇴실</th><th>이름</th><th>동/호</th><th>연락처</th><th>인원</th><th>상태</th><th>사후관리 메모</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+    <textarea class="paste hide" id="pt" readonly></textarea>
+  </div>
+  <div class="panel hide" id="sitePanel">
+    <h2 style="margin:0 0 6px;font-size:26px">홈페이지 내용 편집</h2>
+    <div class="note" style="margin-top:0">항목(카테고리)을 고르고 내용을 고친 뒤 [저장하고 반영]을 누르면 홈페이지에 바로 적용됩니다.</div>
+    <div class="sgroup" id="scat" style="margin-top:14px"></div>
+    <div id="sform"></div>
+    <div class="err" id="sme"></div>
+    <div class="row"><button class="btn mint" id="ssave">저장하고 반영</button><button class="btn alt" id="sreset">처음 내용으로 되돌리기</button></div>
+  </div>
+</section>
+</main>
+<footer id="contact"><div class="wrap"><div><a class="logo" style="color:#fff" href="#"><i style="background:var(--gold);color:var(--navy)">G</i>일광자이푸르지오</a><p style="margin-top:12px">세대 방문 손님 게스트하우스 예약·관리 서비스</p></div>
+<div><h4>바로가기</h4><a href="#about">소개</a><a href="#info">이용안내</a><a href="#process">예약절차</a><a href="#book">예약하기</a></div>
+<div><h4>문의</h4><span>일광자이푸르지오 관리사무소</span><a href="tel:0517143280">전화 051-714-3280</a><a href="mailto:apt05460@naver.com">이메일 apt05460@naver.com</a></div></div><div class="copy">일광자이푸르지오 게스트하우스 © 2026. All rights reserved.</div></footer>
+
+<div class="modal" id="md"><div class="sheet" role="dialog" aria-modal="true">
+  <h2>예약 정보 입력</h2><div id="ms" style="color:#6b86a3;font-weight:700"></div>
+  <label>예약자 이름<input id="nm" autocomplete="off"></label>
+  <div class="two"><label>방문 세대 동<input id="dg" inputmode="numeric" placeholder="101"></label><label>방문 세대 호<input id="ho" inputmode="numeric" placeholder="1203"></label></div>
+  <label>연락처<input id="ph" inputmode="tel" placeholder="010-0000-0000"></label>
+  <div class="two"><label>이용 인원<select id="gn"><option value="2">2명</option><option value="3">3명</option><option value="4">4명 (최대)</option></select></label><label>요청사항<input id="mm" placeholder="선택"></label></div>
+  <div class="err" id="er"></div>
+  <div class="row"><button class="btn" id="sub" style="flex:1">등록하기</button><button class="btn alt" id="cl">취소</button></div>
+</div></div>
+
+<div class="modal" id="lg"><div class="sheet" role="dialog" aria-modal="true">
+  <h2>관리자 로그인</h2><div style="color:#5E6B7D">관리사무소 담당자만 접속할 수 있어요.</div>
+  <label>아이디<input id="lid" autocomplete="username"></label>
+  <label>비밀번호<input id="lpw" type="password" autocomplete="current-password"></label>
+  <div class="err" id="ler"></div>
+  <div class="row"><button class="btn" id="lgo" style="flex:1">로그인</button><button class="btn alt" id="lcl">닫기</button></div>
+</div></div>
+<div class="done" id="dn"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48"/><path d="M28 52l16 16 29-34"/></svg><h2>등록 완료!</h2><div id="dm" style="font-weight:700"></div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const pad=n=>String(n).padStart(2,'0');
+const key=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+let db=null,usr=null,isAdmin=false,slots={},resv=[],cur=new Date(),a=null,b=null,demo=false;
+cur.setDate(1);
+const today=key(new Date());
+$('#dows').innerHTML=['일','월','화','수','목','금','토'].map(x=>`<div class="dow">${x}</div>`).join('');
+
+function render(){
+  $('#mt').textContent=cur.getFullYear()+'년 '+(cur.getMonth()+1)+'월';
+  const first=new Date(cur.getFullYear(),cur.getMonth(),1).getDay(),n=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate();
+  let h='<div></div>'.repeat(first);
+  for(let i=1;i<=n;i++){
+    const k=cur.getFullYear()+'-'+pad(cur.getMonth()+1)+'-'+pad(i);
+    let c='d',dis=k<today;
+    if(slots[k]){c+=' full';dis=true}
+    else if(k===a||k===b)c+=' sel';
+    else if(a&&b&&k>a&&k<b)c+=' rng';
+    h+=`<button class="${c}" data-k="${k}" ${dis?'disabled':''}>${i}</button>`;
+  }
+  $('#cal').innerHTML=h;
+  if(a&&b){const nn=nights(a,b);$('#sum').textContent=`${a} → ${b} (${nn}박)`;$('#go').disabled=false}
+  else{$('#sum').textContent=a?'퇴실일을 눌러 주세요':'입실일과 퇴실일을 눌러 주세요';$('#go').disabled=true}
+}
+const nights=(x,y)=>Math.round((new Date(y)-new Date(x))/864e5);
+function span(x,y){const r=[];for(let d=new Date(x);key(d)<y;d.setDate(d.getDate()+1))r.push(key(d));return r}
+$('#cal').onclick=e=>{
+  const k=e.target.dataset.k;if(!k)return;
+  if(!a||b||k<=a){a=k;b=null}
+  else if(span(a,k).some(x=>slots[x])){a=k;b=null}
+  else b=k;
+  render();
+};
+$('#prev').onclick=()=>{cur.setMonth(cur.getMonth()-1);render()};
+$('#next').onclick=()=>{cur.setMonth(cur.getMonth()+1);render()};
+
+let authed=false,started=false,fails=0,lockUntil=0;
+try{authed=sessionStorage.getItem('gh_auth')==='1'}catch(_){}
+const SALT='31723cef1e8e165e663a2393463178ea',HASH='a91a11e6707276b8df0ddd875ded1040b27e65e4d0818ade791f4fe2f21387f2';
+const hx=u=>[...new Uint8Array(u)].map(x=>x.toString(16).padStart(2,'0')).join('');
+async function check(id,pw){
+  const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(id+':'+pw),'PBKDF2',false,['deriveBits']);
+  const bits=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',iterations:150000,salt:Uint8Array.from(SALT.match(/../g).map(x=>parseInt(x,16)))},k,256);
+  return hx(bits)===HASH;
+}
+function startAdmin(){
+  if(started||!db)return;started=true;raw=[];
+  db.collection('reservations').onSnapshot(s=>{raw=s.docs.map(d=>d.data());if(!(document.activeElement&&document.activeElement.closest('#rows')))refresh()},()=>{});
+}
+const openLogin=()=>{$('#ler').textContent='';$('#lpw').value='';$('#lg').classList.add('open');$('#lid').focus()};
+$('#lcl').onclick=()=>$('#lg').classList.remove('open');
+$('#lgo').onclick=async()=>{
+  if(Date.now()<lockUntil)return $('#ler').textContent='시도 횟수를 초과했어요. 잠시 후 다시 시도해 주세요.';
+  let ok=false;try{ok=await check($('#lid').value.trim(),$('#lpw').value)}catch(_){}
+  if(!ok){fails++;if(fails>=5){lockUntil=Date.now()+30000;fails=0}return $('#ler').textContent='아이디 또는 비밀번호가 올바르지 않아요.'}
+  fails=0;authed=true;try{sessionStorage.setItem('gh_auth','1')}catch(_){}
+  $('#lg').classList.remove('open');startAdmin();$('#adminTab').click();
+};
+$('#lpw').onkeydown=e=>{if(e.key==='Enter')$('#lgo').click()};
+$('#lout').onclick=()=>{authed=false;try{sessionStorage.removeItem('gh_auth')}catch(_){}$('#rows').innerHTML='';document.querySelector('.tab[data-t=book]').click()};
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  if(t.dataset.t==='admin'&&!authed){openLogin();return}
+  if(t.dataset.t==='admin')startAdmin();
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
+  if(t.dataset.t==='admin')window.scrollTo(0,0);
+  
+  $('#admin').classList.toggle('hide',t.dataset.t!=='admin');
+  $('#landing').classList.toggle('hide',t.dataset.t==='admin');$('#book').classList.add('hide');if(t.dataset.t==='admin')$('#book').classList.add('hide');else $('#book').classList.remove('hide');
+});
+
+$('#go').onclick=()=>{$('#ms').textContent=`${a} ~ ${b} · ${nights(a,b)}박`;$('#er').textContent='';$('#md').classList.add('open');$('#nm').focus()};
+$('#cl').onclick=()=>$('#md').classList.remove('open');
+
+$('#sub').onclick=async()=>{
+  const nm=$('#nm').value.trim(),dg=$('#dg').value.trim(),ho=$('#ho').value.trim(),ph=$('#ph').value.replace(/[^0-9]/g,'');
+  if(!nm||!dg||!ho)return $('#er').textContent='이름, 동, 호를 입력해 주세요.';
+  if(ph.length<10)return $('#er').textContent='연락처를 정확히 입력해 주세요.';
+  if(span(a,b).some(x=>slots[x]))return $('#er').textContent='방금 다른 예약이 등록됐어요. 날짜를 다시 골라 주세요.';
+  if(!db)return $('#er').textContent='예약 저장소에 연결되지 않았어요. 로그인 후 다시 시도해 주세요.';
+  if(!pub)return $('#er').textContent='관리자가 아직 보안키를 설정하지 않았어요. 관리사무소에 문의해 주세요.';
+  const id='R'+Date.now().toString(36).toUpperCase().slice(-6);
+  $('#sub').disabled=true;
+  try{
+    const dates=span(a,b);
+    const enc=await seal({name:nm,dong:dg,ho,phone:ph,guests:+$('#gn').value,memo:$('#mm').value.trim()});
+    await db.collection('reservations').doc(id).set({id,checkIn:a,checkOut:b,status:'접수',admin:'',created:new Date().toISOString(),...enc});
+    for(const d of dates)await db.collection('slots').doc(d).set({rid:id});
+    ['#nm','#dg','#ho','#ph','#mm'].forEach(s=>$(s).value='');
+    $('#md').classList.remove('open');
+    $('#dm').textContent=`등록번호 ${id} · ${a} ~ ${b}`;
+    $('#dn').classList.add('open');
+    a=b=null;render();
+    setTimeout(()=>$('#dn').classList.remove('open'),2200);
+  }catch(e){$('#er').textContent='등록에 실패했어요. 잠시 후 다시 시도해 주세요.'}
+  $('#sub').disabled=false;
+};
+
+
+let pub=null,priv=null,raw=[];
+async function refresh(){resv=await Promise.all(raw.map(open_));renderAdmin()}
+const b64=u=>btoa(String.fromCharCode(...new Uint8Array(u))),ub=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
+const RSA={name:'RSA-OAEP',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'};
+async function seal(o){
+  const pk=await crypto.subtle.importKey('jwk',pub,{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
+  const k=await crypto.subtle.generateKey({name:'AES-GCM',length:256},true,['encrypt']),iv=crypto.getRandomValues(new Uint8Array(12));
+  const ct=await crypto.subtle.encrypt({name:'AES-GCM',iv},k,new TextEncoder().encode(JSON.stringify(o)));
+  const ek=await crypto.subtle.encrypt({name:'RSA-OAEP'},pk,await crypto.subtle.exportKey('raw',k));
+  return {enc:b64(ct),ek:b64(ek),iv:b64(iv)};
+}
+async function open_(d){
+  const lock={...d,name:'🔒',dong:'-',ho:'-',phone:'개인키 필요',guests:'',memo:''};
+  if(!priv||!d.enc)return lock;
+  try{
+    const pk=await crypto.subtle.importKey('jwk',priv,{name:'RSA-OAEP',hash:'SHA-256'},false,['decrypt']);
+    const raw=await crypto.subtle.decrypt({name:'RSA-OAEP'},pk,ub(d.ek));
+    const k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);
+    const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:ub(d.iv)},k,ub(d.enc));
+    return {...d,...JSON.parse(new TextDecoder().decode(pt))};
+  }catch(_){return lock}
+}
+try{priv=JSON.parse(localStorage.getItem('gh_priv')||'null')}catch(_){}
+const mask=s=>s.length<=1?s:s[0]+'*'.repeat(Math.max(1,s.length-2))+(s.length>2?s.slice(-1):'');
+const csvRows=()=>[['등록번호','입실','퇴실','이름','동','호','연락처','인원','요청사항','상태','관리자메모','등록일시']].concat(resv.map(r=>[r.id,r.checkIn,r.checkOut,r.name,r.dong,r.ho,r.phone,r.guests,r.memo,r.status,r.admin,r.created]));
+function renderAdmin(){
+  resv.sort((x,y)=>y.created.localeCompare(x.created));
+  $('#rows').innerHTML=resv.map(r=>`<tr><td>${r.id}</td><td>${r.checkIn}</td><td>${r.checkOut}</td><td>${esc(r.name)}</td><td>${esc(r.dong)}-${esc(r.ho)}</td><td>${esc(r.phone)}</td><td>${r.guests}</td>
+  <td><select data-id="${r.id}" data-f="status">${['접수','확정','입실','퇴실','취소'].map(s=>`<option ${s===r.status?'selected':''}>${s}</option>`).join('')}</select></td>
+  <td><input data-id="${r.id}" data-f="admin" value="${esc(r.admin||'')}" placeholder="청소·시설·민원 등"></td><td></td></tr>`).join('')||'<tr><td colspan="10">아직 등록된 예약이 없어요.</td></tr>';
+  $('#am').textContent=(priv?'':'개인키가 없어 예약자 정보가 잠겨 있어요. [보안키 설정]을 눌러 주세요. ')+`총 ${resv.length}건. CSV를 저장해 구글 시트에서 [파일 → 가져오기]로 열거나, "표 복사" 후 시트 A1 셀에 붙여넣으면 됩니다.`;
+}
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('#rows').onchange=async e=>{
+  const t=e.target,id=t.dataset.id;if(!id)return;
+  try{await db.collection('reservations').doc(id).update({[t.dataset.f]:t.value});
+    if(t.dataset.f==='status'&&t.value==='취소'){const r=resv.find(x=>x.id===id);for(const d of span(r.checkIn,r.checkOut))await db.collection('slots').doc(d).delete()}
+  }catch(_){alert('저장에 실패했어요.')}
+};
+const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+$('#dl').onclick=async()=>{
+  const csv='\ufeff'+csvRows().map(r=>r.map(q).join(',')).join('\n');
+  const dls=await claude.use('downloads');
+  if(dls){try{await dls.save({filename:'guesthouse-reservations.csv',data:csv});return}catch(_){}}
+  $('#pt').classList.remove('hide');$('#pt').value=csv;$('#pt').select();
+};
+$('#cp').onclick=async()=>{
+  const t=csvRows().map(r=>r.map(v=>String(v??'').replace(/[\t\n]/g,' ')).join('\t')).join('\n');
+  try{await navigator.clipboard.writeText(t);$('#am').textContent='복사했어요. 구글 시트 A1 셀에 붙여넣기(Ctrl+V) 하세요.'}
+  catch(_){$('#pt').classList.remove('hide');$('#pt').value=t;$('#pt').select();$('#am').textContent='아래 내용을 전체 복사해 구글 시트에 붙여넣으세요.'}
+};
+$('#kg').onclick=async()=>{
+  if(!pub||confirm('보안키가 이미 있습니다. 개인키를 붙여넣어 불러오시겠습니까? (취소 시 새로 만들면 기존 예약은 열 수 없습니다)')){
+    if(pub){const t=prompt('저장해 둔 개인키(JSON)를 붙여넣으세요');if(!t)return;try{priv=JSON.parse(t);localStorage.setItem('gh_priv',t)}catch(_){}
+      refresh();return}
+  }
+  const kp=await crypto.subtle.generateKey(RSA,true,['encrypt','decrypt']);
+  const pj=await crypto.subtle.exportKey('jwk',kp.publicKey),sj=await crypto.subtle.exportKey('jwk',kp.privateKey);
+  await db.collection('config').doc('pub').set({jwk:pj});priv=sj;
+  const t=JSON.stringify(sj);try{localStorage.setItem('gh_priv',t)}catch(_){}
+  const dls=await claude.use('downloads');if(dls){try{await dls.save({filename:'guesthouse-private-key.json',data:t})}catch(_){}}
+  $('#am').textContent='보안키를 만들었어요. 개인키 파일을 안전한 곳에 보관하세요. 분실하면 예약자 정보를 열 수 없습니다.';
+};
+$('#sheet').onclick=()=>window.open('https://sheets.new','_blank','noopener');
+
+
+const CATS=['공지사항','메인 배너','게스트하우스 소개','이용안내','예약절차','안내·문의'],F=[];
+const addF=(c,k,l,sel,long)=>F.push({c,k,l,sel,long});
+addF(0,'notice','공지 문구 (비우면 표시되지 않음)','#notice',1);
+for(let i=1;i<=3;i++){const b='.hero .slide:nth-child('+i+') ';addF(1,'h'+i+'t',i+'번 배너 · 작은 제목',b+'.tag');addF(1,'h'+i+'h',i+'번 배너 · 큰 제목',b+'h1');addF(1,'h'+i+'p',i+'번 배너 · 설명',b+'p',1)}
+addF(2,'a_sub','소개 · 작은 제목','#about .sub');addF(2,'a_h','소개 · 제목','#about h2');addF(2,'a_p','소개 · 설명','#about .about>div:last-child p',1);
+for(let i=1;i<=4;i++){const b='#info .cards .card:nth-child('+i+') ';addF(3,'c'+i+'t','이용안내 '+i+' · 제목',b+'h4');addF(3,'c'+i+'p','이용안내 '+i+' · 내용',b+'p',1)}
+for(let i=1;i<=4;i++){const b='#process .proc>div:nth-child('+i+') ';addF(4,'p'+i+'t','예약절차 '+i+' · 제목',b+'h4');addF(4,'p'+i+'p','예약절차 '+i+' · 내용',b+'p',1)}
+addF(5,'formurl','예약 신청서(구글 폼) 주소 · https:// 로 시작','#formref');addF(5,'cta','하단 안내 문구','.cta h3');addF(5,'note','예약 화면 안내 문구','#book .note',1);
+addF(5,'office','관리사무소 이름','#contact .wrap>div:nth-child(3) span');addF(5,'phone','전화번호','footer a[href^="tel:"]');addF(5,'email','이메일','footer a[href^="mailto:"]');
+const DEF={};let site={},draft={},curCat=0;
+F.forEach(f=>{const e=document.querySelector(f.sel);if(e)DEF[f.k]=e.textContent.trim().replace(f.k==='phone'?/^전화\s*/:f.k==='email'?/^이메일\s*/:/^$/,'')});
+function applySite(v){F.forEach(f=>{const e=document.querySelector(f.sel);if(!e)return;const x=v[f.k]!==undefined?String(v[f.k]):DEF[f.k];if(x===undefined)return;
+  if(f.k==='phone'){e.textContent='전화 '+x;e.href='tel:'+x.replace(/[^0-9+]/g,'')}
+  else if(f.k==='email'){e.textContent='이메일 '+x;e.href='mailto:'+x}
+  else e.textContent=x;
+  if(f.k==='notice')e.classList.toggle('hide',!x.trim())})}
+document.addEventListener('click',e=>{const a=e.target.closest('.formlink');if(!a)return;e.preventDefault();
+  const u=$('#formref').textContent.trim();
+  if(!/^https:\/\//.test(u))return alert('예약 신청서 주소가 아직 설정되지 않았어요. 관리사무소(051-714-3280)로 문의해 주세요.');
+  window.open(u,'_blank','noopener')});
+function buildEditor(){
+  $('#scat').innerHTML=CATS.map((c,i)=>`<button class="btn ${i===curCat?'':'alt'}" data-i="${i}">${c}</button>`).join('');
+  $('#sform').innerHTML=F.filter(f=>f.c===curCat).map(f=>{const v=esc(draft[f.k]??site[f.k]??DEF[f.k]??'');
+    return `<label>${f.l}${f.long?`<textarea data-k="${f.k}">${v}</textarea>`:`<input data-k="${f.k}" value="${v}">`}</label>`}).join('');
+}
+$('#scat').onclick=e=>{const i=e.target.dataset.i;if(i===undefined)return;curCat=+i;buildEditor()};
+$('#sform').oninput=e=>{if(e.target.dataset.k)draft[e.target.dataset.k]=e.target.value};
+$('#acat').onclick=e=>{const v=e.target.dataset.v;if(!v)return;
+  document.querySelectorAll('#acat .btn').forEach(b=>b.classList.toggle('alt',b!==e.target));
+  $('#resvPanel').classList.toggle('hide',v!=='resv');$('#sitePanel').classList.toggle('hide',v!=='site');if(v==='site')buildEditor()};
+$('#ssave').onclick=async()=>{
+  if(!db)return $('#sme').textContent='저장소에 연결되지 않았어요.';
+  try{const vals={...site,...draft};await db.collection('config').doc('site').set({values:vals});draft={};$('#sme').style.color='var(--ok)';$('#sme').textContent='저장했어요. 홈페이지에 반영됩니다.'}
+  catch(_){$('#sme').style.color='var(--bad)';$('#sme').textContent='저장하지 못했어요. claude.ai에 로그인되어 있고 이 페이지의 이용(기여) 권한이 있는지 확인해 주세요.'}
+};
+$('#sreset').onclick=async()=>{
+  if(!db||!confirm('홈페이지 내용을 처음 상태로 되돌릴까요?'))return;
+  try{await db.collection('config').doc('site').delete();draft={};site={};applySite({});buildEditor();$('#sme').style.color='var(--ok)';$('#sme').textContent='처음 내용으로 되돌렸어요.'}
+  catch(_){$('#sme').style.color='var(--bad)';$('#sme').textContent='되돌리지 못했어요.'}
+};
+(()=>{const sl=[...document.querySelectorAll('.slide')],dt=[...document.querySelectorAll('.dots span')];let i=0;
+const go=n=>{i=n;sl.forEach((e,k)=>e.classList.toggle('on',k===n));dt.forEach((e,k)=>e.classList.toggle('on',k===n))};
+dt.forEach((e,k)=>e.onclick=()=>go(k));setInterval(()=>go((i+1)%sl.length),5500)})();
+render();
+(async()=>{
+  try{
+    db=await claude.use('db');usr=await claude.use('user');
+    if(!db)return;
+    db.collection('config').doc('pub').onSnapshot(d=>{pub=d.exists?d.data().jwk:null},()=>{});
+    db.collection('config').doc('site').onSnapshot(d=>{site=d.exists?(d.data().values||{}):{};applySite(site)},()=>{});
+    db.collection('slots').onSnapshot(s=>{slots={};s.docs.forEach(d=>slots[d.id]=1);render()},()=>{});
+    if(authed)startAdmin();
+  }catch(_){}
+})();
+</script>
+</body>
+</html>
