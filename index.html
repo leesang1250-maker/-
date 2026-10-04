@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>일광자이푸르지오 게스트하우스</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2748;--navy2:#16355F;--gold:#E8A317;--paper:#fff;--soft:#F4F6FA;--line:#DDE3EC;--mute:#5E6B7D;--ok:#1F9D6B;--bad:#C8412F;color-scheme:light;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:#fff;color:#1B2A3F;font-family:'Noto Sans KR',system-ui,sans-serif;line-height:1.7}
+h1,h2,h3,h4{font-family:'Poppins','Noto Sans KR',sans-serif;margin:0;line-height:1.25;color:var(--navy)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:88px;gap:14px;padding-top:8px;padding-bottom:8px}
+.logo{display:flex;align-items:center;gap:10px;font:700 18px 'Poppins','Noto Sans KR';color:var(--navy);text-decoration:none}
+.logo i{width:34px;height:34px;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-style:normal;font-size:16px}
+.menu{display:flex;gap:10px;align-items:center}
+.menu a{color:var(--navy);text-decoration:none;font-weight:500;font-size:15px}.menu a:hover{color:var(--gold)}
+.btn,.tab{border:0;cursor:pointer;font:600 15px 'Noto Sans KR',sans-serif;padding:13px 26px;background:var(--gold);color:var(--navy);transition:background .2s,color .2s}
+.btn:hover:not(:disabled),.tab:hover{background:var(--navy);color:#fff}
+.btn:disabled{background:var(--line);color:#99a4b4;cursor:not-allowed}
+.btn.alt{background:var(--navy);color:#fff}.btn.alt:hover{background:var(--gold);color:var(--navy)}
+.btn.mint{background:var(--ok);color:#fff}
+.tab{background:transparent;padding:8px 14px}.tab.on{color:var(--gold)}
+
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.05) 119px 120px),repeating-linear-gradient(0deg,transparent 0 119px,rgba(255,255,255,.05) 119px 120px)}
+.hero:after{content:"";position:absolute;right:6%;top:50%;width:300px;height:300px;border:2px solid var(--gold);transform:translateY(-50%) rotate(45deg);opacity:.5}
+.slide{display:none;position:relative;z-index:1;padding:70px 0}.slide.on{display:block;animation:fade .7s}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+.tag{display:inline-block;color:var(--gold);font-weight:600;border-left:4px solid var(--gold);padding-left:10px;margin-bottom:14px}
+.hero h1{color:#fff;font-size:clamp(34px,6vw,60px);max-width:640px}
+.hero p{max-width:480px;color:#C9D4E5;font-size:18px;margin:16px 0 28px}
+.dots{position:absolute;z-index:2;bottom:22px;left:0;right:0}
+.dots span{display:inline-block;width:34px;height:4px;background:rgba(255,255,255,.3);margin-right:6px;cursor:pointer}.dots span.on{background:var(--gold)}
+section.blk{padding:80px 0}
+.sub{color:var(--gold);font-weight:600;margin-bottom:8px}
+.blk h2{font-size:clamp(26px,4vw,40px);margin-bottom:18px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+.pic{position:relative;height:340px;background:linear-gradient(135deg,var(--navy2),var(--navy));}
+.pic:before{content:"";position:absolute;left:30px;top:30px;right:60px;bottom:60px;border:2px solid rgba(255,255,255,.25)}
+.pic b{position:absolute;right:-12px;bottom:-12px;background:var(--gold);color:var(--navy);padding:18px 26px;font:700 38px 'Poppins'}
+.pic b small{display:block;font:600 14px 'Noto Sans KR'}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:0;list-style:none;margin:18px 0 26px}
+.checks li:before{content:"✓";color:var(--gold);font-weight:700;margin-right:8px}
+.soft{background:var(--soft)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:#fff;padding:30px 26px;border-bottom:4px solid transparent;box-shadow:0 6px 24px rgba(14,39,72,.07);transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.card .ic{width:54px;height:54px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+.card h4{font-size:19px;margin-bottom:6px}.card p{margin:0;color:var(--mute);font-size:15px}
+.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;counter-reset:s}
+.proc div{padding:24px;border:1px solid var(--line);position:relative;background:#fff}
+.proc div:before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:22px;background:var(--gold);color:var(--navy);width:36px;height:36px;display:grid;place-items:center;font:700 16px 'Poppins'}
+.proc h4{margin:8px 0 4px}.proc p{margin:0;color:var(--mute);font-size:14px}
+.cta{background:var(--gold);padding:46px 0}.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h3{font-size:clamp(22px,3vw,30px)}.cta .btn{background:var(--navy);color:#fff}.cta .btn:hover{background:#fff;color:var(--navy)}
+.panel{background:#fff;padding:28px;box-shadow:0 10px 36px rgba(14,39,72,.1);border-top:4px solid var(--gold);margin-bottom:18px}
+.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.cal-head h2{margin:0;font-size:24px}
+.nb{background:#fff;border:1px solid var(--line);width:42px;height:42px;font-size:18px;cursor:pointer;color:var(--navy)}.nb:hover{background:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.dow{text-align:center;font-weight:600;font-size:13px;color:var(--mute)}
+.d{aspect-ratio:1;border:1px solid var(--line);background:#fff;font:600 15px 'Noto Sans KR';cursor:pointer;color:var(--navy);position:relative}
+.d:hover:not(:disabled){border-color:var(--gold)}
+.d.sel{background:var(--navy);border-color:var(--navy);color:var(--gold)}
+.d.rng{background:#FBEFD0;border-color:#FBEFD0}
+.d.full{background:#EEF0F4;color:#9AA5B5;cursor:not-allowed}
+.d.full:after{content:"예약됨";position:absolute;bottom:2px;left:0;right:0;font-size:9px}
+.d:disabled{opacity:.4;cursor:not-allowed}
+.legend{display:flex;gap:16px;font-size:13px;margin-top:12px;flex-wrap:wrap;color:var(--mute)}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.bar b{font-size:17px;color:var(--navy)}
+.modal{position:fixed;inset:0;background:rgba(14,39,72,.7);display:none;align-items:flex-end;justify-content:center;z-index:50}
+.modal.open{display:flex}
+.sheet{background:#fff;width:100%;max-width:520px;padding:26px 24px calc(24px + env(safe-area-inset-bottom,0px));max-height:92%;overflow:auto;border-top:4px solid var(--gold);animation:up .3s}
+@keyframes up{from{transform:translateY(50px);opacity:0}}
+@media(min-width:600px){.modal{align-items:center}}
+.sheet h2{font-size:24px;margin-bottom:2px}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input,select,textarea{width:100%;font:16px 'Noto Sans KR';padding:12px;border:1px solid var(--line);border-radius:0;color:var(--navy);background:#fff}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid rgba(232,163,23,.5);border-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.note{font-size:14px;background:var(--soft);border-left:4px solid var(--gold);padding:12px 14px;margin-top:14px;color:var(--mute)}
+.err{color:var(--bad);font-weight:600;font-size:14px;min-height:20px;margin-top:8px}
+.done{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:60;background:rgba(255,255,255,.96);flex-direction:column;text-align:center;padding:20px}
+.done.open{display:flex}.done svg{width:140px;height:140px}
+.done circle{fill:var(--navy);transform-origin:center;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+.done path{stroke:var(--gold);stroke-width:8;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:80;animation:draw .5s .3s forwards}
+@keyframes pop{from{transform:scale(0)}}@keyframes draw{to{stroke-dashoffset:0}}
+.done h2{font-size:30px;margin:14px 0 4px}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+th{background:var(--navy);color:#fff;font-weight:600}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.hide{display:none}
+textarea.paste{height:90px;font:12px monospace}
+footer{background:var(--navy);color:#B7C4D8;padding:50px 0 24px}
+footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+footer h4{color:#fff;margin-bottom:10px}footer a{color:#B7C4D8;text-decoration:none;display:block}footer a:hover{color:var(--gold)}
+.copy{text-align:center;font-size:13px;margin-top:34px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
+
+.menu .mi{width:74px;height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;border:0;border-radius:14px;cursor:pointer;text-decoration:none;
+ background:linear-gradient(160deg,#2A4F86 0%,var(--navy2) 45%,var(--navy) 100%);color:#fff;
+ box-shadow:0 5px 0 #08172B,0 8px 14px rgba(14,39,72,.35),inset 0 2px 0 rgba(255,255,255,.28);
+ transition:transform .15s,box-shadow .15s,background .15s;position:relative;top:0}
+.menu .mi i{font-style:normal;font-size:22px;line-height:1;color:var(--gold);text-shadow:0 2px 0 rgba(0,0,0,.35)}
+.menu .mi span{font:600 12px 'Noto Sans KR',sans-serif;letter-spacing:-.2px;white-space:nowrap}
+.menu .mi:hover{transform:translateY(-3px);box-shadow:0 8px 0 #08172B,0 12px 18px rgba(14,39,72,.35),inset 0 2px 0 rgba(255,255,255,.35);background:linear-gradient(160deg,#F6C453,var(--gold) 55%,#C98A0C);color:var(--navy)}
+.menu .mi:hover i{color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.4)}
+.menu .mi:active{transform:translateY(3px);box-shadow:0 2px 0 #08172B,inset 0 2px 0 rgba(255,255,255,.2)}
+.menu .mi.on{background:linear-gradient(160deg,#F6C453,var(--gold) 55%,#C98A0C);color:var(--navy);box-shadow:0 5px 0 #8A5E06,0 8px 14px rgba(232,163,23,.4),inset 0 2px 0 rgba(255,255,255,.5)}
+.menu .mi.on i{color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.4)}
+@media(max-width:900px){
+ header.top{position:static}
+ .top .wrap{flex-direction:column;align-items:flex-start}
+ .menu{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 8px}
+ .menu .mi{width:100%;height:60px}
+}
+
+#notice{background:var(--gold);color:var(--navy);text-align:center;font-weight:600;padding:10px 16px}
+.cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.cats .btn{padding:11px 18px}
+.cats .btn.on{background:var(--gold);color:var(--navy)}
+.sgroup{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.sgroup .btn{padding:9px 16px;font-size:14px}
+textarea{min-height:84px;resize:vertical}
+</style>
+</head>
+<body id="top">
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top"><i>G</i>일광자이푸르지오 게스트하우스</a>
+  <nav class="menu">
+    <a class="mi on" href="#top"><i>⌂</i><span>홈</span></a>
+    <a class="mi" href="#about"><i>◈</i><span>소개</span></a>
+    <a class="mi" href="#info"><i>☰</i><span>이용안내</span></a>
+    <a class="mi" href="#process"><i>➤</i><span>예약절차</span></a>
+    <a class="mi" href="#status" id="mStatus"><i>▦</i><span>예약현황</span></a>
+    <a class="mi formlink" href="#"><i>✎</i><span>예약신청</span></a>
+    <a class="mi" href="#contact"><i>✉</i><span>문의</span></a>
+  </nav>
+</div></header>
+<div id="notice" class="hide"></div>
+
+<section class="hero"><div class="wrap">
+  <div class="slide on"><span class="tag">방문 손님 전용 서비스</span><h1>가족과 손님을 위한 편안한 쉼터</h1><p>일광자이푸르지오 세대를 방문하시는 손님이라면 온라인으로 간편하게 예약하세요.</p><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div>
+  <div class="slide"><span class="tag">개인정보 보호</span><h1>신청 정보는 관리사무소만 확인</h1><p>예약 신청서는 관리사무소에서만 열람하며, 예약 확인 목적으로만 사용합니다.</p><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div>
+  <div class="slide"><span class="tag">사후관리</span><h1>예약부터 퇴실까지 꼼꼼하게</h1><p>관리사무소가 확정·입실·퇴실 상태와 점검 사항을 관리합니다.</p><a href="#process"><button class="btn">예약절차 보기</button></a></div>
+</div><div class="dots"><div class="wrap"><span class="on"></span><span></span><span></span></div></div></section>
+
+<section class="blk" id="about"><div class="wrap about">
+  <div class="pic"><b>1실<small>2명 (최대 4명)</small></b></div>
+  <div><div class="sub">게스트하우스 소개</div><h2>세대 방문 손님을 위한 단지 내 게스트하우스</h2>
+  <p>일광자이푸르지오 세대를 방문하시는 손님을 위해 마련한 공간입니다. 신청서를 작성하면 관리사무소가 확인 후 연락드립니다.</p>
+  <ul class="checks"><li>세대 방문 손님 이용</li><li>온라인 예약 신청</li><li>간편한 신청서 작성</li><li>개인정보 보호</li><li>예약 확정 안내</li><li>사후관리 기록</li></ul>
+  <a class="formlink" href="#"><button class="btn alt">예약 신청하기</button></a></div>
+</div></section>
+
+<section class="blk soft" id="info"><div class="wrap">
+  <div class="sub">이용안내</div><h2>한눈에 보는 이용 정보</h2>
+  <div class="cards">
+    <div class="card"><div class="ic">⌂</div><h4>이용 대상</h4><p>일광자이푸르지오 세대를 방문하시는 손님</p></div>
+    <div class="card"><div class="ic">☰</div><h4>이용 인원</h4><p>2명 (최대 4명)까지 등록 가능</p></div>
+    <div class="card"><div class="ic">▦</div><h4>예약 현황</h4><p>예약된 날짜는 예약현황에서 확인</p></div>
+    <div class="card"><div class="ic">◈</div><h4>정보 보호</h4><p>이름·연락처는 관리사무소만 열람</p></div>
+  </div></div></section>
+
+<section class="blk" id="process"><div class="wrap">
+  <div class="sub">예약절차</div><h2>네 단계로 끝나는 예약</h2>
+  <div class="proc" style="margin-top:34px">
+    <div><h4>예약 현황 확인</h4><p>원하는 날짜가 비어 있는지 확인합니다.</p></div>
+    <div><h4>신청서 작성</h4><p>입실·퇴실일, 방문 세대, 연락처를 입력합니다.</p></div>
+    <div><h4>접수 완료</h4><p>제출하면 신청이 관리사무소로 접수됩니다.</p></div>
+    <div><h4>관리사무소 확정</h4><p>확인 후 연락드리고 예약을 확정합니다.</p></div>
+  </div></div></section>
+
+<section class="blk soft" id="status"><div class="wrap">
+  <div class="sub">예약 현황</div><h2>예약된 날짜 확인</h2>
+  <div class="panel" id="calbox"></div>
+</div></section>
+
+<section class="cta"><div class="wrap"><h3>원하는 날짜가 정해지셨나요?</h3><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div></section>
+
+<footer id="contact"><div class="wrap"><div><a class="logo" style="color:#fff" href="#top"><i style="background:var(--gold);color:var(--navy)">G</i>일광자이푸르지오</a><p style="margin-top:12px">세대 방문 손님 게스트하우스</p></div>
+<div><h4>바로가기</h4><a href="#about">소개</a><a href="#info">이용안내</a><a href="#process">예약절차</a><a href="#status">예약현황</a></div>
+<div><h4>문의</h4><span id="fOffice"></span><a id="fPhone"></a><a id="fMail"></a></div></div><div class="copy">일광자이푸르지오 게스트하우스 © 2026. All rights reserved.</div></footer>
+
+<script>
+/* ===== 관리자가 고치는 설정 (여기만 수정하세요) ===== */
+const SITE={
+  formUrl:'',        // 구글 폼 주소 (https://로 시작). 예: 'https://forms.gle/xxxx'
+  calendarUrl:'',    // 구글 캘린더 공유(퍼가기) 주소. 예약 현황 표시용. 비우면 안내 문구만 표시
+  notice:'',         // 맨 위 공지 문구. 비우면 표시 안 함
+  office:'일광자이푸르지오 관리사무소',
+  phone:'051-714-3280',
+  email:'apt05460@naver.com'
+};
+/* ================================================== */
+const $=s=>document.querySelector(s);
+if(SITE.notice){const n=$('#notice');n.textContent=SITE.notice;n.classList.remove('hide')}
+$('#fOffice').textContent=SITE.office;
+$('#fPhone').textContent='전화 '+SITE.phone;$('#fPhone').href='tel:'+SITE.phone.replace(/[^0-9+]/g,'');
+$('#fMail').textContent='이메일 '+SITE.email;$('#fMail').href='mailto:'+SITE.email;
+const box=$('#calbox');
+if(/^https:\/\//.test(SITE.calendarUrl)){
+  const f=document.createElement('iframe');f.src=SITE.calendarUrl;f.title='예약 현황 달력';
+  f.style.cssText='width:100%;height:560px;border:0';f.loading='lazy';box.appendChild(f);
+}else{box.innerHTML='<p style="margin:0;color:#5E6B7D">예약 가능 여부는 관리사무소에 문의하시거나, 신청서 제출 후 확정 연락을 받으세요.<br>전화 '+SITE.phone+'</p>'}
+document.addEventListener('click',e=>{
+  const a=e.target.closest('.formlink');if(!a)return;e.preventDefault();
+  if(!/^https:\/\//.test(SITE.formUrl))return alert('예약 신청서 주소가 아직 설정되지 않았어요. 관리사무소('+SITE.phone+')로 문의해 주세요.');
+  window.open(SITE.formUrl,'_blank','noopener');
+});
+const sl=[...document.querySelectorAll('.slide')],dt=[...document.querySelectorAll('.dots span')];let i=0;
+const go=n=>{i=n;sl.forEach((e,k)=>e.classList.toggle('on',k===n));dt.forEach((e,k)=>e.classList.toggle('on',k===n))};
+dt.forEach((e,k)=>e.onclick=()=>go(k));setInterval(()=>go((i+1)%sl.length),5500);
+</script>
+</body>
+</html>
