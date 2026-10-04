@@ -1,466 +1,253 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>일광자이푸르지오 게스트하우스</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#0E2748;--navy2:#16355F;--gold:#E8A317;--paper:#fff;--soft:#F4F6FA;--line:#DDE3EC;--mute:#5E6B7D;--ok:#1F9D6B;--bad:#C8412F;color-scheme:light;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}
-body{margin:0;background:#fff;color:#1B2A3F;font-family:'Noto Sans KR',system-ui,sans-serif;line-height:1.7}
-h1,h2,h3,h4{font-family:'Poppins','Noto Sans KR',sans-serif;margin:0;line-height:1.25;color:var(--navy)}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-header.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:88px;gap:14px;padding-top:8px;padding-bottom:8px}
-.logo{display:flex;align-items:center;gap:10px;font:700 18px 'Poppins','Noto Sans KR';color:var(--navy);text-decoration:none}
-.logo i{width:34px;height:34px;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-style:normal;font-size:16px}
-.menu{display:flex;gap:10px;align-items:center}
-.menu a{color:var(--navy);text-decoration:none;font-weight:500;font-size:15px}.menu a:hover{color:var(--gold)}
-.btn,.tab{border:0;cursor:pointer;font:600 15px 'Noto Sans KR',sans-serif;padding:13px 26px;background:var(--gold);color:var(--navy);transition:background .2s,color .2s}
-.btn:hover:not(:disabled),.tab:hover{background:var(--navy);color:#fff}
-.btn:disabled{background:var(--line);color:#99a4b4;cursor:not-allowed}
-.btn.alt{background:var(--navy);color:#fff}.btn.alt:hover{background:var(--gold);color:var(--navy)}
-.btn.mint{background:var(--ok);color:#fff}
-.tab{background:transparent;padding:8px 14px}.tab.on{color:var(--gold)}
+<!DOCTYPE html><html lang="ko"><!-- frame-runtime --><head><script>window.__FRAME_PREAMBLE={"v":1,"cred":"cookie","capabilities":{"artifact":"artifact.w_ePPE-a.js","assets":"assets.DOAjpBS9.js","comments":"comments.CnGjamYN.js","db":"db.zFlAA4qL.js","downloads":"downloads.axDW2QAi.js","embed":"embed.DcZf-TSv.js","endpoints":"endpoints.BPfoKaE1.js","files":"files.IkpCjcgM.js","mcp":"mcp.kl0G36TA.js","network":"network.B5UA9Su4.js","permissions":"permissions.BHAs_S4o.js","room":"room.Dy3vHyq9.js","sample":"sample.t8BQC4US.js","self":"artifact.w_ePPE-a.js","user":"user.CB0zJsP2.js"},"transforms":"_transforms.OOT2SKiU.js","comments":"_comments.DUaNQZcg.js","translate":"_translate.DqxC5ek1.js","ldx":"_ldx.B4FSryPi.js"}                                                                                                                                                              </script><script>(function(){"use strict";function ir(t){return t==="cookie"||t==="query"?t:void 0}function lr(t){return typeof t=="number"&&Number.isSafeInteger(t)&&t>0?t:void 0}var Wn=3e5;function cr(t,e){try{const r=t("navigation")[0],o=[r.responseStart,r.redirectEnd-r.redirectStart,r.domContentLoadedEventStart,e(),r.connectEnd-r.domainLookupStart,r.responseStart-r.requestStart];r.requestStart>0||(o.length=4);for(let a=0;a<o.length;a++)if(o[a]>=0&&o[a]<=3e5)o[a]=o[a]|0;else{if(a<4)return;o.length=4}return o}catch{return}}var ur=["light","dark","system"],fr=/^[A-Za-z0-9_-]{1,64}$/,Tt=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,dr=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function hr(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||dr.has(e)}var Lt="data-ldx-props";function pr(t,e){if(e.toLowerCase()===Lt)return!0;const r=t.getAttribute(Lt);if(r===null)return!1;try{const o=JSON.parse(r);if(o===null||typeof o!="object"||Array.isArray(o))return!0;const a=e.toLowerCase();return Object.keys(o).some(s=>s.toLowerCase()===a)}catch{return!0}}var Xn="http://www.w3.org/1999/xhtml",mr="http://www.w3.org/2000/svg",vr=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),_r=new Set(["script","style"]);function yr(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!vr.has(e):t.namespaceURI===mr?!_r.has(e):!1}function tt(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function gr(t,e){const r=t.length,o=e.length;let a=0;for(;a<r&&a<o&&tt(t.charCodeAt(a),e.charCodeAt(a));)a++;let s=0;for(;s<r-a&&s<o-a&&tt(t.charCodeAt(r-1-s),e.charCodeAt(o-1-s));)s++;return{p:a,s}}function wr(t,e){const r=t.firstChild;if(t.childNodes.length!==1||r===null||r.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const o=r.data,a=o.length,s=e.length,{p:l,s:d}=gr(o,e);l===a&&d===0&&a===s||r.replaceData(l,a-l-d,e.slice(l,s-d));const T=r.data,S=t.ownerDocument.getSelection?.()??null,b=S!==null&&S.rangeCount>0&&(S.anchorNode===r||S.focusNode===r)?{anchor:S.anchorNode,anchorOffset:S.anchorOffset,focus:S.focusNode,focusOffset:S.focusOffset}:null;let p=-1,R=-1;for(let m=0;m<T.length&&m<e.length;m++){const C=T.charCodeAt(m),k=e.charCodeAt(m);C!==k&&tt(C,k)&&(p<0&&(p=m),R=m)}const L=p>=0;if(L&&r.replaceData(p,R-p+1,e.slice(p,R+1)),L&&b!==null&&b.anchor!==null&&b.focus!==null)try{S.setBaseAndExtent(b.anchor,b.anchorOffset,b.focus,b.focusOffset)}catch{}}var br=new Set(["html","head","body","frameset"]);function Er(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&br.has(t.localName)}function Sr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!fr.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[r,o]of Object.entries(e.attrsSet))if(!Tt.test(r)||typeof o!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const r of e.attrsRemoved)if(typeof r!="string"||!Tt.test(r))return!1}return!0}function Rr(t,e){if(t===null||typeof t!="object")return!1;const{seq:r,elements:o}=t;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(o)||o.length===0||o.length>64)return!1;for(let a=0;a<o.length;a++)if(!e(o[a]))return!1;return!0}function kr(t){return t===null||typeof t!="object"?!1:Rr(t.__frame_patch,Sr)}function Ar(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function Tr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function Lr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function Or(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const r=e.theme;return typeof r=="string"&&ur.includes(r)}var Pr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],Mr=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function Nr(t){return typeof t=="string"&&Mr.includes(t)?t:"other"}var Cr=Object.freeze({until:null,now:!1}),jr="__claude_hot",Fr="__claude_hot_in",Ir=/^__claude_hot(?:_in)?(?::|$)/,Ot=/^[0-9a-z]{1,32}$/,rt=t=>t===void 0?jr:"__claude_hot:"+t,Le=t=>t===void 0?Fr:"__claude_hot_in:"+t;function xr(t,e){const r=[];for(let o=0;o<t.length;o++){const a=t.key(o);a!==null&&a!==e&&Ir.test(a)&&r.push(a)}for(const o of r)t.removeItem(o)}function Dr(t){let e=null;try{e=D(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!Ot.test(e.k)?null:he(e.g)?{k:e.k,g:e.g}:{k:e.k}}var Yn=262144,Hr=3e3,qr=5e3,Pt=/^[a-z0-9._:-]{1,64}$/,Br=["none","hot-restart","hard-reload"],Ur=["asset","doc","added","removed"],Kr=1500,Gr=/^[0-9a-f]{64}$/;function D(t){return t!==null&&typeof t=="object"?t:null}function he(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function Mt(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function $r(t){return t===void 0||typeof t=="string"&&Pt.test(t)}function Nt(t){const e=D(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function nt(t){const e=D(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Mt(e.seq)&&typeof e.handoff=="string"&&Pr.includes(e.handoff)&&$r(e.note)}function Ct(t){const e=D(t);return e!==null&&he(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||nt(e.from))}function zr(t){const e=D(t);return e!==null&&e.kv===1&&he(e.gen)&&nt(e.from)&&Object.hasOwn(e,"data")}function Vr(t){const e=D(t);return e!==null&&e.__frame_hot_snapshot===!0&&he(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||Nt(e.deadline))&&Mt(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function Wr(t){const e=D(t);return e!==null&&e.__frame_hot_start===!0&&he(e.gen)&&nt(e.from)}function Xr(t){return typeof t=="string"&&t.length>=1&&t.length<=128}function jt(t){return D(t)!==null&&!Array.isArray(t)}function Yr(t){const e=D(t);return e!==null&&e.__frame_cap_grant===!0&&typeof e.cap=="string"&&Xr(e.ver)&&(e.grant===void 0||jt(e.grant))&&(e.budgets===void 0||jt(e.budgets)&&Object.values(e.budgets).every(Number.isFinite))&&(e.brokerGen===void 0||he(e.brokerGen))}function Jr(t){const e=D(t);return e!==null&&e.__frame_cap_rewired===!0&&(e.caps===void 0||Array.isArray(e.caps)&&e.caps.every(r=>typeof r=="string"))&&(e.brokerGen===void 0||he(e.brokerGen))}function Ge(t){const e=D(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function Ft(t){if(t==null||typeof t=="string")return!0;const e=D(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function Zr(t){const e=D(t);return e!==null&&typeof e.path=="string"&&Ur.includes(e.kind)&&Ft(e.from)&&Ft(e.to)}function Qr(t){return t===null?null:Object.freeze(t.filter(Zr))}function en(t){const e=D(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&Ge(e.from)&&Ge(e.to)&&(e.changed===null||Array.isArray(e.changed))&&Br.includes(e.required)&&Nt(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Gr.test(e.preflight))}function tn(t){const e=D(t);return e!==null&&e.__frame_hot_readdress===!0&&Ge(e.from)&&Ge(e.to)}var pe=/^[\w.-]+\.js$/;function rn(t,e,r){return r?"inert":typeof e=="string"&&pe.test(e)?t?[e]:"inert":t?"inert":"framed"}var It=Object.freeze({[Symbol("claude.hot.restart")]:!0});function xt(t,e){let r;try{r=t??sessionStorage}catch{return null}const o=rt(e?.k),a=Le(e?.k);let s=null;try{s=r.getItem(o)}catch{}try{r.removeItem(o)}catch{}try{xr(r,a)}catch{}let l=null;if(s!==null&&!(e!==null&&e.g===void 0))try{const d=JSON.parse(s);zr(d)&&(e===null||d.gen===e.g)&&(l=d)}catch{}if(l===null)try{r.removeItem(a)}catch{}return l}function Dt(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var nn=/^[^/\\?#]{1,128}$/,ot=t=>nn.test(t)&&t!=="."&&t!=="..";function Ht(t,e,r){const o=new URL(t),a="/_f/"+e+"/";if(!e||!o.pathname.startsWith(a)||!ot(r))return null;const s=o.search.slice(1).split("&").filter(l=>!/^__frame_t(?:=|$)/.test(l)).join("&");return o.origin+"/_f/"+r+"/"+o.pathname.slice(a.length)+(s?"?"+s:"")+o.hash}var $e="{}";function Oe(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function qt(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function Bt(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function on(t,e,r,o=null){const a=setTimeout,s=clearTimeout,l=queueMicrotask,d=performance.now.bind(performance),T=new TextEncoder;let S=null,b=null;try{S=history,b=S.replaceState.bind(S)}catch{}const p=(...n)=>{try{console.warn(...n)}catch{}};let R=Dt(),L=null;try{L=sessionStorage}catch{}const m={storage:L,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:R,priors:[],key:o?.k};let C=o?.k;const k=typeof requestAnimationFrame=="function"?requestAnimationFrame:n=>a(()=>n(d()),16);let h=e?.data??{},I=Oe(e?.from),j=e?.gen??0,B=e!==null,Q=!1,V=!1,U=null,be=!1;const je=new AbortController;let Fe=null,H=null,Ee=null,Ie=!1,le=()=>{};const ce=new Promise(n=>{le=n});let ve=!1,c=!1,y=!1,_,E=null,x=!1,W=!1,q=!1,te=!1,X=!1,_e=!1;const ye=n=>{for(const u of[rt(n),Le(n)])try{L?.removeItem(u)}catch{}},K=(n,u)=>{try{u!==null&&r.post(n,u)}catch{}},xe=()=>X||=q&&(H===null||te),Y=()=>{const n={__frame_hot:!0,ready:H!==null,accept:Ee!==null,demand:!0};_e=!X,_e&&(n.booting=!0),ve&&(n.readData=!0),y&&(n.threw=!0),E?.assess&&(n.preflight=!0),K(n,U)};let De=!1,re=!1,ue=!1,He=!1;const Je=()=>{De||!be||ue||(De=!0,K({__frame_reveal_hold:!0},"*"))},Se=()=>new Promise(n=>{let u,f=0;const v=O=>{if(u===void 0)u=O;else if(O!==u||++f>=8){n();return}try{k(v)}catch{n()}};try{k(v)}catch{n()}}),qe=()=>{ue=!0,K({__frame_reveal_ready:!0},"*")},Be=n=>{re||(re=!0,n.then(u=>{if(u===!1)return;let f=null;try{f=E?.settle?.()??null}catch{}return(f===null?Se():new Promise(v=>{a(v,50),Promise.resolve(f).then(v,v)}).then(Se)).then(qe)}))},yt=()=>{if(He||!ue)return;He=!0;const n=()=>{try{E?.afterReveal?.()}catch{}};n(),Se().then(()=>{n(),qe()})},ee=(n=!1)=>{if(Ie||H===null||!B||!V)return;Ie=!0;const u=H,f=h;l(()=>{let v;try{v=u(f)}catch(P){throw le(!1),P}let O=!1;try{O=typeof v?.then=="function"}catch{}if(!O){le(!0);return}Promise.resolve(v).then(()=>le(!0),P=>{le(!1),l(()=>{throw P})})}),Be(n?ce:r.dcl.then(()=>ce))},fe=n=>typeof n=="string"&&Pt.test(n)?n:void 0,Re=n=>{const u={__frame_hot_restart:!0},f=fe(n?.note);f!==void 0&&(u.note=f),n?.required==="hard-reload"&&(u.required="hard-reload"),K(u,U)},Ue=Object.freeze({get data(){return V||(c=!0),!B&&!ve&&(ve=!0,V&&Y()),h},get from(){return I},get gen(){return j},signal:je.signal,snapshot(n){typeof n=="function"&&(Fe=n)},ready(n){typeof n!="function"||H!==null||(H=n,Je(),Y(),Q&&K({__frame_hot_ready:!0,gen:j},U),ee())},accept(n){typeof n=="function"&&(Ee=n,Y())},restart(n){const u={note:n?.note,required:n?.required};if(V){Re(u);return}const f=_;_={note:fe(f?.note)??u.note,required:f?.required==="hard-reload"||u.required==="hard-reload"?"hard-reload":void 0}}});let i=null,g=()=>{};const w=new Promise(n=>{g=n});let M=null;const J=()=>M??=r.dcl.then(()=>{let n=!1;try{n=i!==null&&i.expect()}catch{}if(!n)return;const u=i.maxMs;return new Promise(f=>{w.then(f),a(f,u)})}),Z=()=>{if(!x||W||E===null)return;W=!0;const n=E;J().then(()=>{try{ue||n.afterStart(Bt(e),!1)}catch{}})},de=n=>{e!==null&&c&&(ve=!0),h={},I=null,j=0;try{L?.removeItem(Le(o?.k))}catch{}e!==null&&!n&&Be(r.dcl.then(()=>H!==null?ce:void 0))},Dn=()=>{x=!0,Be(J().then(()=>H!==null?ce:void 0)),Z()};try{addEventListener("error",()=>{y||H!==null||(y=!0,Y())})}catch{}const rr=()=>{a(()=>{!X&&xe()&&_e&&Y()},0)};try{q=document.readyState==="complete",q||addEventListener("load",()=>{q=!0,rr()},{once:!0})}catch{q=!0}xe(),ce.then(()=>{te=!0,rr()});let ge=-1,gt,wt,Ke=!0,bt=!1,Et,Ze=null;const St=n=>{const u=Ze===null;Ze=Ke&&n[0]!=="withheld"?n:["withheld",n[1],$e];let f=n[0];if(Ke&&f!=="withheld"){const O={ver:R,handoff:f};gt!==void 0&&(O.seq=gt),wt!==void 0&&(O.note=wt);try{if(L===null)throw new Error("no storage");L.setItem(rt(C),'{"kv":1,"gen":'+ge+',"from":'+JSON.stringify(O)+(Et!==void 0?',"k":'+JSON.stringify(Et):"")+',"data":'+(f==="ok"?n[2]:$e)+"}")}catch{f="unavailable"}}else{f="withheld",ye(C);try{E?.release?.()}catch{}}const v={__frame_hot_snapshotted:!0,gen:ge,handoff:f,bytes:n[1]};n[3]!==void 0&&(v.errName=n[3]),K(v,U),u&&(f==="snapshot_error"||f==="unclonable"||f==="oversize")&&p("claude.hot: snapshot",f,n[3])},ke=n=>{try{return Nr(n?.name)}catch{return"other"}},Ae=(n,u,f=0)=>St(u===void 0?[n,f,$e]:[n,f,$e,ke(u)]),Hn=n=>{if(n.gen<=ge)return;const u=ge>=0;if(ge=n.gen,gt=n.seq,wt=fe(n.note),typeof n.key=="string"&&Ot.test(n.key)&&n.key!==C&&(ye(C),C=n.key),Ke&&=n.handoff!==!1,u){Ze!==null?St(Ze):bt&&K({__frame_hot_held:!0,gen:ge},U);return}je.abort();const f=Object.freeze({handoff:Ke,timeoutMs:n.timeoutMs,deadline:n.deadline??Cr}),v=Fe,O=()=>{if(Ke)try{Et=E?.capture()}catch{}if(v===null){Ae("empty");return}let A=!1;const G=a(()=>{A||(A=!0,Ae("snapshot_timeout"))},Math.max(0,f.timeoutMs));Promise.resolve().then(()=>v(f)).then(Te=>{if(A)return;A=!0,s(G);let ne;try{ne=JSON.stringify(Te)}catch(Rt){Ae("unclonable",Rt);return}if(typeof ne!="string"){Ae("unclonable");return}let oe=ne.length;try{oe=T.encode(ne).length}catch{}if(oe>262144){Ae("oversize",void 0,oe);return}St(["ok",oe,ne])},Te=>{A||(A=!0,s(G),Ae("snapshot_error",Te))})};let P=null;try{P=E?.holdForIme()??null}catch{}if(P===null)O();else{bt=!0,K({__frame_hot_held:!0,gen:ge},U);const A=()=>{bt=!1,O()};P.then(A,A)}},qn=n=>{if(!Q||B||H===null||n.gen!==j)return;let u=null;try{u=xt(L,o&&{k:o.k,g:n.gen})}catch{}if(u!==null&&u.gen!==n.gen){u=null;try{L?.removeItem(Le(o?.k))}catch{}}h=u?.data??{},I=qt(Oe(u?.from??n.from),Oe(n.from)),u!==null&&(j=u.gen),B=!0,Q=!1;const f=Bt(u);ce.then(v=>{try{v&&E?.afterStart(f,!0)}catch{}}),ee(!0)},nr=n=>{const u=R,f=m.entry;let v="",O,P=null;try{if(v=location.href,O=S.state,P=Ht(v,u,n),P!==null)if(b(O,"",P),location.pathname.startsWith("/_f/"+n+"/"))P=location.href;else return{failed:"navigate event canceled"}}catch(A){return{failed:ke(A)}}R=m.ver=n,m.priors.push(u)>8&&m.priors.splice(1,1);try{m.entry=Ht(f,u,n)??f}catch{}return[P,u,f,v,O]},Bn=({from:n,to:u})=>{let f,v;if(!ot(u.ver))f="adopt_failed",v="not a version path segment";else if(u.ver===R)f="adopted";else if(!R||n.ver!==R)f="stale";else{const P=nr(u.ver);"failed"in P?(f="adopt_failed",v=P.failed):f=P[0]===null?"adopt_skipped":"adopted"}v!==void 0&&p(`claude.hot: could not move this page's URL to its new version folder /_f/${u.ver}/ (${v})`);const O={__frame_hot_readdressed:!0,to:u.ver,at:R,outcome:f};K(O,U)};let Qe=0;const Un=n=>{const u=Ee;if(u===null||n.id<=Qe)return;Qe=n.id;const f=E?.assess;if(n.preflight===void 0||f===void 0){or(n,u);return}let v=!1;const O=G=>{v||(v=!0,s(A),n.id===Qe&&or(n,u,G))},P=()=>O(f.timeout(n)),A=a(P,Kr+100);f.run(n,window).then(O,P)},or=(n,u,f)=>{let v,O=!1,P=!1,A,G,Te=null;const ne=N=>{if(P)return!1;if(A!==void 0&&A!==N)return p(`claude.hot: u.${N}() ignored - u.${A}() was called first`),!1;const ae=A===void 0;return A=N,ae},oe=N=>{A="restart",p(`claude.hot: ${N} - restarting`)},Rt=()=>{if(!ne("adopt")||n.id!==Qe)return;const N=n.to.ver;if(et.required!=="none"){oe(`u.adopt() needs required 'none', it is '${et.required}'`);return}if(!ot(N)){oe("u.adopt() cannot address this version");return}if(!R||N===R)return;const ae=nr(N);if("failed"in ae){G="adopt_failed",oe(`adopt_failed ${ae.failed}; URL not changed`);return}const[$,At,$n,sr,zn]=ae;$===null?(G="adopt_skipped",p(`claude.hot: adopt_skipped - page already left /_f/${At}/; URL not changed, update still applied`)):G="adopted",Te=()=>{if(R===N){if($!==null)try{if(location.href!==$)p("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(b(zn,"",sr),location.href!==sr){p("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}G="adopt_reverted",p("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(Vn){p(`claude.hot: adopt_revert_failed ${ke(Vn)} - URL still at the new version`);return}R=m.ver=At,m.entry=$n,m.priors[m.priors.length-1]===At&&m.priors.pop(),$===null&&(G=void 0)}}},et=Object.freeze({from:{ver:n.from.ver,seq:n.from.seq},to:{ver:n.to.ver,seq:n.to.seq},changed:Qr(n.changed),required:n.required,deadline:n.deadline,adopt:Rt,defer(){return ne("defer")&&et.deadline.now&&oe("u.defer() past the deadline"),It},restart(N){return ne("restart"),A==="restart"&&!P&&(v??=fe(N?.note),O||=N?.required==="hard-reload"),It},...f?.update}),Kn=(N,ae)=>{P=!0,N==="threw"?(Te?.(),v??=ke(ae).toLowerCase()):A===void 0&&p(N==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const $={__frame_hot_verdict:!0,id:n.id};$.verdict=N==="threw"||A===void 0||A==="restart"?"restart":A==="adopt"?"applied":"deferred",$.verdict==="restart"&&(O&&($.required="hard-reload"),v!==void 0&&($.note=v)),G!==void 0&&($.verdict==="applied"||G!=="adopted")&&($.adopt=G),K(Object.assign($,f?.verdict),U)};let ar=!1;const kt=(N,ae)=>ar?!1:(ar=!0,s(Gn),Kn(N,ae),!0),Gn=a(()=>kt("timeout"),n.verdictTimeoutMs);Promise.resolve().then(()=>u(et)).then(()=>kt("settled"),N=>{!kt("threw",N)&&A==="adopt"&&Re({note:ke(N).toLowerCase()}),p("claude.hot: accept",ke(N))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:Ue,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:Ue,boot:m,afterConnect(){be=!0,(e!==null||H!==null)&&Je()},onInit(n,u){U=u,V=!0;const f=Ct(n)?n:null;f?.phase==="final"&&e!==null&&e.gen===f.gen?(B=!0,I=qt(I,Oe(f.from)),Dn()):(Q=f?.phase==="pending",de(Q),B=!Q,j=f?.gen??0,I=Oe(f?.from)),Y(),_e&&a(()=>{X||(X=!0,Y())},qr),Q&&H!==null&&K({__frame_hot_ready:!0,gen:j},u),_!==void 0&&(Re(_),_=void 0),ee()},onNoInit(){V=!0,de(!1),B=!0,ee()},onShell(n){return n?.__frame_revealed===!0?(yt(),!1):Vr(n)?(Hn(n),!0):Wr(n)?(qn(n),!0):en(n)?(Un(n),!0):tn(n)?(Bn(n),!0):!1},attachExtras(n){E=n,Z(),n.assess&&Y()},inSlot:()=>Le(C),hydration(n,u){i??={expect:n,maxMs:u}},hydrated(){g()},carried(){return B?h:{}},presented:()=>ue}}var Jn="frame_ldx_runtime",an="frame_ldx_build",Zn="script#an-form",sn=256;function Ut(t,e,r){for(const o of t)r(o)&&t.delete(o);t.size>=sn&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function Pe(t,e,r,o){try{const a=t[e];if(typeof a!="function")return;t[e]=function(...s){if(o){let d;try{d=o(this)}catch{}if(d!==void 0)return d}const l=a.apply(this,s);try{r?.(this)}catch{}return l}}catch{}}var at;function ln(){if(at)return at;const t={media:new Set,contexts:new Set,gate:null,onStart:null,onStop:null};at=t;const e=l=>t.gate?.(l),r=l=>{t.onStop?.(l)},o=window.HTMLMediaElement?.prototype;o&&(Pe(o,"play",l=>{Ut(t.media,l,d=>d.paused),t.onStart?.(l)},e),Pe(o,"pause",r));const a=window.AudioContext,s=window.AudioNode?.prototype;return a&&s&&(Pe(s,"connect",l=>{const d=l.context;d instanceof a&&(Ut(t.contexts,d,T=>T.state==="closed"),t.onStart?.(d))}),Pe(a.prototype,"resume",void 0,e),Pe(a.prototype,"suspend",r)),t}function cn(t){let e=window;for(let r=0;e.parent&&e.parent!==e&&r<8;r++)if(e=e.parent,t(e))return!0;return!1}function un(){let t=null;const e=()=>t??parent,r=o=>t?o===t:cn(a=>a===o);return{post(o,a){if(t){e().postMessage(o,a);return}let s=parent;for(let l=0;l<8&&(s.postMessage(o,a),!(!s.parent||s.parent===s));l++)s=s.parent},on(o){const a=s=>{const l=s.source;r(l)&&o(s.data,s.origin,s.isTrusted,()=>{t??=l})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:o=>({post(a,s){if(s?.activation){e().postMessage(a,{targetOrigin:o,includeUserActivation:!0});return}if(s?.transfer){e().postMessage(a,o,s.transfer);return}e().postMessage(a,o)},on(a,s){const l=d=>{r(d.source)&&d.origin===o&&a(d.data,d)};return addEventListener("message",l,s),()=>removeEventListener("message",l,s)}})}}function fn(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var dn=500,hn=2e4,pn="data-token-reads",mn="data-frame-refused-watch",vn="data-frame-unsupported",_n=/(?:^|\s)stylesheet(?:\s|$)/i;function yn(t,e){let r="";if(t instanceof HTMLScriptElement?r=t.src:t instanceof HTMLLinkElement&&_n.test(t.rel)&&(r=t.href),!r)return null;try{const o=new URL(r);return o.origin===location.origin&&o.pathname.startsWith(e)?o.origin+o.pathname:null}catch{return null}}function gn(t,e,r){if(!t||e!=="query")return;const o="/_f/"+t+"/";document.documentElement.setAttribute(mn,"");const a=location.href,s=fetch,l=setTimeout,d={method:"HEAD",cache:"no-store",credentials:"same-origin"},T=m=>m.ok||m.status===304;let S=!1,b=!1;const p=()=>removeEventListener("error",L,!0),R=async m=>{const C=await s(m,d);if(T(C))b=!0;else if(C.status===403){const k=await s(a,d);if(T(k)){const h=(await s(m,d)).status;h===403?(b=!0,document.documentElement.setAttribute(vn,""),r()):h<500&&(b=!0)}else k.status>=400&&k.status<500&&(b=!0)}},L=m=>{if(b||S)return;if(document.documentElement.hasAttribute(pn)){b=!0,p();return}const C=yn(m.target,o);C&&(S=!0,l(()=>{R(C).catch(()=>{}).finally(()=>{S=!1,b&&p()})},dn))};addEventListener("error",L,!0),addEventListener("load",p,{once:!0}),l(p,hn)}var st="__frame_scroll",wn=150,bn=310,En=160,Sn=3e4;function Rn(){let t=0,e=!1,r=!1,o=!1,a=0,s=null;const l=h=>{try{sessionStorage.setItem(st,JSON.stringify({y:h}))}catch{}},d=()=>{if(clearTimeout(t),s===null)return;const h=s;s=null,l(h)},T=()=>{if(e){e=!1;return}r=!0,s=scrollY,clearTimeout(t),t=setTimeout(d,wn)};try{addEventListener("scroll",T,{passive:!0}),addEventListener("pagehide",d)}catch{}const S=()=>{let h;try{h=sessionStorage.getItem(st)}catch{return null}if(h===null)return null;let I;try{I=JSON.parse(h)}catch{I=null}const j=I?.y;if(!(typeof j=="number"&&Number.isFinite(j)&&j>=0)){try{sessionStorage.removeItem(st)}catch{}return null}return j};let b=!1;const p=h=>{try{const I=scrollY;scrollTo({top:h,left:0,behavior:"instant"}),a=h,o=!0,clearTimeout(t),s=null,l(h);const j=scrollY;j!==I&&(e=!0),j!==h&&!b&&(b=!0,addEventListener("load",()=>{try{if(scrollY===j){const B=S();p(B!==null?B:a)}}catch{}},{once:!0}))}catch{}},R=()=>{try{return!!location.hash}catch{return!0}};let L=!1;const m=()=>{try{if(L||innerWidth>bn||innerHeight>En)return;L=!0;const h=Date.now(),I=()=>{try{removeEventListener("resize",I)}catch{}if(Date.now()-h>Sn||r||R())return;const j=S();p(j!==null?j:a)};addEventListener("resize",I)}catch{}};let C=!1,k=!1;return{restore(){if(C||(C=!0,R()))return;const h=S();h!==null&&(p(h),m())},promoted(){if(k||(k=!0,R()))return;const h=S();h!==null?(p(h),m()):o&&p(a)}}}function kn(t,e,r,o){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:T=>T})??null}catch{}const s=window.Worker,l=s?.prototype,d=Object.freeze({Worker:s,workerOn:l?.addEventListener,workerPost:l?.postMessage,workerTerminate:l?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});r(t).then(T=>T?.bootTopLevel?T.bootTopLevel(d,o):o.settle()).catch(()=>o.settle())}var Qn="modulepreload",eo=function(t){return"/"+t},to={},An=function(e,r,o){let a=Promise.resolve();function s(l){const d=new Event("vite:preloadError",{cancelable:!0});if(d.payload=l,window.dispatchEvent(d),!d.defaultPrevented)throw l}return a.then(l=>{for(const d of l||[])d.status==="rejected"&&s(d.reason);return e().catch(s)})},Tn=window===top,Kt=Object.getOwnPropertyDescriptor(window,"claude"),ze=rn(Tn,window.__FRAME_PREAMBLE?.topLevel,Kt?.writable===!1),it=typeof ze=="object"&&ze[0],F=it?fn():un();(function(){const t=Object.defineProperty,e=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let o=0;for(let a=0;a<r.length;a++){const s=r[a];try{t(e,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[s]}catch{}try{t(e,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[s]=="function"&&o++}if(o&&ze==="framed")try{F.post({__frame_rtc_lockdown_failed:o},"*")}catch{}})();var Gt=1e4,Ln=2e3,lt=2e3,ct=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function $t(t){for(const e of ct)if(e.endsWith(":*"))try{const r=new URL(t);if(`${r.protocol}//${r.hostname}:*`===e)return!0}catch{}else if(t===e)return!0;return!1}var Me=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),Ne=window.__FRAME_PREAMBLE?.transforms,ut=window.__FRAME_PREAMBLE?.comments,ft=window.__FRAME_PREAMBLE?.translate,me=window.__FRAME_PREAMBLE?.ldx,Ve=ir(window.__FRAME_PREAMBLE?.cred),zt=(()=>{try{const[t]=performance.getEntriesByType("navigation"),e=t?.serverTiming?.find(r=>r.name==="frame-cred-exp");return e!==void 0&&/^\d{1,15}$/.test(e.description)?lr(Number(e.description)):void 0}catch{return}})();function Vt(t){return An(()=>import("/_runtime/"+t),void 0)}var Ce=new Set,Wt=setTimeout,On=fetch,Pn=AbortController,Mn=800+800*Math.random(),Nn=3e3,We=null,Xt=new Map;function Cn(t,e){let r=Xt.get(t);return r||Xt.set(t,r=jn(t,e)),r}function jn(t,e){if(We?.has(t))return Promise.resolve("csp");if(navigator.onLine===!1)return Promise.resolve("offline");const r=new Pn;let o=!1;return Wt(()=>{o=!0,r.abort()},Nn),On("/_runtime/"+t,{signal:r.signal}).then(a=>(r.abort(),a.ok?/javascript/i.test(a.headers.get("content-type")??"")?e instanceof Error&&/:\d+:\d+\)?$/m.test(e.stack??"")?"eval":"served":"mime":"http"),()=>o?"timeout":We?.has(t)?"csp":"net")}function se(t){if(!We){const e=We=new Set;try{document.addEventListener("securitypolicyviolation",r=>{const o=/\/_runtime\/([^/?#]+)/.exec(r.blockedURI);o&&r.disposition!=="report"&&e.add(o[1])})}catch{}}return Vt(t).catch(()=>new Promise(e=>Wt(e,Mn)).then(()=>Vt(t+"?r=1")).then(e=>(e!==void 0&&Ce.add(t),e)))}function Yt(t,e,r){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},brokerGen:t.brokerGen,transforms:new Map,shellOrigin:e,shell:r,mount:_t,hooks:Xe,pipe:()=>({wrap:(o,a)=>(...s)=>{try{return a(...s)}catch(l){return Promise.reject(l)}}})}}var we=null,z=null;function Jt(t,e,r){try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var dt=!1,Xe={editBefore:null,edit:null};function Fn(t,e,r=!1){const o=[];let a;if(r)try{Xe.editBefore?.(t)}catch{}for(const s of t.elements){const l=document.querySelector(`[data-id="${s.target}"]`);if(!l){a=s.target;break}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(d=>!hr(d)||pr(l,d))){a=s.target;break}if(s.text!==void 0&&(!yr(l)||Er(l))){a=s.target;break}for(const[d,T]of Object.entries(s.attrsSet??{}))if(!Qt(l,d)){try{l.setAttribute(d,T)}catch{}Zt(l,d,T)}for(const d of s.attrsRemoved??[])Qt(l,d)||(l.removeAttribute(d),Zt(l,d,null));typeof s.text=="string"&&wr(l,s.text),o.push(s.target)}if(r)try{Xe.edit?.(t.seq,o,a)}catch{}if(a!==void 0){F.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:o}}))}catch{}}function Zt(t,e,r){if(!(t instanceof HTMLInputElement))return;const o=e.toLowerCase();o==="checked"?t.checked=r!==null:o==="value"&&t.type!=="file"&&(t.value=r??"")}function Qt(t,e){const r=e.toLowerCase(),o=t;return r==="data-id"||(r==="value"||r==="checked")&&(o.__artifactSecret===!0||/^(password|hidden|file)$/.test(o.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${o.autocomplete??""}`))}function er(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,dt=!0):dt&&(delete e.dataset.theme,e.style.colorScheme="",dt=!1)}var ie=new Map,ht=null;function pt(){let t;const e={u:new Promise(r=>{t=r}),r:r=>{e.done=!0,t(r)},done:!1,nulled:!1};return e}function Ye(t,e){t.nulled=!0,t.ver=e,t.r(null)}function mt(t,e){for(const[r,o]of ie)o.done||(e&&o.asked?e(r,o):Ye(o,t))}function In(){for(const t of ie.values())if(t.asked&&!t.done)return!0;return!1}var xn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),vt=!1,_t=(t,e)=>{let r=ie.get(t);if(r?.nulled&&vt)r=pt(),ie.set(t,r);else if(!r||r.done){r?.nulled&&z&&F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},z);return}const o=typeof e=="function"?Object.setPrototypeOf(e,xn):Object.assign(Object.create(null),e);typeof o.then=="function"&&delete o.then,r.want=void 0,r.r(Object.freeze(o))};function tr(){const t=Kt?.value??{};Jt(window,"claude",t);for(const e of Object.keys(Me)){if(t[e]!==void 0){Jt(t,e,t[e]);continue}ie.set(e,pt())}if(t.use===void 0){const e=r=>{if(typeof r!="string"||!Object.hasOwn(Me,r))return Promise.resolve(null);let o=ie.get(r);return o?(ht&&(o.nulled||o.want!==void 0)&&(o=ht(r,o)),o.asked=!0,o.u):Promise.resolve(t[r]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(ze==="framed"){let t;const e=Ne&&pe.test(Ne)?se(Ne).catch(c=>{t={f:Ne,e:c}}):Promise.resolve(void 0),r=c=>{if(c.type==="auxclick"&&c.button!==1)return;const y=c.target,_=y&&y.closest?y.closest("a[href],area[href]"):null;if(!_)return;const E=_.getAttribute("href");if(!E)return;let x;try{x=new URL(E,document.baseURI)}catch{return}if((x.protocol==="http:"||x.protocol==="https:")&&x.origin!==location.origin){c.preventDefault();const W=(_.getAttribute("target")??"").toLowerCase(),q=c.type==="auxclick"||c.metaKey||c.ctrlKey||c.shiftKey||c.altKey||!["","_self","_top","_parent"].includes(W);F.post({__frame_nav:!0,url:x.href,newTab:q},"*")}};addEventListener("click",r,!0),addEventListener("auxclick",r,!0);const o={},a=c=>{c.isTrusted&&(o.pointer=!0)},s=c=>{c.isTrusted&&(o.click=!0)};addEventListener("pointermove",a,{capture:!0,passive:!0}),addEventListener("click",s,{capture:!0,passive:!0});const l={cb:null};addEventListener("keydown",c=>l.cb?.(c),!0);const d={cb:null};addEventListener("keydown",c=>d.cb?.(c));const T=ln();e.then(c=>c?.installEscapeForward?.(l,y=>{z&&F.post(y,z)})),e.then(c=>{try{c?.installFocusKeep?.()}catch{}}),e.then(c=>{if(!c?.wireNav)return;const y=F.port("*");c.wireNav(y),removeEventListener("click",r,!0),removeEventListener("auxclick",r,!0),removeEventListener("pointermove",a,!0),removeEventListener("click",s,!0),c.wireEngagement?.(o,y,T)});let S=null;try{S=Rn()}catch{}const b=document.readyState==="loading"?new Promise(c=>document.addEventListener("DOMContentLoaded",()=>c(),{once:!0})):Promise.resolve();let p="dcl",R=!1;b.then(()=>{R=!0});let L=null,m=null;try{m=Dr(window.name),L=xt(null,m)}catch{}const C=tr();let k=null;try{k=on(C,L,{post:(c,y)=>F.post(c,y),dcl:b},m)}catch{}e.then(c=>{try{k&&c?.installHotExtras?.(k)}catch{}});let h=null;const I=()=>Array.isArray(h?.flags)&&h.flags.includes("frame_ldx_runtime")&&!!me&&pe.test(me)&&document.querySelector("script#an-form")!==null;try{k?.hydration(I,Hr)}catch{}let j=null,B=0;const Q=F.on((c,y,_,E)=>{$t(y)&&Ar(c)&&(E(),h=c.__frame_init,z=y,Q(),clearTimeout(B),j?.())});if(Ve){const c=zt===void 0?{__frame_cred:Ve}:{__frame_cred:Ve,exp:zt};for(const y of ct)try{y.endsWith(":*")||F.post(c,y)}catch{}}F.post({__frame_connect:!0},"*");try{k?.afterConnect()}catch{}const V=setTimeout,U=clearTimeout;let be=()=>NaN,je=()=>[];try{be=performance.now.bind(performance),je=performance.getEntriesByType.bind(performance)}catch{}let Fe=0;const H=()=>{try{F.post({__frame_alive:!0},"*")}catch{}Fe=V(H,Ln)},Ee=()=>U(Fe);H(),addEventListener("load",Ee,{once:!0});const Ie=new Promise(c=>{j=c,B=setTimeout(()=>{Q(),c()},Gt)}),le=new WeakSet;addEventListener("error",c=>{c.target&&le.add(c.target)},!0);try{gn(Dt(),Ve,()=>{e.then(c=>{try{c?.drawRefusedNotice?.()}catch{}})})}catch{}const ce=()=>{let c=[];try{c=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(_=>!_.sheet&&!_.disabled&&!le.has(_)&&_.getAttribute("href")&&URL.canParse(_.href)&&(!_.media||matchMedia(_.media).matches))}catch{}let y=c.length;return y===0?Promise.resolve():new Promise(_=>{try{const E=lt-be();E>0&&(p="sheets");const x=V(_,E>0?E<lt?E:lt:0),W=()=>{--y===0&&(U(x),_())};for(const q of c)q.addEventListener("load",W,{once:!0}),q.addEventListener("error",W,{once:!0})}catch{_()}})};b.then(()=>{try{S?.restore()}catch{}}),Promise.all([Ie,b,e]).then(([,,c])=>{if(h?.hostOverlays!==!0||!z)return;let y=!1;try{y=c?.declaresCover?.()===!0}catch{}F.post({__frame_layout:{cover:y}},z)});const ve={cb:null};F.on((c,y)=>{if($t(y)&&Tr(c)){try{S?.promoted()}catch{}ve.cb?.()}}),Ie.then(async()=>{if(!h||!z){mt();try{k?.onNoInit()}catch{}return}if(er(h.theme),h.hostVisible===!1&&e.then(i=>i?.applyHostVisible?.(!1,T)),h.hostKeys!==void 0){const i=z,g=h.hostKeys;e.then(w=>w?.installHostKeyForward?.(d,g,M=>F.post(M,i)))}try{k?.onInit(h.hot,z)}catch{}let c;const y=()=>{try{!c&&me&&I()&&(c=se(me),c.then(i=>i?.prefetch?.()).catch(()=>{}))}catch{}};y(),b.then(y);const _=z,E=F.port(_),x=(i,g)=>F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:i,phase:g}},_),W=(i,g,w)=>{new Promise(M=>M(Cn(g,w))).then(M=>x(i,M),()=>x(i))},q=i=>F.post({__frame_cap_recovered:{cap:i}},_);let te=h.brokerGen;const X=()=>k?.boot.ver??"",_e=X(),ye=(i,g)=>{const w=X();U(g.t),g.want=w,g.t=V(()=>{g.done||Ye(g,w)},Gt),F.post({__frame_cap_want:!0,cap:i,ver:w},_)},K=(i,g)=>{const w=ie.get(i.cap),M=Me[i.cap];if(!g||!w||w.done||w.want!==i.ver||!pe.test(M))return;if(U(w.t),w.want=void 0,te=i.brokerGen??te,i.ver!==X()){ye(i.cap,w);return}if(!i.grant||i.cap==="network"){Ye(w,i.ver);return}const J=we,Z=we={...J,capabilities:{...J.capabilities,[i.cap]:i.grant},capBudgets:{...J.capBudgets,[i.cap]:{...J.capBudgets[i.cap],...i.budgets}}};se(M).then(de=>{Ce.has(M)&&q(i.cap),Z.brokerGen=te,vt=!0;try{de?.install?.(Z)}catch{x(i.cap,"install")}finally{vt=!1}},de=>W(i.cap,M,de)).then(()=>{w.done||Ye(w,i.ver)})};let xe=!1,Y=!1;F.on((i,g,w)=>{if(g!==_)return;try{if(k?.onShell(i))return}catch{}if(Or(i)&&er(i.__frame_theme.theme),Yr(i)&&K(i,w),w&&Jr(i)&&(te=i.brokerGen??te),Lr(i)){const Z=i.__frame_host_visible.visible;e.then(de=>de?.applyHostVisible?.(Z,T))}kr(i)&&Fn(i.__frame_patch,_,w);const M=i?.__fc_mode;M&&typeof M=="object"&&!xe&&ut&&pe.test(ut)&&(xe=!0,se(ut).then(Z=>Z.install?.(_,M.on===!0,E)).catch(()=>{}));const J=i?.__ft_cmd;J&&typeof J=="object"&&!Y&&ft&&pe.test(ft)&&(Y=!0,se(ft).then(Z=>Z.install?.(_,J,E)).catch(()=>{}))});const De=Object.keys(h.capabilities??{}).filter(i=>Object.hasOwn(Me,i)).map(i=>[i,Me[i]]).filter(i=>typeof i[1]=="string"&&pe.test(i[1])),re=_;let ue=!1,He=()=>{};const Je=new Promise(i=>{He=()=>{ue=!0,i()}}),Se=()=>(ue||(p="caps"),Je),qe=L!==null||Ct(h.hot)||h.hostVisible===!1||h.hostOverlays===!0;R&&(p="init");const Be=b.then(()=>qe?Se():new Promise(i=>V(i,0))).then(ce).then(()=>{let i=!0;try{i=qe||In()}catch{}return i?Se():void 0}).then(()=>{Ee();const i=cr(je,be);F.post(i?{__frame_ready:!0,nav:i,gate:p}:{__frame_ready:!0,gate:p},re),e.then(g=>{g?.installSizeReporter?.(re,ve,E),g?.installPaintReporter?.(E)})}),yt=await Promise.allSettled(De.map(([,i])=>se(i))),ee=await e;if(ee?.buildBoot||(t?W("_transforms",t.f,t.e):x("_transforms")),ee?.buildBoot)try{we=ee.buildBoot(h,ee.TRANSFORMS??{},{shellOrigin:re,mount:_t,hooks:Xe,shell:E},i=>F.post({__frame_cap_telemetry:i},re))}catch{x("_transforms","install"),we=Yt(h,re,E)}else we=Yt(h,re,E);ee?.buildBoot&&Ce.has(Ne??"")&&q("_transforms");const fe=we;fe.brokerGen=te,yt.forEach((i,g)=>{const[w,M]=De[g];if(i.status!=="fulfilled"){W(w,M,i.reason);return}Ce.has(M)&&q(w);try{i.value?.install?.(fe)}catch{x(w,"install")}});const Re=h.capWants===!0;Re&&(ht=(i,g)=>{const w=X();if(!w)return g;if(!g.nulled)return g.want!==w&&ye(i,g),g;if(w===g.ver)return g;const M=pt();return ie.set(i,M),ye(i,M),M}),mt(_e,Re&&X()!==_e?ye:void 0),He(),await Be;let Ue=!1;try{Ue=I()}catch{}me&&Ue?(c??se(me)).then(i=>i?.boot?.({shellOrigin:_,build:fe.flags.has(an),hot:k?.hot??null,carried:k?.carried(),presented:()=>k?.presented()??!0})).catch(()=>!1).then(i=>{k?.hydrated(),i!==!0?x("_ldx"):Ce.has(me)&&q("_ldx")}):k?.hydrated()})}else it&&(tr(),kn(it,ct,se,{settle:mt,mount:_t}))})();</script><script src="chrome-extension://dncepekefegjiljlfbihljgogephdhph/contentscript.js"></script><script>window.__FRAME_PREAMBLE={"v":1,"cred":"cookie","capabilities":{"artifact":"artifact.w_ePPE-a.js","assets":"assets.DOAjpBS9.js","comments":"comments.CnGjamYN.js","db":"db.zFlAA4qL.js","downloads":"downloads.axDW2QAi.js","embed":"embed.DcZf-TSv.js","endpoints":"endpoints.BPfoKaE1.js","files":"files.IkpCjcgM.js","mcp":"mcp.kl0G36TA.js","network":"network.B5UA9Su4.js","permissions":"permissions.BHAs_S4o.js","room":"room.Dy3vHyq9.js","sample":"sample.t8BQC4US.js","self":"artifact.w_ePPE-a.js","user":"user.CB0zJsP2.js"},"transforms":"_transforms.OOT2SKiU.js","comments":"_comments.DUaNQZcg.js","translate":"_translate.DqxC5ek1.js","ldx":"_ldx.B4FSryPi.js"}                                                                                                                                                                           </script><script>(function(){"use strict";function ir(t){return t==="cookie"||t==="query"?t:void 0}function lr(t){return typeof t=="number"&&Number.isSafeInteger(t)&&t>0?t:void 0}var Wn=3e5;function cr(t,e){try{const r=t("navigation")[0],o=[r.responseStart,r.redirectEnd-r.redirectStart,r.domContentLoadedEventStart,e(),r.connectEnd-r.domainLookupStart,r.responseStart-r.requestStart];r.requestStart>0||(o.length=4);for(let a=0;a<o.length;a++)if(o[a]>=0&&o[a]<=3e5)o[a]=o[a]|0;else{if(a<4)return;o.length=4}return o}catch{return}}var ur=["light","dark","system"],fr=/^[A-Za-z0-9_-]{1,64}$/,Tt=/^[a-zA-Z_:][a-zA-Z0-9_:.-]{0,127}$/,dr=new Set(["class","hidden","value","checked","style","title","alt","placeholder","lang","dir","role","tabindex","disabled","readonly","contenteditable","open","colspan","rowspan"]);function hr(t){const e=t.toLowerCase();return e.startsWith("data-")||e.startsWith("aria-")||dr.has(e)}var Lt="data-ldx-props";function pr(t,e){if(e.toLowerCase()===Lt)return!0;const r=t.getAttribute(Lt);if(r===null)return!1;try{const o=JSON.parse(r);if(o===null||typeof o!="object"||Array.isArray(o))return!0;const a=e.toLowerCase();return Object.keys(o).some(s=>s.toLowerCase()===a)}catch{return!0}}var Xn="http://www.w3.org/1999/xhtml",mr="http://www.w3.org/2000/svg",vr=new Set(["script","style","iframe","noscript","noframes","noembed","xmp","plaintext","template","title","textarea","object","embed"]),_r=new Set(["script","style"]);function yr(t){const e=t.localName.toLowerCase();return t.namespaceURI==="http://www.w3.org/1999/xhtml"?!vr.has(e):t.namespaceURI===mr?!_r.has(e):!1}function tt(t,e){return t===e||(t===160||t===32)&&(e===160||e===32)}function gr(t,e){const r=t.length,o=e.length;let a=0;for(;a<r&&a<o&&tt(t.charCodeAt(a),e.charCodeAt(a));)a++;let s=0;for(;s<r-a&&s<o-a&&tt(t.charCodeAt(r-1-s),e.charCodeAt(o-1-s));)s++;return{p:a,s}}function wr(t,e){const r=t.firstChild;if(t.childNodes.length!==1||r===null||r.nodeType!==Node.TEXT_NODE){t.textContent=e;return}const o=r.data,a=o.length,s=e.length,{p:l,s:d}=gr(o,e);l===a&&d===0&&a===s||r.replaceData(l,a-l-d,e.slice(l,s-d));const T=r.data,S=t.ownerDocument.getSelection?.()??null,b=S!==null&&S.rangeCount>0&&(S.anchorNode===r||S.focusNode===r)?{anchor:S.anchorNode,anchorOffset:S.anchorOffset,focus:S.focusNode,focusOffset:S.focusOffset}:null;let p=-1,R=-1;for(let m=0;m<T.length&&m<e.length;m++){const C=T.charCodeAt(m),k=e.charCodeAt(m);C!==k&&tt(C,k)&&(p<0&&(p=m),R=m)}const L=p>=0;if(L&&r.replaceData(p,R-p+1,e.slice(p,R+1)),L&&b!==null&&b.anchor!==null&&b.focus!==null)try{S.setBaseAndExtent(b.anchor,b.anchorOffset,b.focus,b.focusOffset)}catch{}}var br=new Set(["html","head","body","frameset"]);function Er(t){return t.namespaceURI==="http://www.w3.org/1999/xhtml"&&br.has(t.localName)}function Sr(t){if(t===null||typeof t!="object")return!1;const e=t;if(typeof e.target!="string"||!fr.test(e.target)||e.text!==void 0&&typeof e.text!="string")return!1;if(e.attrsSet!==void 0){if(e.attrsSet===null||typeof e.attrsSet!="object")return!1;for(const[r,o]of Object.entries(e.attrsSet))if(!Tt.test(r)||typeof o!="string")return!1}if(e.attrsRemoved!==void 0){if(!Array.isArray(e.attrsRemoved))return!1;for(const r of e.attrsRemoved)if(typeof r!="string"||!Tt.test(r))return!1}return!0}function Rr(t,e){if(t===null||typeof t!="object")return!1;const{seq:r,elements:o}=t;if(typeof r!="number"||!Number.isSafeInteger(r)||!Array.isArray(o)||o.length===0||o.length>64)return!1;for(let a=0;a<o.length;a++)if(!e(o[a]))return!1;return!0}function kr(t){return t===null||typeof t!="object"?!1:Rr(t.__frame_patch,Sr)}function Ar(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_init;return e!==null&&typeof e=="object"}function Tr(t){return t!==null&&typeof t=="object"&&t.__frame_size_poke===!0}function Lr(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_host_visible;return e!==null&&typeof e=="object"&&typeof e.visible=="boolean"}function Or(t){if(t===null||typeof t!="object")return!1;const e=t.__frame_theme;if(e===null||typeof e!="object")return!1;const r=e.theme;return typeof r=="string"&&ur.includes(r)}var Pr=["ok","empty","snapshot_error","snapshot_timeout","unclonable","oversize","unavailable","restore_error","withheld"],Mr=["TypeError","RangeError","ReferenceError","SyntaxError","DataCloneError","QuotaExceededError","AbortError","TimeoutError","SecurityError","Error","other"];function Nr(t){return typeof t=="string"&&Mr.includes(t)?t:"other"}var Cr=Object.freeze({until:null,now:!1}),jr="__claude_hot",Fr="__claude_hot_in",Ir=/^__claude_hot(?:_in)?(?::|$)/,Ot=/^[0-9a-z]{1,32}$/,rt=t=>t===void 0?jr:"__claude_hot:"+t,Le=t=>t===void 0?Fr:"__claude_hot_in:"+t;function xr(t,e){const r=[];for(let o=0;o<t.length;o++){const a=t.key(o);a!==null&&a!==e&&Ir.test(a)&&r.push(a)}for(const o of r)t.removeItem(o)}function Dr(t){let e=null;try{e=D(JSON.parse(t)?.hot)}catch{return null}return e===null||typeof e.k!="string"||!Ot.test(e.k)?null:he(e.g)?{k:e.k,g:e.g}:{k:e.k}}var Yn=262144,Hr=3e3,qr=5e3,Pt=/^[a-z0-9._:-]{1,64}$/,Br=["none","hot-restart","hard-reload"],Ur=["asset","doc","added","removed"],Kr=1500,Gr=/^[0-9a-f]{64}$/;function D(t){return t!==null&&typeof t=="object"?t:null}function he(t){return typeof t=="number"&&Number.isInteger(t)&&t>=0&&t<2**31}function Mt(t){return t===void 0||typeof t=="number"&&Number.isFinite(t)}function $r(t){return t===void 0||typeof t=="string"&&Pt.test(t)}function Nt(t){const e=D(t);return e!==null&&(e.until===null||typeof e.until=="number"&&Number.isFinite(e.until))&&typeof e.now=="boolean"}function nt(t){const e=D(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Mt(e.seq)&&typeof e.handoff=="string"&&Pr.includes(e.handoff)&&$r(e.note)}function Ct(t){const e=D(t);return e!==null&&he(e.gen)&&(e.phase==="final"||e.phase==="pending")&&(e.from===null||nt(e.from))}function zr(t){const e=D(t);return e!==null&&e.kv===1&&he(e.gen)&&nt(e.from)&&Object.hasOwn(e,"data")}function Vr(t){const e=D(t);return e!==null&&e.__frame_hot_snapshot===!0&&he(e.gen)&&typeof e.timeoutMs=="number"&&e.timeoutMs>=0&&e.timeoutMs<=6e4&&(e.handoff===void 0||typeof e.handoff=="boolean")&&(e.deadline===void 0||Nt(e.deadline))&&Mt(e.seq)&&(e.note===void 0||typeof e.note=="string")&&(e.key===void 0||typeof e.key=="string")}function Wr(t){const e=D(t);return e!==null&&e.__frame_hot_start===!0&&he(e.gen)&&nt(e.from)}function Xr(t){return typeof t=="string"&&t.length>=1&&t.length<=128}function jt(t){return D(t)!==null&&!Array.isArray(t)}function Yr(t){const e=D(t);return e!==null&&e.__frame_cap_grant===!0&&typeof e.cap=="string"&&Xr(e.ver)&&(e.grant===void 0||jt(e.grant))&&(e.budgets===void 0||jt(e.budgets)&&Object.values(e.budgets).every(Number.isFinite))&&(e.brokerGen===void 0||he(e.brokerGen))}function Jr(t){const e=D(t);return e!==null&&e.__frame_cap_rewired===!0&&(e.caps===void 0||Array.isArray(e.caps)&&e.caps.every(r=>typeof r=="string"))&&(e.brokerGen===void 0||he(e.brokerGen))}function Ge(t){const e=D(t);return e!==null&&typeof e.ver=="string"&&e.ver.length<=128&&Number.isFinite(e.seq)}function Ft(t){if(t==null||typeof t=="string")return!0;const e=D(t);return e!==null&&typeof e.doc=="string"&&typeof e.profile=="string"}function Zr(t){const e=D(t);return e!==null&&typeof e.path=="string"&&Ur.includes(e.kind)&&Ft(e.from)&&Ft(e.to)}function Qr(t){return t===null?null:Object.freeze(t.filter(Zr))}function en(t){const e=D(t);return e!==null&&e.__frame_hot_update===!0&&Number.isFinite(e.id)&&Ge(e.from)&&Ge(e.to)&&(e.changed===null||Array.isArray(e.changed))&&Br.includes(e.required)&&Nt(e.deadline)&&typeof e.verdictTimeoutMs=="number"&&e.verdictTimeoutMs>=0&&e.verdictTimeoutMs<=6e4&&(e.preflight===void 0||typeof e.preflight=="string"&&Gr.test(e.preflight))}function tn(t){const e=D(t);return e!==null&&e.__frame_hot_readdress===!0&&Ge(e.from)&&Ge(e.to)}var pe=/^[\w.-]+\.js$/;function rn(t,e,r){return r?"inert":typeof e=="string"&&pe.test(e)?t?[e]:"inert":t?"inert":"framed"}var It=Object.freeze({[Symbol("claude.hot.restart")]:!0});function xt(t,e){let r;try{r=t??sessionStorage}catch{return null}const o=rt(e?.k),a=Le(e?.k);let s=null;try{s=r.getItem(o)}catch{}try{r.removeItem(o)}catch{}try{xr(r,a)}catch{}let l=null;if(s!==null&&!(e!==null&&e.g===void 0))try{const d=JSON.parse(s);zr(d)&&(e===null||d.gen===e.g)&&(l=d)}catch{}if(l===null)try{r.removeItem(a)}catch{}return l}function Dt(){const t=/^\/_f\/([^/]{1,128})\//.exec(location.pathname);return t?t[1]:""}var nn=/^[^/\\?#]{1,128}$/,ot=t=>nn.test(t)&&t!=="."&&t!=="..";function Ht(t,e,r){const o=new URL(t),a="/_f/"+e+"/";if(!e||!o.pathname.startsWith(a)||!ot(r))return null;const s=o.search.slice(1).split("&").filter(l=>!/^__frame_t(?:=|$)/.test(l)).join("&");return o.origin+"/_f/"+r+"/"+o.pathname.slice(a.length)+(s?"?"+s:"")+o.hash}var $e="{}";function Oe(t){if(!t)return null;const e={ver:t.ver,handoff:t.handoff};return t.seq!==void 0&&(e.seq=t.seq),t.note!==void 0&&(e.note=t.note),e}function qt(t,e){return t!==null&&t.note===void 0&&e?.note!==void 0?{...t,note:e.note}:t}function Bt(t){const e=t?.k;return e!==null&&typeof e=="object"?e:void 0}function on(t,e,r,o=null){const a=setTimeout,s=clearTimeout,l=queueMicrotask,d=performance.now.bind(performance),T=new TextEncoder;let S=null,b=null;try{S=history,b=S.replaceState.bind(S)}catch{}const p=(...n)=>{try{console.warn(...n)}catch{}};let R=Dt(),L=null;try{L=sessionStorage}catch{}const m={storage:L,fetch:typeof fetch=="function"?fetch.bind(globalThis):null,entry:location.origin+location.pathname+location.search,ver:R,priors:[],key:o?.k};let C=o?.k;const k=typeof requestAnimationFrame=="function"?requestAnimationFrame:n=>a(()=>n(d()),16);let h=e?.data??{},I=Oe(e?.from),j=e?.gen??0,B=e!==null,Q=!1,V=!1,U=null,be=!1;const je=new AbortController;let Fe=null,H=null,Ee=null,Ie=!1,le=()=>{};const ce=new Promise(n=>{le=n});let ve=!1,c=!1,y=!1,_,E=null,x=!1,W=!1,q=!1,te=!1,X=!1,_e=!1;const ye=n=>{for(const u of[rt(n),Le(n)])try{L?.removeItem(u)}catch{}},K=(n,u)=>{try{u!==null&&r.post(n,u)}catch{}},xe=()=>X||=q&&(H===null||te),Y=()=>{const n={__frame_hot:!0,ready:H!==null,accept:Ee!==null,demand:!0};_e=!X,_e&&(n.booting=!0),ve&&(n.readData=!0),y&&(n.threw=!0),E?.assess&&(n.preflight=!0),K(n,U)};let De=!1,re=!1,ue=!1,He=!1;const Je=()=>{De||!be||ue||(De=!0,K({__frame_reveal_hold:!0},"*"))},Se=()=>new Promise(n=>{let u,f=0;const v=O=>{if(u===void 0)u=O;else if(O!==u||++f>=8){n();return}try{k(v)}catch{n()}};try{k(v)}catch{n()}}),qe=()=>{ue=!0,K({__frame_reveal_ready:!0},"*")},Be=n=>{re||(re=!0,n.then(u=>{if(u===!1)return;let f=null;try{f=E?.settle?.()??null}catch{}return(f===null?Se():new Promise(v=>{a(v,50),Promise.resolve(f).then(v,v)}).then(Se)).then(qe)}))},yt=()=>{if(He||!ue)return;He=!0;const n=()=>{try{E?.afterReveal?.()}catch{}};n(),Se().then(()=>{n(),qe()})},ee=(n=!1)=>{if(Ie||H===null||!B||!V)return;Ie=!0;const u=H,f=h;l(()=>{let v;try{v=u(f)}catch(P){throw le(!1),P}let O=!1;try{O=typeof v?.then=="function"}catch{}if(!O){le(!0);return}Promise.resolve(v).then(()=>le(!0),P=>{le(!1),l(()=>{throw P})})}),Be(n?ce:r.dcl.then(()=>ce))},fe=n=>typeof n=="string"&&Pt.test(n)?n:void 0,Re=n=>{const u={__frame_hot_restart:!0},f=fe(n?.note);f!==void 0&&(u.note=f),n?.required==="hard-reload"&&(u.required="hard-reload"),K(u,U)},Ue=Object.freeze({get data(){return V||(c=!0),!B&&!ve&&(ve=!0,V&&Y()),h},get from(){return I},get gen(){return j},signal:je.signal,snapshot(n){typeof n=="function"&&(Fe=n)},ready(n){typeof n!="function"||H!==null||(H=n,Je(),Y(),Q&&K({__frame_hot_ready:!0,gen:j},U),ee())},accept(n){typeof n=="function"&&(Ee=n,Y())},restart(n){const u={note:n?.note,required:n?.required};if(V){Re(u);return}const f=_;_={note:fe(f?.note)??u.note,required:f?.required==="hard-reload"||u.required==="hard-reload"?"hard-reload":void 0}}});let i=null,g=()=>{};const w=new Promise(n=>{g=n});let M=null;const J=()=>M??=r.dcl.then(()=>{let n=!1;try{n=i!==null&&i.expect()}catch{}if(!n)return;const u=i.maxMs;return new Promise(f=>{w.then(f),a(f,u)})}),Z=()=>{if(!x||W||E===null)return;W=!0;const n=E;J().then(()=>{try{ue||n.afterStart(Bt(e),!1)}catch{}})},de=n=>{e!==null&&c&&(ve=!0),h={},I=null,j=0;try{L?.removeItem(Le(o?.k))}catch{}e!==null&&!n&&Be(r.dcl.then(()=>H!==null?ce:void 0))},Dn=()=>{x=!0,Be(J().then(()=>H!==null?ce:void 0)),Z()};try{addEventListener("error",()=>{y||H!==null||(y=!0,Y())})}catch{}const rr=()=>{a(()=>{!X&&xe()&&_e&&Y()},0)};try{q=document.readyState==="complete",q||addEventListener("load",()=>{q=!0,rr()},{once:!0})}catch{q=!0}xe(),ce.then(()=>{te=!0,rr()});let ge=-1,gt,wt,Ke=!0,bt=!1,Et,Ze=null;const St=n=>{const u=Ze===null;Ze=Ke&&n[0]!=="withheld"?n:["withheld",n[1],$e];let f=n[0];if(Ke&&f!=="withheld"){const O={ver:R,handoff:f};gt!==void 0&&(O.seq=gt),wt!==void 0&&(O.note=wt);try{if(L===null)throw new Error("no storage");L.setItem(rt(C),'{"kv":1,"gen":'+ge+',"from":'+JSON.stringify(O)+(Et!==void 0?',"k":'+JSON.stringify(Et):"")+',"data":'+(f==="ok"?n[2]:$e)+"}")}catch{f="unavailable"}}else{f="withheld",ye(C);try{E?.release?.()}catch{}}const v={__frame_hot_snapshotted:!0,gen:ge,handoff:f,bytes:n[1]};n[3]!==void 0&&(v.errName=n[3]),K(v,U),u&&(f==="snapshot_error"||f==="unclonable"||f==="oversize")&&p("claude.hot: snapshot",f,n[3])},ke=n=>{try{return Nr(n?.name)}catch{return"other"}},Ae=(n,u,f=0)=>St(u===void 0?[n,f,$e]:[n,f,$e,ke(u)]),Hn=n=>{if(n.gen<=ge)return;const u=ge>=0;if(ge=n.gen,gt=n.seq,wt=fe(n.note),typeof n.key=="string"&&Ot.test(n.key)&&n.key!==C&&(ye(C),C=n.key),Ke&&=n.handoff!==!1,u){Ze!==null?St(Ze):bt&&K({__frame_hot_held:!0,gen:ge},U);return}je.abort();const f=Object.freeze({handoff:Ke,timeoutMs:n.timeoutMs,deadline:n.deadline??Cr}),v=Fe,O=()=>{if(Ke)try{Et=E?.capture()}catch{}if(v===null){Ae("empty");return}let A=!1;const G=a(()=>{A||(A=!0,Ae("snapshot_timeout"))},Math.max(0,f.timeoutMs));Promise.resolve().then(()=>v(f)).then(Te=>{if(A)return;A=!0,s(G);let ne;try{ne=JSON.stringify(Te)}catch(Rt){Ae("unclonable",Rt);return}if(typeof ne!="string"){Ae("unclonable");return}let oe=ne.length;try{oe=T.encode(ne).length}catch{}if(oe>262144){Ae("oversize",void 0,oe);return}St(["ok",oe,ne])},Te=>{A||(A=!0,s(G),Ae("snapshot_error",Te))})};let P=null;try{P=E?.holdForIme()??null}catch{}if(P===null)O();else{bt=!0,K({__frame_hot_held:!0,gen:ge},U);const A=()=>{bt=!1,O()};P.then(A,A)}},qn=n=>{if(!Q||B||H===null||n.gen!==j)return;let u=null;try{u=xt(L,o&&{k:o.k,g:n.gen})}catch{}if(u!==null&&u.gen!==n.gen){u=null;try{L?.removeItem(Le(o?.k))}catch{}}h=u?.data??{},I=qt(Oe(u?.from??n.from),Oe(n.from)),u!==null&&(j=u.gen),B=!0,Q=!1;const f=Bt(u);ce.then(v=>{try{v&&E?.afterStart(f,!0)}catch{}}),ee(!0)},nr=n=>{const u=R,f=m.entry;let v="",O,P=null;try{if(v=location.href,O=S.state,P=Ht(v,u,n),P!==null)if(b(O,"",P),location.pathname.startsWith("/_f/"+n+"/"))P=location.href;else return{failed:"navigate event canceled"}}catch(A){return{failed:ke(A)}}R=m.ver=n,m.priors.push(u)>8&&m.priors.splice(1,1);try{m.entry=Ht(f,u,n)??f}catch{}return[P,u,f,v,O]},Bn=({from:n,to:u})=>{let f,v;if(!ot(u.ver))f="adopt_failed",v="not a version path segment";else if(u.ver===R)f="adopted";else if(!R||n.ver!==R)f="stale";else{const P=nr(u.ver);"failed"in P?(f="adopt_failed",v=P.failed):f=P[0]===null?"adopt_skipped":"adopted"}v!==void 0&&p(`claude.hot: could not move this page's URL to its new version folder /_f/${u.ver}/ (${v})`);const O={__frame_hot_readdressed:!0,to:u.ver,at:R,outcome:f};K(O,U)};let Qe=0;const Un=n=>{const u=Ee;if(u===null||n.id<=Qe)return;Qe=n.id;const f=E?.assess;if(n.preflight===void 0||f===void 0){or(n,u);return}let v=!1;const O=G=>{v||(v=!0,s(A),n.id===Qe&&or(n,u,G))},P=()=>O(f.timeout(n)),A=a(P,Kr+100);f.run(n,window).then(O,P)},or=(n,u,f)=>{let v,O=!1,P=!1,A,G,Te=null;const ne=N=>{if(P)return!1;if(A!==void 0&&A!==N)return p(`claude.hot: u.${N}() ignored - u.${A}() was called first`),!1;const ae=A===void 0;return A=N,ae},oe=N=>{A="restart",p(`claude.hot: ${N} - restarting`)},Rt=()=>{if(!ne("adopt")||n.id!==Qe)return;const N=n.to.ver;if(et.required!=="none"){oe(`u.adopt() needs required 'none', it is '${et.required}'`);return}if(!ot(N)){oe("u.adopt() cannot address this version");return}if(!R||N===R)return;const ae=nr(N);if("failed"in ae){G="adopt_failed",oe(`adopt_failed ${ae.failed}; URL not changed`);return}const[$,At,$n,sr,zn]=ae;$===null?(G="adopt_skipped",p(`claude.hot: adopt_skipped - page already left /_f/${At}/; URL not changed, update still applied`)):G="adopted",Te=()=>{if(R===N){if($!==null)try{if(location.href!==$)p("claude.hot: adopt_revert_skipped - update not applied; URL left where the page navigated");else{if(b(zn,"",sr),location.href!==sr){p("claude.hot: adopt_revert_failed navigate event canceled - URL still at the new version");return}G="adopt_reverted",p("claude.hot: adopt_reverted - adopt() was called but the handler threw; URL restored")}}catch(Vn){p(`claude.hot: adopt_revert_failed ${ke(Vn)} - URL still at the new version`);return}R=m.ver=At,m.entry=$n,m.priors[m.priors.length-1]===At&&m.priors.pop(),$===null&&(G=void 0)}}},et=Object.freeze({from:{ver:n.from.ver,seq:n.from.seq},to:{ver:n.to.ver,seq:n.to.seq},changed:Qr(n.changed),required:n.required,deadline:n.deadline,adopt:Rt,defer(){return ne("defer")&&et.deadline.now&&oe("u.defer() past the deadline"),It},restart(N){return ne("restart"),A==="restart"&&!P&&(v??=fe(N?.note),O||=N?.required==="hard-reload"),It},...f?.update}),Kn=(N,ae)=>{P=!0,N==="threw"?(Te?.(),v??=ke(ae).toLowerCase()):A===void 0&&p(N==="timeout"?"claude.hot: accept handler did not answer in time - restarting":"claude.hot: accept handler settled without defer/restart/adopt - restarting");const $={__frame_hot_verdict:!0,id:n.id};$.verdict=N==="threw"||A===void 0||A==="restart"?"restart":A==="adopt"?"applied":"deferred",$.verdict==="restart"&&(O&&($.required="hard-reload"),v!==void 0&&($.note=v)),G!==void 0&&($.verdict==="applied"||G!=="adopted")&&($.adopt=G),K(Object.assign($,f?.verdict),U)};let ar=!1;const kt=(N,ae)=>ar?!1:(ar=!0,s(Gn),Kn(N,ae),!0),Gn=a(()=>kt("timeout"),n.verdictTimeoutMs);Promise.resolve().then(()=>u(et)).then(()=>kt("settled"),N=>{!kt("threw",N)&&A==="adopt"&&Re({note:ke(N).toLowerCase()}),p("claude.hot: accept",ke(N))})};try{t.hot===void 0&&Object.defineProperty(t,"hot",{value:Ue,writable:!1,configurable:!1,enumerable:!1})}catch{}return{hot:Ue,boot:m,afterConnect(){be=!0,(e!==null||H!==null)&&Je()},onInit(n,u){U=u,V=!0;const f=Ct(n)?n:null;f?.phase==="final"&&e!==null&&e.gen===f.gen?(B=!0,I=qt(I,Oe(f.from)),Dn()):(Q=f?.phase==="pending",de(Q),B=!Q,j=f?.gen??0,I=Oe(f?.from)),Y(),_e&&a(()=>{X||(X=!0,Y())},qr),Q&&H!==null&&K({__frame_hot_ready:!0,gen:j},u),_!==void 0&&(Re(_),_=void 0),ee()},onNoInit(){V=!0,de(!1),B=!0,ee()},onShell(n){return n?.__frame_revealed===!0?(yt(),!1):Vr(n)?(Hn(n),!0):Wr(n)?(qn(n),!0):en(n)?(Un(n),!0):tn(n)?(Bn(n),!0):!1},attachExtras(n){E=n,Z(),n.assess&&Y()},inSlot:()=>Le(C),hydration(n,u){i??={expect:n,maxMs:u}},hydrated(){g()},carried(){return B?h:{}},presented:()=>ue}}var Jn="frame_ldx_runtime",an="frame_ldx_build",Zn="script#an-form",sn=256;function Ut(t,e,r){for(const o of t)r(o)&&t.delete(o);t.size>=sn&&!t.has(e)&&t.delete(t.values().next().value),t.add(e)}function Pe(t,e,r,o){try{const a=t[e];if(typeof a!="function")return;t[e]=function(...s){if(o){let d;try{d=o(this)}catch{}if(d!==void 0)return d}const l=a.apply(this,s);try{r?.(this)}catch{}return l}}catch{}}var at;function ln(){if(at)return at;const t={media:new Set,contexts:new Set,gate:null,onStart:null,onStop:null};at=t;const e=l=>t.gate?.(l),r=l=>{t.onStop?.(l)},o=window.HTMLMediaElement?.prototype;o&&(Pe(o,"play",l=>{Ut(t.media,l,d=>d.paused),t.onStart?.(l)},e),Pe(o,"pause",r));const a=window.AudioContext,s=window.AudioNode?.prototype;return a&&s&&(Pe(s,"connect",l=>{const d=l.context;d instanceof a&&(Ut(t.contexts,d,T=>T.state==="closed"),t.onStart?.(d))}),Pe(a.prototype,"resume",void 0,e),Pe(a.prototype,"suspend",r)),t}function cn(t){let e=window;for(let r=0;e.parent&&e.parent!==e&&r<8;r++)if(e=e.parent,t(e))return!0;return!1}function un(){let t=null;const e=()=>t??parent,r=o=>t?o===t:cn(a=>a===o);return{post(o,a){if(t){e().postMessage(o,a);return}let s=parent;for(let l=0;l<8&&(s.postMessage(o,a),!(!s.parent||s.parent===s));l++)s=s.parent},on(o){const a=s=>{const l=s.source;r(l)&&o(s.data,s.origin,s.isTrusted,()=>{t??=l})};return addEventListener("message",a),()=>removeEventListener("message",a)},port:o=>({post(a,s){if(s?.activation){e().postMessage(a,{targetOrigin:o,includeUserActivation:!0});return}if(s?.transfer){e().postMessage(a,o,s.transfer);return}e().postMessage(a,o)},on(a,s){const l=d=>{r(d.source)&&d.origin===o&&a(d.data,d)};return addEventListener("message",l,s),()=>removeEventListener("message",l,s)}})}}function fn(){const t={post:()=>{},on:()=>()=>{}};return{...t,port:()=>t}}var dn=500,hn=2e4,pn="data-token-reads",mn="data-frame-refused-watch",vn="data-frame-unsupported",_n=/(?:^|\s)stylesheet(?:\s|$)/i;function yn(t,e){let r="";if(t instanceof HTMLScriptElement?r=t.src:t instanceof HTMLLinkElement&&_n.test(t.rel)&&(r=t.href),!r)return null;try{const o=new URL(r);return o.origin===location.origin&&o.pathname.startsWith(e)?o.origin+o.pathname:null}catch{return null}}function gn(t,e,r){if(!t||e!=="query")return;const o="/_f/"+t+"/";document.documentElement.setAttribute(mn,"");const a=location.href,s=fetch,l=setTimeout,d={method:"HEAD",cache:"no-store",credentials:"same-origin"},T=m=>m.ok||m.status===304;let S=!1,b=!1;const p=()=>removeEventListener("error",L,!0),R=async m=>{const C=await s(m,d);if(T(C))b=!0;else if(C.status===403){const k=await s(a,d);if(T(k)){const h=(await s(m,d)).status;h===403?(b=!0,document.documentElement.setAttribute(vn,""),r()):h<500&&(b=!0)}else k.status>=400&&k.status<500&&(b=!0)}},L=m=>{if(b||S)return;if(document.documentElement.hasAttribute(pn)){b=!0,p();return}const C=yn(m.target,o);C&&(S=!0,l(()=>{R(C).catch(()=>{}).finally(()=>{S=!1,b&&p()})},dn))};addEventListener("error",L,!0),addEventListener("load",p,{once:!0}),l(p,hn)}var st="__frame_scroll",wn=150,bn=310,En=160,Sn=3e4;function Rn(){let t=0,e=!1,r=!1,o=!1,a=0,s=null;const l=h=>{try{sessionStorage.setItem(st,JSON.stringify({y:h}))}catch{}},d=()=>{if(clearTimeout(t),s===null)return;const h=s;s=null,l(h)},T=()=>{if(e){e=!1;return}r=!0,s=scrollY,clearTimeout(t),t=setTimeout(d,wn)};try{addEventListener("scroll",T,{passive:!0}),addEventListener("pagehide",d)}catch{}const S=()=>{let h;try{h=sessionStorage.getItem(st)}catch{return null}if(h===null)return null;let I;try{I=JSON.parse(h)}catch{I=null}const j=I?.y;if(!(typeof j=="number"&&Number.isFinite(j)&&j>=0)){try{sessionStorage.removeItem(st)}catch{}return null}return j};let b=!1;const p=h=>{try{const I=scrollY;scrollTo({top:h,left:0,behavior:"instant"}),a=h,o=!0,clearTimeout(t),s=null,l(h);const j=scrollY;j!==I&&(e=!0),j!==h&&!b&&(b=!0,addEventListener("load",()=>{try{if(scrollY===j){const B=S();p(B!==null?B:a)}}catch{}},{once:!0}))}catch{}},R=()=>{try{return!!location.hash}catch{return!0}};let L=!1;const m=()=>{try{if(L||innerWidth>bn||innerHeight>En)return;L=!0;const h=Date.now(),I=()=>{try{removeEventListener("resize",I)}catch{}if(Date.now()-h>Sn||r||R())return;const j=S();p(j!==null?j:a)};addEventListener("resize",I)}catch{}};let C=!1,k=!1;return{restore(){if(C||(C=!0,R()))return;const h=S();h!==null&&(p(h),m())},promoted(){if(k||(k=!0,R()))return;const h=S();h!==null?(p(h),m()):o&&p(a)}}}function kn(t,e,r,o){let a=null;try{a=window.trustedTypes?.createPolicy("frame-runtime",{createScriptURL:T=>T})??null}catch{}const s=window.Worker,l=s?.prototype,d=Object.freeze({Worker:s,workerOn:l?.addEventListener,workerPost:l?.postMessage,workerTerminate:l?.terminate,fetch:window.fetch.bind(window),preventDefault:Event.prototype.preventDefault,now:Date.now,policy:a,origins:e});r(t).then(T=>T?.bootTopLevel?T.bootTopLevel(d,o):o.settle()).catch(()=>o.settle())}var Qn="modulepreload",eo=function(t){return"/"+t},to={},An=function(e,r,o){let a=Promise.resolve();function s(l){const d=new Event("vite:preloadError",{cancelable:!0});if(d.payload=l,window.dispatchEvent(d),!d.defaultPrevented)throw l}return a.then(l=>{for(const d of l||[])d.status==="rejected"&&s(d.reason);return e().catch(s)})},Tn=window===top,Kt=Object.getOwnPropertyDescriptor(window,"claude"),ze=rn(Tn,window.__FRAME_PREAMBLE?.topLevel,Kt?.writable===!1),it=typeof ze=="object"&&ze[0],F=it?fn():un();(function(){const t=Object.defineProperty,e=globalThis,r=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let o=0;for(let a=0;a<r.length;a++){const s=r[a];try{t(e,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete e[s]}catch{}try{t(e,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof e[s]=="function"&&o++}if(o&&ze==="framed")try{F.post({__frame_rtc_lockdown_failed:o},"*")}catch{}})();var Gt=1e4,Ln=2e3,lt=2e3,ct=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function $t(t){for(const e of ct)if(e.endsWith(":*"))try{const r=new URL(t);if(`${r.protocol}//${r.hostname}:*`===e)return!0}catch{}else if(t===e)return!0;return!1}var Me=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities}),Ne=window.__FRAME_PREAMBLE?.transforms,ut=window.__FRAME_PREAMBLE?.comments,ft=window.__FRAME_PREAMBLE?.translate,me=window.__FRAME_PREAMBLE?.ldx,Ve=ir(window.__FRAME_PREAMBLE?.cred),zt=(()=>{try{const[t]=performance.getEntriesByType("navigation"),e=t?.serverTiming?.find(r=>r.name==="frame-cred-exp");return e!==void 0&&/^\d{1,15}$/.test(e.description)?lr(Number(e.description)):void 0}catch{return}})();function Vt(t){return An(()=>import("/_runtime/"+t),void 0)}var Ce=new Set,Wt=setTimeout,On=fetch,Pn=AbortController,Mn=800+800*Math.random(),Nn=3e3,We=null,Xt=new Map;function Cn(t,e){let r=Xt.get(t);return r||Xt.set(t,r=jn(t,e)),r}function jn(t,e){if(We?.has(t))return Promise.resolve("csp");if(navigator.onLine===!1)return Promise.resolve("offline");const r=new Pn;let o=!1;return Wt(()=>{o=!0,r.abort()},Nn),On("/_runtime/"+t,{signal:r.signal}).then(a=>(r.abort(),a.ok?/javascript/i.test(a.headers.get("content-type")??"")?e instanceof Error&&/:\d+:\d+\)?$/m.test(e.stack??"")?"eval":"served":"mime":"http"),()=>o?"timeout":We?.has(t)?"csp":"net")}function se(t){if(!We){const e=We=new Set;try{document.addEventListener("securitypolicyviolation",r=>{const o=/\/_runtime\/([^/?#]+)/.exec(r.blockedURI);o&&r.disposition!=="report"&&e.add(o[1])})}catch{}}return Vt(t).catch(()=>new Promise(e=>Wt(e,Mn)).then(()=>Vt(t+"?r=1")).then(e=>(e!==void 0&&Ce.add(t),e)))}function Yt(t,e,r){return{contract:t.contract,changes:new Set(t.changes??[]),flags:new Set(t.flags??[]),capabilities:t.capabilities??{},capBudgets:t.capBudgets??{},brokerGen:t.brokerGen,transforms:new Map,shellOrigin:e,shell:r,mount:_t,hooks:Xe,pipe:()=>({wrap:(o,a)=>(...s)=>{try{return a(...s)}catch(l){return Promise.reject(l)}}})}}var we=null,z=null;function Jt(t,e,r){try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(t,e,{value:r,writable:!1,configurable:!0,enumerable:!0})}catch{}}}var dt=!1,Xe={editBefore:null,edit:null};function Fn(t,e,r=!1){const o=[];let a;if(r)try{Xe.editBefore?.(t)}catch{}for(const s of t.elements){const l=document.querySelector(`[data-id="${s.target}"]`);if(!l){a=s.target;break}if([...Object.keys(s.attrsSet??{}),...s.attrsRemoved??[]].some(d=>!hr(d)||pr(l,d))){a=s.target;break}if(s.text!==void 0&&(!yr(l)||Er(l))){a=s.target;break}for(const[d,T]of Object.entries(s.attrsSet??{}))if(!Qt(l,d)){try{l.setAttribute(d,T)}catch{}Zt(l,d,T)}for(const d of s.attrsRemoved??[])Qt(l,d)||(l.removeAttribute(d),Zt(l,d,null));typeof s.text=="string"&&wr(l,s.text),o.push(s.target)}if(r)try{Xe.edit?.(t.seq,o,a)}catch{}if(a!==void 0){F.post({__frame_patch_miss:{seq:t.seq}},e);return}try{document.dispatchEvent(new CustomEvent("claude:edit",{detail:{seq:t.seq,targets:o}}))}catch{}}function Zt(t,e,r){if(!(t instanceof HTMLInputElement))return;const o=e.toLowerCase();o==="checked"?t.checked=r!==null:o==="value"&&t.type!=="file"&&(t.value=r??"")}function Qt(t,e){const r=e.toLowerCase(),o=t;return r==="data-id"||(r==="value"||r==="checked")&&(o.__artifactSecret===!0||/^(password|hidden|file)$/.test(o.type??"")||/(^|\s)(cc-|one-time-code|current-password|new-password)/i.test(`${t.getAttribute("autocomplete")??""} ${o.autocomplete??""}`))}function er(t){const e=document.documentElement;t==="light"||t==="dark"?(e.dataset.theme=t,e.style.colorScheme=t,dt=!0):dt&&(delete e.dataset.theme,e.style.colorScheme="",dt=!1)}var ie=new Map,ht=null;function pt(){let t;const e={u:new Promise(r=>{t=r}),r:r=>{e.done=!0,t(r)},done:!1,nulled:!1};return e}function Ye(t,e){t.nulled=!0,t.ver=e,t.r(null)}function mt(t,e){for(const[r,o]of ie)o.done||(e&&o.asked?e(r,o):Ye(o,t))}function In(){for(const t of ie.values())if(t.asked&&!t.done)return!0;return!1}var xn=Object.freeze(Object.assign(Object.create(null),{call:Function.prototype.call,apply:Function.prototype.apply,bind:Function.prototype.bind})),vt=!1,_t=(t,e)=>{let r=ie.get(t);if(r?.nulled&&vt)r=pt(),ie.set(t,r);else if(!r||r.done){r?.nulled&&z&&F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:t,phase:"install"}},z);return}const o=typeof e=="function"?Object.setPrototypeOf(e,xn):Object.assign(Object.create(null),e);typeof o.then=="function"&&delete o.then,r.want=void 0,r.r(Object.freeze(o))};function tr(){const t=Kt?.value??{};Jt(window,"claude",t);for(const e of Object.keys(Me)){if(t[e]!==void 0){Jt(t,e,t[e]);continue}ie.set(e,pt())}if(t.use===void 0){const e=r=>{if(typeof r!="string"||!Object.hasOwn(Me,r))return Promise.resolve(null);let o=ie.get(r);return o?(ht&&(o.nulled||o.want!==void 0)&&(o=ht(r,o)),o.asked=!0,o.u):Promise.resolve(t[r]??null)};try{Object.defineProperty(t,"use",{value:e,writable:!0,configurable:!0,enumerable:!1})}catch{}}return t}if(ze==="framed"){let t;const e=Ne&&pe.test(Ne)?se(Ne).catch(c=>{t={f:Ne,e:c}}):Promise.resolve(void 0),r=c=>{if(c.type==="auxclick"&&c.button!==1)return;const y=c.target,_=y&&y.closest?y.closest("a[href],area[href]"):null;if(!_)return;const E=_.getAttribute("href");if(!E)return;let x;try{x=new URL(E,document.baseURI)}catch{return}if((x.protocol==="http:"||x.protocol==="https:")&&x.origin!==location.origin){c.preventDefault();const W=(_.getAttribute("target")??"").toLowerCase(),q=c.type==="auxclick"||c.metaKey||c.ctrlKey||c.shiftKey||c.altKey||!["","_self","_top","_parent"].includes(W);F.post({__frame_nav:!0,url:x.href,newTab:q},"*")}};addEventListener("click",r,!0),addEventListener("auxclick",r,!0);const o={},a=c=>{c.isTrusted&&(o.pointer=!0)},s=c=>{c.isTrusted&&(o.click=!0)};addEventListener("pointermove",a,{capture:!0,passive:!0}),addEventListener("click",s,{capture:!0,passive:!0});const l={cb:null};addEventListener("keydown",c=>l.cb?.(c),!0);const d={cb:null};addEventListener("keydown",c=>d.cb?.(c));const T=ln();e.then(c=>c?.installEscapeForward?.(l,y=>{z&&F.post(y,z)})),e.then(c=>{try{c?.installFocusKeep?.()}catch{}}),e.then(c=>{if(!c?.wireNav)return;const y=F.port("*");c.wireNav(y),removeEventListener("click",r,!0),removeEventListener("auxclick",r,!0),removeEventListener("pointermove",a,!0),removeEventListener("click",s,!0),c.wireEngagement?.(o,y,T)});let S=null;try{S=Rn()}catch{}const b=document.readyState==="loading"?new Promise(c=>document.addEventListener("DOMContentLoaded",()=>c(),{once:!0})):Promise.resolve();let p="dcl",R=!1;b.then(()=>{R=!0});let L=null,m=null;try{m=Dr(window.name),L=xt(null,m)}catch{}const C=tr();let k=null;try{k=on(C,L,{post:(c,y)=>F.post(c,y),dcl:b},m)}catch{}e.then(c=>{try{k&&c?.installHotExtras?.(k)}catch{}});let h=null;const I=()=>Array.isArray(h?.flags)&&h.flags.includes("frame_ldx_runtime")&&!!me&&pe.test(me)&&document.querySelector("script#an-form")!==null;try{k?.hydration(I,Hr)}catch{}let j=null,B=0;const Q=F.on((c,y,_,E)=>{$t(y)&&Ar(c)&&(E(),h=c.__frame_init,z=y,Q(),clearTimeout(B),j?.())});if(Ve){const c=zt===void 0?{__frame_cred:Ve}:{__frame_cred:Ve,exp:zt};for(const y of ct)try{y.endsWith(":*")||F.post(c,y)}catch{}}F.post({__frame_connect:!0},"*");try{k?.afterConnect()}catch{}const V=setTimeout,U=clearTimeout;let be=()=>NaN,je=()=>[];try{be=performance.now.bind(performance),je=performance.getEntriesByType.bind(performance)}catch{}let Fe=0;const H=()=>{try{F.post({__frame_alive:!0},"*")}catch{}Fe=V(H,Ln)},Ee=()=>U(Fe);H(),addEventListener("load",Ee,{once:!0});const Ie=new Promise(c=>{j=c,B=setTimeout(()=>{Q(),c()},Gt)}),le=new WeakSet;addEventListener("error",c=>{c.target&&le.add(c.target)},!0);try{gn(Dt(),Ve,()=>{e.then(c=>{try{c?.drawRefusedNotice?.()}catch{}})})}catch{}const ce=()=>{let c=[];try{c=[...document.querySelectorAll("link[rel~=stylesheet]:not([rel~=alternate])")].filter(_=>!_.sheet&&!_.disabled&&!le.has(_)&&_.getAttribute("href")&&URL.canParse(_.href)&&(!_.media||matchMedia(_.media).matches))}catch{}let y=c.length;return y===0?Promise.resolve():new Promise(_=>{try{const E=lt-be();E>0&&(p="sheets");const x=V(_,E>0?E<lt?E:lt:0),W=()=>{--y===0&&(U(x),_())};for(const q of c)q.addEventListener("load",W,{once:!0}),q.addEventListener("error",W,{once:!0})}catch{_()}})};b.then(()=>{try{S?.restore()}catch{}}),Promise.all([Ie,b,e]).then(([,,c])=>{if(h?.hostOverlays!==!0||!z)return;let y=!1;try{y=c?.declaresCover?.()===!0}catch{}F.post({__frame_layout:{cover:y}},z)});const ve={cb:null};F.on((c,y)=>{if($t(y)&&Tr(c)){try{S?.promoted()}catch{}ve.cb?.()}}),Ie.then(async()=>{if(!h||!z){mt();try{k?.onNoInit()}catch{}return}if(er(h.theme),h.hostVisible===!1&&e.then(i=>i?.applyHostVisible?.(!1,T)),h.hostKeys!==void 0){const i=z,g=h.hostKeys;e.then(w=>w?.installHostKeyForward?.(d,g,M=>F.post(M,i)))}try{k?.onInit(h.hot,z)}catch{}let c;const y=()=>{try{!c&&me&&I()&&(c=se(me),c.then(i=>i?.prefetch?.()).catch(()=>{}))}catch{}};y(),b.then(y);const _=z,E=F.port(_),x=(i,g)=>F.post({__frame_cap_telemetry:{kind:"cap-load-error",cap:i,phase:g}},_),W=(i,g,w)=>{new Promise(M=>M(Cn(g,w))).then(M=>x(i,M),()=>x(i))},q=i=>F.post({__frame_cap_recovered:{cap:i}},_);let te=h.brokerGen;const X=()=>k?.boot.ver??"",_e=X(),ye=(i,g)=>{const w=X();U(g.t),g.want=w,g.t=V(()=>{g.done||Ye(g,w)},Gt),F.post({__frame_cap_want:!0,cap:i,ver:w},_)},K=(i,g)=>{const w=ie.get(i.cap),M=Me[i.cap];if(!g||!w||w.done||w.want!==i.ver||!pe.test(M))return;if(U(w.t),w.want=void 0,te=i.brokerGen??te,i.ver!==X()){ye(i.cap,w);return}if(!i.grant||i.cap==="network"){Ye(w,i.ver);return}const J=we,Z=we={...J,capabilities:{...J.capabilities,[i.cap]:i.grant},capBudgets:{...J.capBudgets,[i.cap]:{...J.capBudgets[i.cap],...i.budgets}}};se(M).then(de=>{Ce.has(M)&&q(i.cap),Z.brokerGen=te,vt=!0;try{de?.install?.(Z)}catch{x(i.cap,"install")}finally{vt=!1}},de=>W(i.cap,M,de)).then(()=>{w.done||Ye(w,i.ver)})};let xe=!1,Y=!1;F.on((i,g,w)=>{if(g!==_)return;try{if(k?.onShell(i))return}catch{}if(Or(i)&&er(i.__frame_theme.theme),Yr(i)&&K(i,w),w&&Jr(i)&&(te=i.brokerGen??te),Lr(i)){const Z=i.__frame_host_visible.visible;e.then(de=>de?.applyHostVisible?.(Z,T))}kr(i)&&Fn(i.__frame_patch,_,w);const M=i?.__fc_mode;M&&typeof M=="object"&&!xe&&ut&&pe.test(ut)&&(xe=!0,se(ut).then(Z=>Z.install?.(_,M.on===!0,E)).catch(()=>{}));const J=i?.__ft_cmd;J&&typeof J=="object"&&!Y&&ft&&pe.test(ft)&&(Y=!0,se(ft).then(Z=>Z.install?.(_,J,E)).catch(()=>{}))});const De=Object.keys(h.capabilities??{}).filter(i=>Object.hasOwn(Me,i)).map(i=>[i,Me[i]]).filter(i=>typeof i[1]=="string"&&pe.test(i[1])),re=_;let ue=!1,He=()=>{};const Je=new Promise(i=>{He=()=>{ue=!0,i()}}),Se=()=>(ue||(p="caps"),Je),qe=L!==null||Ct(h.hot)||h.hostVisible===!1||h.hostOverlays===!0;R&&(p="init");const Be=b.then(()=>qe?Se():new Promise(i=>V(i,0))).then(ce).then(()=>{let i=!0;try{i=qe||In()}catch{}return i?Se():void 0}).then(()=>{Ee();const i=cr(je,be);F.post(i?{__frame_ready:!0,nav:i,gate:p}:{__frame_ready:!0,gate:p},re),e.then(g=>{g?.installSizeReporter?.(re,ve,E),g?.installPaintReporter?.(E)})}),yt=await Promise.allSettled(De.map(([,i])=>se(i))),ee=await e;if(ee?.buildBoot||(t?W("_transforms",t.f,t.e):x("_transforms")),ee?.buildBoot)try{we=ee.buildBoot(h,ee.TRANSFORMS??{},{shellOrigin:re,mount:_t,hooks:Xe,shell:E},i=>F.post({__frame_cap_telemetry:i},re))}catch{x("_transforms","install"),we=Yt(h,re,E)}else we=Yt(h,re,E);ee?.buildBoot&&Ce.has(Ne??"")&&q("_transforms");const fe=we;fe.brokerGen=te,yt.forEach((i,g)=>{const[w,M]=De[g];if(i.status!=="fulfilled"){W(w,M,i.reason);return}Ce.has(M)&&q(w);try{i.value?.install?.(fe)}catch{x(w,"install")}});const Re=h.capWants===!0;Re&&(ht=(i,g)=>{const w=X();if(!w)return g;if(!g.nulled)return g.want!==w&&ye(i,g),g;if(w===g.ver)return g;const M=pt();return ie.set(i,M),ye(i,M),M}),mt(_e,Re&&X()!==_e?ye:void 0),He(),await Be;let Ue=!1;try{Ue=I()}catch{}me&&Ue?(c??se(me)).then(i=>i?.boot?.({shellOrigin:_,build:fe.flags.has(an),hot:k?.hot??null,carried:k?.carried(),presented:()=>k?.presented()??!0})).catch(()=>!1).then(i=>{k?.hydrated(),i!==!0?x("_ldx"):Ce.has(me)&&q("_ldx")}):k?.hydrated()})}else it&&(tr(),kn(it,ct,se,{settle:mt,mount:_t}))})();</script><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>일광자이 푸르지오 게스트하우스</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;700&amp;display=swap"><style>
+:root{--bg:#e4f2fc;--bg2:#cfe6f7;--card:#fff;--ink:#111;--mut:#6b7078;--sea:#0b2a5b;--sun:#c9a45c;--line:#e3e5e8;--bad:#b3392f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a24;--bg2:#0a131b;--card:#171b22;--ink:#eceef1;--mut:#9aa1ab;--sea:#7fa6e8;--sun:#d9b873;--line:#2a2f38;--bad:#e07a70}}
+:root[data-theme="dark"]{--bg:#0e1a24;--bg2:#0a131b;--card:#171b22;--ink:#eceef1;--mut:#9aa1ab;--sea:#7fa6e8;--sun:#d9b873;--line:#2a2f38;--bad:#e07a70}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);color:var(--ink);font:300 16px/1.7 "Noto Sans KR",system-ui,sans-serif;letter-spacing:-.01em}
+h1,h2,h3{font-weight:300;line-height:1.3;margin:0;letter-spacing:-.03em}
+h2{font-size:1.9rem;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+h3{font-size:1.25rem;font-weight:500}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:68px}
+.brand{font-weight:700;font-size:1.1rem;letter-spacing:-.03em}
+nav{display:flex;gap:10px}
+nav .btn.nv{display:flex;flex-direction:column;align-items:flex-start;gap:0;padding:8px 18px;line-height:1.35;text-align:left;border:1px solid var(--sea);color:var(--sea);background:var(--card)}
+nav .btn.nv b{font-weight:700;font-size:.98rem}
+nav .btn.nv small{font-size:.72rem;font-weight:300;opacity:.85}
+nav .btn.nv.on{background:var(--sea);color:#fff}
+[data-theme="dark"] nav .btn.nv.on{color:#0e1116}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) nav .btn.nv.on{color:#0e1116}}
+@media(max-width:640px){nav .btn.nv small{display:none}header.top .wrap{height:auto;padding-top:12px;padding-bottom:12px}}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:0;padding:9px 20px;cursor:pointer;font-weight:400}
+.btn.on,.btn.pri{background:var(--sea);border-color:var(--sea);color:#fff}
+[data-theme="dark"] .btn.pri,[data-theme="dark"] .btn.on{color:#0e1116}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.pri,:root:not([data-theme="light"]) .btn.on{color:#0e1116}}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:#111;font-weight:700}
+.btn.del{color:var(--bad)}
+.btn.sm{padding:4px 12px;font-size:.85rem}
+.hero{background:linear-gradient(90deg,rgba(40,12,5,.78) 0%,rgba(40,12,5,.35) 55%,rgba(40,12,5,0) 100%),url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22640%22%20height=%22480%22%20viewBox=%220%200%20640%20480%22%3E%3Cg%20transform=%22translate%2860%2070%29%20rotate%2820%29%20scale%281.6%29%22%20fill=%22%23c0391b%22%20opacity=%220.5%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23c0391b%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28210%20150%29%20rotate%28-35%29%20scale%281.1%29%22%20fill=%22%23f0a830%22%20opacity=%220.55%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23f0a830%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28340%2060%29%20rotate%2860%29%20scale%281.9%29%22%20fill=%22%23e0731f%22%20opacity=%220.4%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23e0731f%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28470%20200%29%20rotate%2810%29%20scale%281.3%29%22%20fill=%22%238f2a12%22%20opacity=%220.5%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%238f2a12%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28560%2090%29%20rotate%28-20%29%20scale%280.9%29%22%20fill=%22%23f3bd4a%22%20opacity=%220.6%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23f3bd4a%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28120%20300%29%20rotate%2845%29%20scale%281.4%29%22%20fill=%22%23e0731f%22%20opacity=%220.45%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23e0731f%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28300%20330%29%20rotate%28-10%29%20scale%281.0%29%22%20fill=%22%23c0391b%22%20opacity=%220.5%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23c0391b%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28430%20380%29%20rotate%2870%29%20scale%281.7%29%22%20fill=%22%23f0a830%22%20opacity=%220.35%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23f0a830%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28580%20320%29%20rotate%28-50%29%20scale%281.2%29%22%20fill=%22%23a8321a%22%20opacity=%220.5%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23a8321a%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%2840%20430%29%20rotate%2815%29%20scale%280.9%29%22%20fill=%22%23f3bd4a%22%20opacity=%220.55%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23f3bd4a%22%20stroke-width=%223%22/%3E%3C/g%3E%3C/svg%3E") 0 0/560px 420px,url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22820%22%20height=%22520%22%20viewBox=%220%200%20820%20520%22%3E%3Cg%20transform=%22translate%28100%20120%29%20rotate%28-15%29%20scale%282.6%29%22%20fill=%22%237a1f0e%22%20opacity=%220.28%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%237a1f0e%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28380%20200%29%20rotate%2840%29%20scale%283.0%29%22%20fill=%22%23d9651a%22%20opacity=%220.22%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23d9651a%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28700%2090%29%20rotate%285%29%20scale%282.4%29%22%20fill=%22%23f0a830%22%20opacity=%220.25%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23f0a830%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28560%20380%29%20rotate%28-60%29%20scale%282.8%29%22%20fill=%22%23a8321a%22%20opacity=%220.22%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23a8321a%22%20stroke-width=%223%22/%3E%3C/g%3E%3Cg%20transform=%22translate%28240%20430%29%20rotate%2830%29%20scale%282.2%29%22%20fill=%22%23e8a33d%22%20opacity=%220.25%22%3E%3Cpath%20d=%22M0-30L7-14%2022-20%2015-4%2030%200%2012%208%2016%2024%200%2014-16%2024-12%208-30%200-15-4-22-20-7-14Z%22/%3E%3Cpath%20d=%22M0%2014L0%2040%22%20stroke=%22%23e8a33d%22%20stroke-width=%223%22/%3E%3C/g%3E%3C/svg%3E") 140px 60px/760px 480px,linear-gradient(115deg,#3b1409 0%,#7a2a10 38%,#c4571a 72%,#e8a33d 100%);color:#fff;padding:88px 0 72px;text-shadow:0 1px 14px rgba(30,8,2,.45)}
+.badge{display:inline-block;border:1px solid rgba(255,255,255,.6);padding:3px 14px;font-size:.85rem;margin-bottom:22px;font-weight:400}
+.hero h1{font-size:clamp(2rem,5.2vw,3.2rem);font-weight:500;max-width:18ch;white-space:pre-line;line-height:1.3}
+.hero p{color:rgba(255,255,255,.88);max-width:44ch;margin:18px 0 0;font-size:1.1rem;font-weight:300}
+.times{display:flex;align-items:baseline;gap:14px;margin-top:36px;font-size:clamp(1.7rem,4.6vw,2.4rem);font-weight:400;flex-wrap:wrap;letter-spacing:-.02em}
+.times small{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.85);letter-spacing:0}
+.times i{color:#ffd58a;font-style:normal;font-weight:300}
+.meta{color:rgba(255,255,255,.82);margin-top:10px;font-size:.95rem}
+.sec{padding:56px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;margin-top:28px}
+.room{background:var(--card);border:0;border-radius:0;display:flex;flex-direction:column}
+.room .ph{aspect-ratio:4/3;background:linear-gradient(135deg,#7a2a10,#e8a33d);object-fit:cover;width:100%}
+.room .b{padding:18px 2px 0;display:flex;flex-direction:column;gap:8px;flex:1}
+.tags span{display:inline-block;border:1px solid var(--line);padding:0 10px;font-size:.8rem;margin:0 6px 6px 0;color:var(--mut)}
+.price{font-weight:500;font-size:1.1rem}
+.cat{color:var(--sea);font-size:.85rem;font-weight:700}
+.card{background:var(--card);border:1px solid var(--line);border-radius:0;padding:24px;margin-top:20px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+label{display:block;font-size:.88rem;color:var(--mut);margin:12px 0 4px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:0;background:var(--bg)}
+textarea{min-height:76px;resize:vertical}
+.f2{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0 14px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th{font-weight:500;border-top:1px solid var(--ink)}
+th,td{text-align:left;padding:11px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.st{font-weight:700}.st.p{color:#b27a12}.st.a{color:var(--sea)}.st.r{color:var(--bad)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border-top:1px solid var(--ink);background:var(--card)}
+.stats div{padding:18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+.stats b{display:block;font-size:1.7rem;font-weight:300}
+.bar{position:sticky;bottom:0;background:var(--sea);color:#fff;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+dialog{border:0;border-radius:0;background:var(--card);color:var(--ink);width:min(460px,92vw);padding:28px}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:11px 20px;display:none;z-index:9}
+footer{background:var(--card);border-top:1px solid var(--line);margin-top:72px;padding:32px 0;color:var(--mut);font-size:.88rem}
+.muted{color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><!-- /frame-runtime --><!-- frame-runtime --><!-- /frame-runtime -->
 
-.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center}
-.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,255,255,.05) 119px 120px),repeating-linear-gradient(0deg,transparent 0 119px,rgba(255,255,255,.05) 119px 120px)}
-.hero:after{content:"";position:absolute;right:6%;top:50%;width:300px;height:300px;border:2px solid var(--gold);transform:translateY(-50%) rotate(45deg);opacity:.5}
-.slide{display:none;position:relative;z-index:1;padding:70px 0}.slide.on{display:block;animation:fade .7s}
-@keyframes fade{from{opacity:0;transform:translateY(14px)}}
-.tag{display:inline-block;color:var(--gold);font-weight:600;border-left:4px solid var(--gold);padding-left:10px;margin-bottom:14px}
-.hero h1{color:#fff;font-size:clamp(34px,6vw,60px);max-width:640px}
-.hero p{max-width:480px;color:#C9D4E5;font-size:18px;margin:16px 0 28px}
-.dots{position:absolute;z-index:2;bottom:22px;left:0;right:0}
-.dots span{display:inline-block;width:34px;height:4px;background:rgba(255,255,255,.3);margin-right:6px;cursor:pointer}.dots span.on{background:var(--gold)}
-section.blk{padding:80px 0}
-.sub{color:var(--gold);font-weight:600;margin-bottom:8px}
-.blk h2{font-size:clamp(26px,4vw,40px);margin-bottom:18px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-@media(max-width:800px){.about{grid-template-columns:1fr}}
-.pic{position:relative;height:340px;background:linear-gradient(135deg,var(--navy2),var(--navy));}
-.pic:before{content:"";position:absolute;left:30px;top:30px;right:60px;bottom:60px;border:2px solid rgba(255,255,255,.25)}
-.pic b{position:absolute;right:-12px;bottom:-12px;background:var(--gold);color:var(--navy);padding:18px 26px;font:700 38px 'Poppins'}
-.pic b small{display:block;font:600 14px 'Noto Sans KR'}
-.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:0;list-style:none;margin:18px 0 26px}
-.checks li:before{content:"✓";color:var(--gold);font-weight:700;margin-right:8px}
-.soft{background:var(--soft)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-.card{background:#fff;padding:30px 26px;border-bottom:4px solid transparent;box-shadow:0 6px 24px rgba(14,39,72,.07);transition:border-color .2s,transform .2s}
-.card:hover{border-color:var(--gold);transform:translateY(-4px)}
-.card .ic{width:54px;height:54px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:24px;margin-bottom:16px}
-.card h4{font-size:19px;margin-bottom:6px}.card p{margin:0;color:var(--mute);font-size:15px}
-.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;counter-reset:s}
-.proc div{padding:24px;border:1px solid var(--line);position:relative;background:#fff}
-.proc div:before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:22px;background:var(--gold);color:var(--navy);width:36px;height:36px;display:grid;place-items:center;font:700 16px 'Poppins'}
-.proc h4{margin:8px 0 4px}.proc p{margin:0;color:var(--mute);font-size:14px}
-.cta{background:var(--gold);padding:46px 0}.cta .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.cta h3{font-size:clamp(22px,3vw,30px)}.cta .btn{background:var(--navy);color:#fff}.cta .btn:hover{background:#fff;color:var(--navy)}
-.panel{background:#fff;padding:28px;box-shadow:0 10px 36px rgba(14,39,72,.1);border-top:4px solid var(--gold);margin-bottom:18px}
-.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.cal-head h2{margin:0;font-size:24px}
-.nb{background:#fff;border:1px solid var(--line);width:42px;height:42px;font-size:18px;cursor:pointer;color:var(--navy)}.nb:hover{background:var(--navy);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
-.dow{text-align:center;font-weight:600;font-size:13px;color:var(--mute)}
-.d{aspect-ratio:1;border:1px solid var(--line);background:#fff;font:600 15px 'Noto Sans KR';cursor:pointer;color:var(--navy);position:relative}
-.d:hover:not(:disabled){border-color:var(--gold)}
-.d.sel{background:var(--navy);border-color:var(--navy);color:var(--gold)}
-.d.rng{background:#FBEFD0;border-color:#FBEFD0}
-.d.full{background:#EEF0F4;color:#9AA5B5;cursor:not-allowed}
-.d.full:after{content:"예약됨";position:absolute;bottom:2px;left:0;right:0;font-size:9px}
-.d:disabled{opacity:.4;cursor:not-allowed}
-.legend{display:flex;gap:16px;font-size:13px;margin-top:12px;flex-wrap:wrap;color:var(--mute)}
-.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
-.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
-.bar b{font-size:17px;color:var(--navy)}
-.modal{position:fixed;inset:0;background:rgba(14,39,72,.7);display:none;align-items:flex-end;justify-content:center;z-index:50}
-.modal.open{display:flex}
-.sheet{background:#fff;width:100%;max-width:520px;padding:26px 24px calc(24px + env(safe-area-inset-bottom,0px));max-height:92%;overflow:auto;border-top:4px solid var(--gold);animation:up .3s}
-@keyframes up{from{transform:translateY(50px);opacity:0}}
-@media(min-width:600px){.modal{align-items:center}}
-.sheet h2{font-size:24px;margin-bottom:2px}
-label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
-input,select,textarea{width:100%;font:16px 'Noto Sans KR';padding:12px;border:1px solid var(--line);border-radius:0;color:var(--navy);background:#fff}
-input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid rgba(232,163,23,.5);border-color:var(--gold)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.note{font-size:14px;background:var(--soft);border-left:4px solid var(--gold);padding:12px 14px;margin-top:14px;color:var(--mute)}
-.err{color:var(--bad);font-weight:600;font-size:14px;min-height:20px;margin-top:8px}
-.done{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:60;background:rgba(255,255,255,.96);flex-direction:column;text-align:center;padding:20px}
-.done.open{display:flex}.done svg{width:140px;height:140px}
-.done circle{fill:var(--navy);transform-origin:center;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
-.done path{stroke:var(--gold);stroke-width:8;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:80;animation:draw .5s .3s forwards}
-@keyframes pop{from{transform:scale(0)}}@keyframes draw{to{stroke-dashoffset:0}}
-.done h2{font-size:30px;margin:14px 0 4px}
-.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;min-width:760px}
-th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
-th{background:var(--navy);color:#fff;font-weight:600}
-.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-.hide{display:none}
-textarea.paste{height:90px;font:12px monospace}
-footer{background:var(--navy);color:#B7C4D8;padding:50px 0 24px}
-footer .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
-footer h4{color:#fff;margin-bottom:10px}footer a{color:#B7C4D8;text-decoration:none;display:block}footer a:hover{color:var(--gold)}
-.copy{text-align:center;font-size:13px;margin-top:34px;border-top:1px solid rgba(255,255,255,.12);padding-top:18px}
 
-.menu .mi{width:74px;height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:0;border:0;border-radius:14px;cursor:pointer;text-decoration:none;
- background:linear-gradient(160deg,#2A4F86 0%,var(--navy2) 45%,var(--navy) 100%);color:#fff;
- box-shadow:0 5px 0 #08172B,0 8px 14px rgba(14,39,72,.35),inset 0 2px 0 rgba(255,255,255,.28);
- transition:transform .15s,box-shadow .15s,background .15s;position:relative;top:0}
-.menu .mi i{font-style:normal;font-size:22px;line-height:1;color:var(--gold);text-shadow:0 2px 0 rgba(0,0,0,.35)}
-.menu .mi span{font:600 12px 'Noto Sans KR',sans-serif;letter-spacing:-.2px;white-space:nowrap}
-.menu .mi:hover{transform:translateY(-3px);box-shadow:0 8px 0 #08172B,0 12px 18px rgba(14,39,72,.35),inset 0 2px 0 rgba(255,255,255,.35);background:linear-gradient(160deg,#F6C453,var(--gold) 55%,#C98A0C);color:var(--navy)}
-.menu .mi:hover i{color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.4)}
-.menu .mi:active{transform:translateY(3px);box-shadow:0 2px 0 #08172B,inset 0 2px 0 rgba(255,255,255,.2)}
-.menu .mi.on{background:linear-gradient(160deg,#F6C453,var(--gold) 55%,#C98A0C);color:var(--navy);box-shadow:0 5px 0 #8A5E06,0 8px 14px rgba(232,163,23,.4),inset 0 2px 0 rgba(255,255,255,.5)}
-.menu .mi.on i{color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.4)}
-@media(max-width:900px){
- header.top{position:static}
- .top .wrap{flex-direction:column;align-items:flex-start}
- .menu{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 8px}
- .menu .mi{width:100%;height:60px}
-}
 
-#notice{background:var(--gold);color:var(--navy);text-align:center;font-weight:600;padding:10px 16px}
-.cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.cats .btn{padding:11px 18px}
-.cats .btn.on{background:var(--gold);color:var(--navy)}
-.sgroup{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
-.sgroup .btn{padding:9px 16px;font-size:14px}
-textarea{min-height:84px;resize:vertical}
-</style>
-</head>
+
+
+
 <body>
-<header class="top"><div class="wrap">
-  <a class="logo" href="#"><i>G</i>일광자이푸르지오 게스트하우스</a>
-  <nav class="menu">
-    <button class="tab mi on" data-t="book"><i>⌂</i><span>홈</span></button>
-    <a class="mi" href="#about"><i>◈</i><span>소개</span></a>
-    <a class="mi" href="#info"><i>☰</i><span>이용안내</span></a>
-    <a class="mi" href="#process"><i>➤</i><span>예약절차</span></a>
-    <a class="mi" href="#book"><i>▦</i><span>예약현황</span></a>
-    <a class="mi formlink" href="#"><i>✎</i><span>예약신청</span></a>
-    <a class="mi" href="#contact"><i>✉</i><span>문의</span></a>
-    <button class="tab mi" id="adminTab" data-t="admin"><i>⚙</i><span>관리자</span></button>
-  </nav>
-</div></header>
-<a id="formref" class="hide"></a>
-<div id="notice" class="hide"></div>
-<div id="landing">
-<section class="hero"><div class="wrap">
-  <div class="slide on"><span class="tag">방문 손님 전용 서비스</span><h1>가족과 손님을 위한 편안한 쉼터</h1><p>일광자이푸르지오 세대를 방문하시는 손님이라면 온라인으로 간편하게 예약하세요.</p><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div>
-  <div class="slide"><span class="tag">개인정보 보호</span><h1>예약자 정보는 암호화되어 보관</h1><p>예약 현황에는 날짜만 표시되고, 상세 정보는 관리자만 확인합니다.</p><a href="#book"><button class="btn">예약 현황 보기</button></a></div>
-  <div class="slide"><span class="tag">사후관리</span><h1>예약부터 퇴실까지 한 곳에서</h1><p>관리사무소가 확정·입실·퇴실 상태와 점검 메모를 꼼꼼히 관리합니다.</p><a href="#process"><button class="btn">예약절차 보기</button></a></div>
-</div><div class="dots"><div class="wrap"><span class="on"></span><span></span><span></span></div></div></section>
-
-<section class="blk" id="about"><div class="wrap about">
-  <div class="pic"><b>1실<small>2명 (최대 4명)</small></b></div>
-  <div><div class="sub">게스트하우스 소개</div><h2>세대 방문 손님을 위한 단지 내 게스트하우스</h2>
-  <p>일광자이푸르지오 세대를 방문하시는 손님을 위해 마련한 공간입니다. 달력에서 날짜를 고르고 정보를 입력하면 등록이 끝납니다.</p>
-  <ul class="checks"><li>세대 방문 손님 이용</li><li>실시간 예약 현황</li><li>간편한 날짜 선택</li><li>개인정보 암호화</li><li>상태 알림 관리</li><li>사후관리 기록</li></ul>
-  <a class="formlink" href="#"><button class="btn alt">예약 신청하기</button></a></div>
-</div></section>
-
-<section class="blk soft" id="info"><div class="wrap">
-  <div class="sub">이용안내</div><h2>한눈에 보는 이용 정보</h2>
-  <div class="cards">
-    <div class="card"><div class="ic">⌂</div><h4>이용 대상</h4><p>일광자이푸르지오 세대를 방문하시는 손님</p></div>
-    <div class="card"><div class="ic">☰</div><h4>이용 인원</h4><p>2명 (최대 4명)까지 등록 가능</p></div>
-    <div class="card"><div class="ic">▦</div><h4>실시간 현황</h4><p>예약된 날짜는 달력에 바로 표시</p></div>
-    <div class="card"><div class="ic">◈</div><h4>정보 보호</h4><p>이름·연락처는 관리자만 열람</p></div>
-  </div></div></section>
-
-<section class="blk" id="process"><div class="wrap">
-  <div class="sub">예약절차</div><h2>네 단계로 끝나는 예약</h2>
-  <div class="proc" style="margin-top:34px">
-    <div><h4>날짜 선택</h4><p>입실일과 퇴실일을 달력에서 선택합니다.</p></div>
-    <div><h4>정보 입력</h4><p>예약자 이름, 동·호, 연락처를 입력합니다.</p></div>
-    <div><h4>등록 완료</h4><p>등록번호가 발급되고 완료 아이콘이 표시됩니다.</p></div>
-    <div><h4>관리사무소 확정</h4><p>관리자가 확인 후 상태를 확정합니다.</p></div>
-  </div></div></section>
-<section class="cta"><div class="wrap"><h3>원하는 날짜가 비어 있는지 확인해 보세요</h3><a class="formlink" href="#"><button class="btn">예약 신청하기</button></a></div></section>
-</div>
-<main class="wrap" style="padding-top:70px;padding-bottom:70px" id="book0">
-<section id="book">
-  <div class="panel" id="applyPanel"><div class="sub">예약 신청</div><h2 style="font-size:30px;margin-bottom:8px">신청서를 작성해 주세요</h2>
-  <p style="margin:0 0 16px;color:#5E6B7D">버튼을 누르면 예약 신청서(구글 폼)가 열립니다. 입실일·퇴실일, 방문 세대, 연락처를 입력하면 접수되고, 관리사무소가 확인 후 연락드립니다.</p>
-  <a class="formlink" href="#"><button class="btn">예약 신청서 작성하기</button></a></div>
-  <div class="sub" style="color:#E8A317;font-weight:600">예약 현황</div><h2 style="font-size:32px;margin-bottom:20px">예약 가능한 날짜 확인</h2>
-  <div class="panel">
-    <div class="cal-head"><button class="nb" id="prev" aria-label="이전 달">‹</button><h2 id="mt"></h2><button class="nb" id="next" aria-label="다음 달">›</button></div>
-    <div class="grid" id="dows"></div><div class="grid" id="cal" style="margin-top:6px"></div>
-    <div class="legend"><span><i style="background:var(--sky)"></i>선택</span><span><i style="background:#FFE0DD"></i>예약됨</span><span><i style="background:#fff;border:2px solid var(--line)"></i>예약 가능</span></div>
-    <div class="bar"><b id="sum">입실일과 퇴실일을 눌러 주세요</b><button class="btn" id="go" disabled>예약 등록하기</button></div>
-  </div>
-  <div class="note">예약 현황에는 날짜만 표시됩니다. 이름·연락처·동호수는 다른 이용자에게 보이지 않아요.</div>
-</section>
-
-<section id="admin" class="hide">
-  <div class="cats" id="acat"><button class="btn on" data-v="resv">예약 관리</button><button class="btn alt" data-v="site">홈페이지 편집</button></div>
-  <div class="panel" id="resvPanel">
-    <h2 style="margin:0 0 6px;font-size:26px">예약 관리</h2>
-    <div class="row">
-      <button class="btn alt" id="lout">로그아웃</button>
-      <button class="btn mint" id="dl">구글 시트용 CSV 저장</button>
-      <button class="btn alt" id="cp">표 복사 (시트에 붙여넣기)</button>
-      <button class="btn alt" id="kg">보안키 설정</button>
-      <button class="btn" id="sheet" style="background:#34A853;box-shadow:0 5px 0 #23783a">새 구글 시트 열기</button>
-    </div>
-    <div class="note" id="am"></div>
-    <div class="tbl" style="margin-top:12px"><table><thead><tr><th>등록번호</th><th>입실</th><th>퇴실</th><th>이름</th><th>동/호</th><th>연락처</th><th>인원</th><th>상태</th><th>사후관리 메모</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
-    <textarea class="paste hide" id="pt" readonly></textarea>
-  </div>
-  <div class="panel hide" id="sitePanel">
-    <h2 style="margin:0 0 6px;font-size:26px">홈페이지 내용 편집</h2>
-    <div class="note" style="margin-top:0">항목(카테고리)을 고르고 내용을 고친 뒤 [저장하고 반영]을 누르면 홈페이지에 바로 적용됩니다.</div>
-    <div class="sgroup" id="scat" style="margin-top:14px"></div>
-    <div id="sform"></div>
-    <div class="err" id="sme"></div>
-    <div class="row"><button class="btn mint" id="ssave">저장하고 반영</button><button class="btn alt" id="sreset">처음 내용으로 되돌리기</button></div>
-  </div>
-</section>
-</main>
-<footer id="contact"><div class="wrap"><div><a class="logo" style="color:#fff" href="#"><i style="background:var(--gold);color:var(--navy)">G</i>일광자이푸르지오</a><p style="margin-top:12px">세대 방문 손님 게스트하우스 예약·관리 서비스</p></div>
-<div><h4>바로가기</h4><a href="#about">소개</a><a href="#info">이용안내</a><a href="#process">예약절차</a><a href="#book">예약하기</a></div>
-<div><h4>문의</h4><span>일광자이푸르지오 관리사무소</span><a href="tel:0517143280">전화 051-714-3280</a><a href="mailto:apt05460@naver.com">이메일 apt05460@naver.com</a></div></div><div class="copy">일광자이푸르지오 게스트하우스 © 2026. All rights reserved.</div></footer>
-
-<div class="modal" id="md"><div class="sheet" role="dialog" aria-modal="true">
-  <h2>예약 정보 입력</h2><div id="ms" style="color:#6b86a3;font-weight:700"></div>
-  <label>예약자 이름<input id="nm" autocomplete="off"></label>
-  <div class="two"><label>방문 세대 동<input id="dg" inputmode="numeric" placeholder="101"></label><label>방문 세대 호<input id="ho" inputmode="numeric" placeholder="1203"></label></div>
-  <label>연락처<input id="ph" inputmode="tel" placeholder="010-0000-0000"></label>
-  <div class="two"><label>이용 인원<select id="gn"><option value="2">2명</option><option value="3">3명</option><option value="4">4명 (최대)</option></select></label><label>요청사항<input id="mm" placeholder="선택"></label></div>
-  <div class="err" id="er"></div>
-  <div class="row"><button class="btn" id="sub" style="flex:1">등록하기</button><button class="btn alt" id="cl">취소</button></div>
-</div></div>
-
-<div class="modal" id="lg"><div class="sheet" role="dialog" aria-modal="true">
-  <h2>관리자 로그인</h2><div style="color:#5E6B7D">관리사무소 담당자만 접속할 수 있어요.</div>
-  <label>아이디<input id="lid" autocomplete="username"></label>
-  <label>비밀번호<input id="lpw" type="password" autocomplete="current-password"></label>
-  <div class="err" id="ler"></div>
-  <div class="row"><button class="btn" id="lgo" style="flex:1">로그인</button><button class="btn alt" id="lcl">닫기</button></div>
-</div></div>
-<div class="done" id="dn"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48"/><path d="M28 52l16 16 29-34"/></svg><h2>등록 완료!</h2><div id="dm" style="font-weight:700"></div></div>
-
+<div id="app"></div>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status"></div>
+<script id="state" type="application/json">{"content":{"brand":"일광자이 푸르지오 게스트하우스","badge":"단지 내 입주민 전용 편의시설","heroTitle":"소중한 귀빈을 위한\n일광방 · 자이방 라운지","heroSub":"따스한 채광을 품은 객실에서 가정식 주거 편의시설를 경험해 보세요.","addr":"부산광역시 기장군 일광읍 해빛로 29","phone":"관리사무소 내선 051-714-3280","copy":"© 일광자이 푸르지오 관리사무소. All rights reserved."},"policy":{"checkIn":"15:00","checkOut":"11:00","maxNights":2,"pin":"1234"},"categories":[{"id":"c1","name":"일광게스트 하우스"},{"id":"c2","name":"자이게스트 하우스"}],"rooms":[{"id":"r1","cat":"c1","name":"일광방","price":50000,"base":2,"max":4,"img":"","tags":"온돌 침구류, 주방, 욕실, 거실","desc":"따뜻한 햇살이 드는 모던 객실입니다. "},{"id":"r2","cat":"c2","name":"자이방","price":50000,"base":2,"max":4,"img":"","tags":"넓은 거실,침대 2,욕조","desc":"가족 단위 손님을 위한 넓은 객실입니다."}]}</script>
 <script>
-const $=s=>document.querySelector(s);
-const pad=n=>String(n).padStart(2,'0');
-const key=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
-let db=null,usr=null,isAdmin=false,slots={},resv=[],cur=new Date(),a=null,b=null,demo=false;
-cur.setDate(1);
-const today=key(new Date());
-$('#dows').innerHTML=['일','월','화','수','목','금','토'].map(x=>`<div class="dow">${x}</div>`).join('');
+const SHELL='<!DOCTYPE html>'+document.documentElement.outerHTML;
+let S=JSON.parse(document.getElementById('state').textContent);
+let D=JSON.parse(JSON.stringify(S));
+const $=(s,e=document)=>e.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const won=n=>Number(n||0).toLocaleString('ko-KR')+'원';
+const ST={pending:['승인 대기','p'],approved:['승인 완료','a'],rejected:['거절됨','r']};
+let RES=[],db=null,view='res',atab='res',admin=false,lookup=null,filt='all';
+try{admin=sessionStorage.getItem('adm')==='1'}catch(e){}
+const LS='gh_res';
+const lsGet=()=>{try{return JSON.parse(localStorage.getItem(LS)||'[]')}catch(e){return[]}};
+const lsSet=a=>{try{localStorage.setItem(LS,JSON.stringify(a))}catch(e){}};
+const ymd=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const today=()=>ymd(new Date());
+const addDays=(s,n)=>{const d=new Date(s+'T00:00:00');d.setDate(d.getDate()+n);return ymd(d)};
+const dirty=()=>JSON.stringify(D)!==JSON.stringify(S);
+const BAR=`<div class="bar"><span>저장하지 않은 변경사항이 있습니다.</span><span class="row"><button class="btn sm" data-a="discard">되돌리기</button><button class="btn sun" data-a="publish">변경사항 게시</button></span></div>`;
+const catName=id=>(S.categories.find(c=>c.id===id)||{}).name||'';
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',2800)}
 
-function render(){
-  $('#mt').textContent=cur.getFullYear()+'년 '+(cur.getMonth()+1)+'월';
-  const first=new Date(cur.getFullYear(),cur.getMonth(),1).getDay(),n=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate();
-  let h='<div></div>'.repeat(first);
-  for(let i=1;i<=n;i++){
-    const k=cur.getFullYear()+'-'+pad(cur.getMonth()+1)+'-'+pad(i);
-    let c='d',dis=k<today;
-    if(slots[k]){c+=' full';dis=true}
-    else if(k===a||k===b)c+=' sel';
-    else if(a&&b&&k>a&&k<b)c+=' rng';
-    h+=`<button class="${c}" data-k="${k}" ${dis?'disabled':''}>${i}</button>`;
+RES=lsGet();
+(async()=>{try{const c=await claude.use('db');if(c){db=c;c.collection('reservations').onSnapshot(s=>{RES=s.docs.map(d=>Object.assign({id:d.id},d.data()));render(true)},()=>{db=null})}}catch(e){}})();
+
+async function addRes(r){
+  if(db){await db.collection('reservations').add(r)}
+  else{const a=lsGet();r.id='L'+Date.now();a.push(r);lsSet(a);RES=a;render(true)}
+}
+async function setSt(id,st){
+  if(db){await db.collection('reservations').doc(id).update({status:st})}
+  else{const a=lsGet();const x=a.find(y=>y.id===id);if(x)x.status=st;lsSet(a);RES=a;render(true)}
+}
+
+function render(fromData){
+  if(fromData&&view==='adm'&&atab!=='res')return;
+  const c=S.content,p=S.policy;
+  document.title=c.brand;
+  let h=`<header class="top"><div class="wrap"><span class="brand">${esc(c.brand)}</span><nav>
+  <button class="btn nv ${view==='res'?'on':''}" data-a="v-res"><b>입주민 예약</b><small>객실 보기 · 예약 신청 · 내역 조회</small></button>
+  <button class="btn nv ${view==='adm'?'on':''}" data-a="v-adm"><b>운영자 관리</b><small>예약 승인 · 객실 · 문구 편집</small></button></nav></div></header>`;
+  h+=view==='adm'&&admin?adminView():residentView();
+  h+=`<footer><div class="wrap"><div>${esc(c.addr)} · 문의 ${esc(c.phone)}</div><div>${esc(c.copy)}</div></div></footer>`;
+  if(view==='adm'&&admin&&dirty())h+=BAR;
+  $('#app').innerHTML=h;
+}
+
+function residentView(){
+  const c=S.content,p=S.policy;
+  let h=`<section class="hero"><div class="wrap"><span class="badge">${esc(c.badge)}</span><h1>${esc(c.heroTitle)}</h1><p>${esc(c.heroSub)}</p>
+  <div class="times"><span>${esc(p.checkIn)}<small> 체크인</small></span><i>→</i><span>${esc(p.checkOut)}<small> 체크아웃</small></span></div>
+  <div class="meta">세대별 월 최대 ${p.maxNights}박</div></div></section>
+  <div class="wrap"><section class="sec"><h2>이용 가능 객실</h2><div class="grid">`;
+  S.categories.forEach(cat=>S.rooms.filter(r=>r.cat===cat.id).forEach(r=>{
+    h+=`<article class="room">${r.img?`<img class="ph" src="${esc(r.img)}" alt="${esc(r.name)}">`:'<div class="ph"></div>'}<div class="b">
+    <span class="cat">${esc(cat.name)}</span><h3>${esc(r.name)}</h3>
+    <div class="tags">${String(r.tags||'').split(',').filter(t=>t.trim()).map(t=>`<span>${esc(t.trim())}</span>`).join('')}</div>
+    <p class="muted" style="margin:0">${esc(r.desc)}</p><div class="muted">기준 ${r.base}명 · 최대 ${r.max}명</div>
+    <div class="row" style="justify-content:space-between;margin-top:auto"><span class="price">${won(r.price)} / 1박</span><button class="btn pri" data-a="book" data-id="${r.id}">예약 신청</button></div></div></article>`}));
+  if(!S.rooms.length)h+='<p class="muted">등록된 객실이 없습니다.</p>';
+  h+=`</div></section><section class="sec"><h2>나의 예약 내역</h2><div class="card"><div class="row"><input id="lk" placeholder="동·호수 (예: 101-1203)" style="max-width:260px" value="${esc(lookup||'')}"><button class="btn pri" data-a="lookup">조회</button></div>`;
+  if(lookup!==null){
+    const m=RES.filter(r=>r.unit===lookup).sort((a,b)=>a.ci<b.ci?1:-1);
+    h+=m.length?`<div class="tw"><table><tr><th>객실</th><th>일정</th><th>금액</th><th>상태</th></tr>${m.map(r=>`<tr><td>${esc(r.roomName)}</td><td>${r.ci} ~ ${addDays(r.ci,r.nights)} (${r.nights}박)</td><td>${won(r.amount)}</td><td class="st ${ST[r.status][1]}">${ST[r.status][0]}</td></tr>`).join('')}</table></div>`:'<p class="muted">조회된 예약이 없습니다. 동·호수를 다시 확인해 주세요.</p>'}
+  else h+='<p class="muted">동·호수를 입력하고 조회를 눌러 주세요.</p>';
+  return h+'</div></section></div>';
+}
+
+function adminView(){
+  const ym=today().slice(0,7);
+  const mo=RES.filter(r=>r.ci.slice(0,7)===ym);
+  const ap=mo.filter(r=>r.status==='approved');
+  let h=`<div class="wrap" style="padding-top:28px"><div class="row" style="justify-content:space-between"><h2>게스트하우스 운영 관리</h2><button class="btn sm" data-a="logout">관리자 로그아웃</button></div>
+  <div class="stats" style="margin-top:16px"><div>이달 승인 예약<b>${ap.length}건</b></div><div>승인 대기<b>${RES.filter(r=>r.status==='pending').length}건</b></div><div>이달 예상 수입<b>${won(ap.reduce((s,r)=>s+r.amount,0))}</b></div></div>
+  <div class="row" style="margin-top:20px">${[['res','예약 관리'],['rooms','객실 · 카테고리'],['pol','운영 정책'],['txt','페이지 문구']].map(t=>`<button class="btn ${atab===t[0]?'on':''}" data-a="tab" data-id="${t[0]}">${t[1]}</button>`).join('')}</div>`;
+  if(atab==='res'){
+    const L=RES.filter(r=>filt==='all'||r.status===filt).sort((a,b)=>a.ci<b.ci?1:-1);
+    h+=`<div class="card"><div class="row"><select id="flt" style="max-width:180px"><option value="all">전체 상태</option>${Object.keys(ST).map(k=>`<option value="${k}" ${filt===k?'selected':''}>${ST[k][0]}</option>`).join('')}</select></div>
+    <div class="tw"><table><tr><th>번호</th><th>동·호수</th><th>신청자</th><th>객실</th><th>일정</th><th>금액</th><th>상태</th><th>처리</th></tr>
+    ${L.map(r=>`<tr><td>${esc(String(r.id).slice(-5))}</td><td>${esc(r.unit)}</td><td>${esc(r.name)}<br><span class="muted">${esc(r.phone)}</span></td><td>${esc(r.roomName)} (${r.guests}명)</td><td>${r.ci} ~ ${addDays(r.ci,r.nights)}</td><td>${won(r.amount)}</td><td class="st ${ST[r.status][1]}">${ST[r.status][0]}</td>
+    <td>${r.status==='pending'?`<button class="btn sm pri" data-a="ok" data-id="${esc(r.id)}">승인</button> <button class="btn sm del" data-a="no" data-id="${esc(r.id)}">거절</button>`:''}</td></tr>`).join('')||'<tr><td colspan="8" class="muted">예약 내역이 없습니다.</td></tr>'}</table></div>
+    <p class="muted" style="font-size:.85rem">${db?'예약은 공유 데이터베이스에 저장됩니다.':'공유 저장소를 사용할 수 없어 이 브라우저에만 저장 중입니다.'}</p></div>`;
   }
-  $('#cal').innerHTML=h;
-  if(a&&b){const nn=nights(a,b);$('#sum').textContent=`${a} → ${b} (${nn}박)`;$('#go').disabled=false}
-  else{$('#sum').textContent=a?'퇴실일을 눌러 주세요':'입실일과 퇴실일을 눌러 주세요';$('#go').disabled=true}
+  if(atab==='rooms'){
+    h+=`<div class="card"><h3>카테고리</h3>${D.categories.map((c,i)=>`<div class="row" style="margin-top:8px"><input data-c="${i}" value="${esc(c.name)}" style="max-width:260px"><button class="btn sm del" data-a="delcat" data-id="${i}">삭제</button></div>`).join('')}<button class="btn sm" style="margin-top:10px" data-a="addcat">카테고리 추가</button></div>`;
+    D.rooms.forEach((r,i)=>{
+      const f=(k,l,t)=>`<div><label>${l}</label><input ${t==='n'?'type="number" min="0"':''} data-r="${i}" data-f="${k}" value="${esc(r[k])}"></div>`;
+      h+=`<div class="card"><div class="f2">${f('name','객실 이름')}<div><label>소속 카테고리</label><select data-r="${i}" data-f="cat">${D.categories.map(c=>`<option value="${c.id}" ${c.id===r.cat?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>${f('price','1박 요금(원)','n')}${f('base','기준 인원','n')}${f('max','최대 인원','n')}</div>
+      <div class="f2">${f('img','이미지 URL (선택)')}${f('tags','태그 (쉼표 구분)')}</div><label>객실 설명</label><textarea data-r="${i}" data-f="desc">${esc(r.desc)}</textarea>
+      <button class="btn sm del" style="margin-top:10px" data-a="delroom" data-id="${i}">객실 삭제</button></div>`});
+    h+='<button class="btn pri" style="margin-top:16px" data-a="addroom">신규 객실 등록</button>';
+  }
+  if(atab==='pol'){
+    const f=(k,l,t)=>`<div><label>${l}</label><input ${t||''} data-k="policy.${k}" value="${esc(D.policy[k])}"></div>`;
+    h+=`<div class="card"><div class="f2">${f('checkIn','체크인 시간','type="time"')}${f('checkOut','체크아웃 시간','type="time"')}${f('maxNights','세대별 월 최대 예약 박수','type="number" min="1"')}${f('pin','관리자 접속 PIN')}</div></div>`;
+  }
+  if(atab==='txt'){
+    const f=(k,l,ta)=>`<label>${l}</label>${ta?`<textarea data-k="content.${k}">${esc(D.content[k])}</textarea>`:`<input data-k="content.${k}" value="${esc(D.content[k])}">`}`;
+    h+=`<div class="card">${f('brand','사이트 이름')}${f('badge','상단 안내 배지')}${f('heroTitle','메인 제목 (줄바꿈 가능)',1)}${f('heroSub','소개 문구',1)}${f('addr','관리사무소 주소')}${f('phone','문의 전화')}${f('copy','저작권 문구')}</div>`;
+  }
+  return h+'</div>';
 }
-const nights=(x,y)=>Math.round((new Date(y)-new Date(x))/864e5);
-function span(x,y){const r=[];for(let d=new Date(x);key(d)<y;d.setDate(d.getDate()+1))r.push(key(d));return r}
-$('#cal').onclick=e=>{
-  const k=e.target.dataset.k;if(!k)return;
-  if(!a||b||k<=a){a=k;b=null}
-  else if(span(a,k).some(x=>slots[x])){a=k;b=null}
-  else b=k;
-  render();
-};
-$('#prev').onclick=()=>{cur.setMonth(cur.getMonth()-1);render()};
-$('#next').onclick=()=>{cur.setMonth(cur.getMonth()+1);render()};
 
-let authed=false,started=false,fails=0,lockUntil=0;
-try{authed=sessionStorage.getItem('gh_auth')==='1'}catch(_){}
-const SALT='31723cef1e8e165e663a2393463178ea',HASH='a91a11e6707276b8df0ddd875ded1040b27e65e4d0818ade791f4fe2f21387f2';
-const hx=u=>[...new Uint8Array(u)].map(x=>x.toString(16).padStart(2,'0')).join('');
-async function check(id,pw){
-  const k=await crypto.subtle.importKey('raw',new TextEncoder().encode(id+':'+pw),'PBKDF2',false,['deriveBits']);
-  const bits=await crypto.subtle.deriveBits({name:'PBKDF2',hash:'SHA-256',iterations:150000,salt:Uint8Array.from(SALT.match(/../g).map(x=>parseInt(x,16)))},k,256);
-  return hx(bits)===HASH;
+function bookDlg(id){
+  const r=S.rooms.find(x=>x.id===id);if(!r)return;
+  const n=S.policy.maxNights;
+  $('#dlg').innerHTML=`<h3>${esc(r.name)} 예약 신청</h3><div id="bf"><label>동·호수</label><input id="b-u" placeholder="101-1203"><label>신청 입주민 성함</label><input id="b-n"><label>연락처</label><input id="b-p" type="tel" placeholder="010-0000-0000">
+  <div class="f2"><div><label>체크인 일자</label><input id="b-d" type="date" min="${today()}"></div><div><label>이용 박수</label><select id="b-k">${Array.from({length:n},(_,i)=>`<option>${i+1}</option>`).join('')}</select></div><div><label>투숙 인원 (최대 ${r.max}명)</label><input id="b-g" type="number" min="1" max="${r.max}" value="${r.base}"></div></div>
+  <p>총 결제 예정 금액 <b id="b-t">${won(r.price)}</b></p><p class="muted" style="font-size:.85rem">이용 요금은 익월 관리비에 통합 청구됩니다.</p></div>
+  <div class="row" style="justify-content:flex-end"><button class="btn" data-a="close">취소</button><button class="btn pri" data-a="submit" data-id="${r.id}">예약 신청 완료</button></div>`;
+  $('#b-k').onchange=()=>$('#b-t').textContent=won(r.price*$('#b-k').value);
+  $('#dlg').showModal();
 }
-function startAdmin(){
-  if(started||!db)return;started=true;raw=[];
-  db.collection('reservations').onSnapshot(s=>{raw=s.docs.map(d=>d.data());if(!(document.activeElement&&document.activeElement.closest('#rows')))refresh()},()=>{});
+function submit(id){
+  const r=S.rooms.find(x=>x.id===id),v=k=>$('#b-'+k).value.trim();
+  const u=v('u'),nm=v('n'),ph=v('p'),d=v('d'),k=+v('k'),g=+v('g');
+  if(!u||!nm||!ph||!d)return toast('모든 항목을 입력해 주세요.');
+  if(d<today())return toast('오늘 이후 날짜를 선택해 주세요.');
+  if(!(g>=1&&g<=r.max))return toast('투숙 인원은 1~'+r.max+'명입니다.');
+  const act=RES.filter(x=>x.status!=='rejected');
+  const used=act.filter(x=>x.unit===u&&x.ci.slice(0,7)===d.slice(0,7)).reduce((s,x)=>s+x.nights,0);
+  if(used+k>S.policy.maxNights)return toast('세대별 월 최대 '+S.policy.maxNights+'박까지 가능합니다. (이번 달 신청 '+used+'박)');
+  const end=addDays(d,k);
+  if(act.some(x=>x.roomId===id&&x.ci<end&&addDays(x.ci,x.nights)>d))return toast('해당 일정에 이미 예약된 객실입니다.');
+  addRes({unit:u,name:nm,phone:ph,roomId:id,roomName:r.name,ci:d,nights:k,guests:g,amount:r.price*k,status:'pending',createdAt:Date.now()})
+    .then(()=>{$('#dlg').close();lookup=u;render();toast('예약 신청이 접수되었습니다.')})
+    .catch(()=>toast('예약을 저장하지 못했습니다. 잠시 후 다시 시도해 주세요.'));
 }
-const openLogin=()=>{$('#ler').textContent='';$('#lpw').value='';$('#lg').classList.add('open');$('#lid').focus()};
-$('#lcl').onclick=()=>$('#lg').classList.remove('open');
-$('#lgo').onclick=async()=>{
-  if(Date.now()<lockUntil)return $('#ler').textContent='시도 횟수를 초과했어요. 잠시 후 다시 시도해 주세요.';
-  let ok=false;try{ok=await check($('#lid').value.trim(),$('#lpw').value)}catch(_){}
-  if(!ok){fails++;if(fails>=5){lockUntil=Date.now()+30000;fails=0}return $('#ler').textContent='아이디 또는 비밀번호가 올바르지 않아요.'}
-  fails=0;authed=true;try{sessionStorage.setItem('gh_auth','1')}catch(_){}
-  $('#lg').classList.remove('open');startAdmin();$('#adminTab').click();
-};
-$('#lpw').onkeydown=e=>{if(e.key==='Enter')$('#lgo').click()};
-$('#lout').onclick=()=>{authed=false;try{sessionStorage.removeItem('gh_auth')}catch(_){}$('#rows').innerHTML='';document.querySelector('.tab[data-t=book]').click()};
-document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
-  if(t.dataset.t==='admin'&&!authed){openLogin();return}
-  if(t.dataset.t==='admin')startAdmin();
-  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===t));
-  if(t.dataset.t==='admin')window.scrollTo(0,0);
-  
-  $('#admin').classList.toggle('hide',t.dataset.t!=='admin');
-  $('#landing').classList.toggle('hide',t.dataset.t==='admin');$('#book').classList.add('hide');if(t.dataset.t==='admin')$('#book').classList.add('hide');else $('#book').classList.remove('hide');
+function pinDlg(){
+  $('#dlg').innerHTML=`<h3>운영자 인증</h3><label>관리자 PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="off"><div class="row" style="justify-content:flex-end;margin-top:14px"><button class="btn" data-a="close">취소</button><button class="btn pri" data-a="login">접속</button></div>`;
+  $('#dlg').showModal();
+}
+async function publish(){
+  const j=JSON.stringify(D).replace(/</g,'\\u003c');
+  const html=SHELL.replace(/(<script id="state" type="application\/json">)[\s\S]*?(<\/script>)/,(m,a,b)=>a+j+b);
+  try{
+    const a=await claude.use('artifact');
+    if(!a)return toast('게시 권한이 없습니다. 페이지 소유자 계정으로 열어 주세요.');
+    await a.publish(html);
+  }catch(e){
+    toast(e&&(e.code==='not_writer'||e.code==='not_granted')?'게시 권한이 없습니다. 소유자 또는 편집자만 게시할 수 있습니다.':e&&e.code==='conflict'?'다른 편집이 먼저 게시되어 새로 불러옵니다.':'게시하지 못했습니다. 다시 시도해 주세요.');
+  }
+}
+
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-a]');if(!t)return;
+  const a=t.dataset.a,id=t.dataset.id;
+  if(a==='v-res'){view='res';render()}
+  else if(a==='v-adm'){view='adm';admin?render():(render(),pinDlg())}
+  else if(a==='close')$('#dlg').close();
+  else if(a==='login'){if($('#pin').value===S.policy.pin){admin=true;try{sessionStorage.setItem('adm','1')}catch(x){}$('#dlg').close();render()}else toast('PIN이 올바르지 않습니다.')}
+  else if(a==='logout'){admin=false;view='res';try{sessionStorage.removeItem('adm')}catch(x){}render()}
+  else if(a==='book')bookDlg(id);
+  else if(a==='submit')submit(id);
+  else if(a==='lookup'){lookup=$('#lk').value.trim();render()}
+  else if(a==='tab'){atab=id;render()}
+  else if(a==='ok'||a==='no')setSt(id,a==='ok'?'approved':'rejected');
+  else if(a==='addcat'){D.categories.push({id:'c'+Date.now(),name:'새 카테고리'});render()}
+  else if(a==='delcat'){const c=D.categories[id];if(D.rooms.some(r=>r.cat===c.id))toast('이 카테고리에 속한 객실을 먼저 옮기거나 삭제해 주세요.');else{D.categories.splice(id,1);render()}}
+  else if(a==='addroom'){if(!D.categories.length)return toast('먼저 카테고리를 추가해 주세요.');D.rooms.push({id:'r'+Date.now(),cat:D.categories[0].id,name:'새 객실',price:30000,base:2,max:4,img:'',tags:'',desc:''});render()}
+  else if(a==='delroom'){if(confirm('이 객실을 삭제할까요?')){D.rooms.splice(id,1);render()}}
+  else if(a==='discard'){D=JSON.parse(JSON.stringify(S));render()}
+  else if(a==='publish')publish();
 });
-
-$('#go').onclick=()=>{$('#ms').textContent=`${a} ~ ${b} · ${nights(a,b)}박`;$('#er').textContent='';$('#md').classList.add('open');$('#nm').focus()};
-$('#cl').onclick=()=>$('#md').classList.remove('open');
-
-$('#sub').onclick=async()=>{
-  const nm=$('#nm').value.trim(),dg=$('#dg').value.trim(),ho=$('#ho').value.trim(),ph=$('#ph').value.replace(/[^0-9]/g,'');
-  if(!nm||!dg||!ho)return $('#er').textContent='이름, 동, 호를 입력해 주세요.';
-  if(ph.length<10)return $('#er').textContent='연락처를 정확히 입력해 주세요.';
-  if(span(a,b).some(x=>slots[x]))return $('#er').textContent='방금 다른 예약이 등록됐어요. 날짜를 다시 골라 주세요.';
-  if(!db)return $('#er').textContent='예약 저장소에 연결되지 않았어요. 로그인 후 다시 시도해 주세요.';
-  if(!pub)return $('#er').textContent='관리자가 아직 보안키를 설정하지 않았어요. 관리사무소에 문의해 주세요.';
-  const id='R'+Date.now().toString(36).toUpperCase().slice(-6);
-  $('#sub').disabled=true;
-  try{
-    const dates=span(a,b);
-    const enc=await seal({name:nm,dong:dg,ho,phone:ph,guests:+$('#gn').value,memo:$('#mm').value.trim()});
-    await db.collection('reservations').doc(id).set({id,checkIn:a,checkOut:b,status:'접수',admin:'',created:new Date().toISOString(),...enc});
-    for(const d of dates)await db.collection('slots').doc(d).set({rid:id});
-    ['#nm','#dg','#ho','#ph','#mm'].forEach(s=>$(s).value='');
-    $('#md').classList.remove('open');
-    $('#dm').textContent=`등록번호 ${id} · ${a} ~ ${b}`;
-    $('#dn').classList.add('open');
-    a=b=null;render();
-    setTimeout(()=>$('#dn').classList.remove('open'),2200);
-  }catch(e){$('#er').textContent='등록에 실패했어요. 잠시 후 다시 시도해 주세요.'}
-  $('#sub').disabled=false;
-};
-
-
-let pub=null,priv=null,raw=[];
-async function refresh(){resv=await Promise.all(raw.map(open_));renderAdmin()}
-const b64=u=>btoa(String.fromCharCode(...new Uint8Array(u))),ub=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
-const RSA={name:'RSA-OAEP',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'};
-async function seal(o){
-  const pk=await crypto.subtle.importKey('jwk',pub,{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
-  const k=await crypto.subtle.generateKey({name:'AES-GCM',length:256},true,['encrypt']),iv=crypto.getRandomValues(new Uint8Array(12));
-  const ct=await crypto.subtle.encrypt({name:'AES-GCM',iv},k,new TextEncoder().encode(JSON.stringify(o)));
-  const ek=await crypto.subtle.encrypt({name:'RSA-OAEP'},pk,await crypto.subtle.exportKey('raw',k));
-  return {enc:b64(ct),ek:b64(ek),iv:b64(iv)};
-}
-async function open_(d){
-  const lock={...d,name:'🔒',dong:'-',ho:'-',phone:'개인키 필요',guests:'',memo:''};
-  if(!priv||!d.enc)return lock;
-  try{
-    const pk=await crypto.subtle.importKey('jwk',priv,{name:'RSA-OAEP',hash:'SHA-256'},false,['decrypt']);
-    const raw=await crypto.subtle.decrypt({name:'RSA-OAEP'},pk,ub(d.ek));
-    const k=await crypto.subtle.importKey('raw',raw,'AES-GCM',false,['decrypt']);
-    const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:ub(d.iv)},k,ub(d.enc));
-    return {...d,...JSON.parse(new TextDecoder().decode(pt))};
-  }catch(_){return lock}
-}
-try{priv=JSON.parse(localStorage.getItem('gh_priv')||'null')}catch(_){}
-const mask=s=>s.length<=1?s:s[0]+'*'.repeat(Math.max(1,s.length-2))+(s.length>2?s.slice(-1):'');
-const csvRows=()=>[['등록번호','입실','퇴실','이름','동','호','연락처','인원','요청사항','상태','관리자메모','등록일시']].concat(resv.map(r=>[r.id,r.checkIn,r.checkOut,r.name,r.dong,r.ho,r.phone,r.guests,r.memo,r.status,r.admin,r.created]));
-function renderAdmin(){
-  resv.sort((x,y)=>y.created.localeCompare(x.created));
-  $('#rows').innerHTML=resv.map(r=>`<tr><td>${r.id}</td><td>${r.checkIn}</td><td>${r.checkOut}</td><td>${esc(r.name)}</td><td>${esc(r.dong)}-${esc(r.ho)}</td><td>${esc(r.phone)}</td><td>${r.guests}</td>
-  <td><select data-id="${r.id}" data-f="status">${['접수','확정','입실','퇴실','취소'].map(s=>`<option ${s===r.status?'selected':''}>${s}</option>`).join('')}</select></td>
-  <td><input data-id="${r.id}" data-f="admin" value="${esc(r.admin||'')}" placeholder="청소·시설·민원 등"></td><td></td></tr>`).join('')||'<tr><td colspan="10">아직 등록된 예약이 없어요.</td></tr>';
-  $('#am').textContent=(priv?'':'개인키가 없어 예약자 정보가 잠겨 있어요. [보안키 설정]을 눌러 주세요. ')+`총 ${resv.length}건. CSV를 저장해 구글 시트에서 [파일 → 가져오기]로 열거나, "표 복사" 후 시트 A1 셀에 붙여넣으면 됩니다.`;
-}
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-$('#rows').onchange=async e=>{
-  const t=e.target,id=t.dataset.id;if(!id)return;
-  try{await db.collection('reservations').doc(id).update({[t.dataset.f]:t.value});
-    if(t.dataset.f==='status'&&t.value==='취소'){const r=resv.find(x=>x.id===id);for(const d of span(r.checkIn,r.checkOut))await db.collection('slots').doc(d).delete()}
-  }catch(_){alert('저장에 실패했어요.')}
-};
-const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
-$('#dl').onclick=async()=>{
-  const csv='\ufeff'+csvRows().map(r=>r.map(q).join(',')).join('\n');
-  const dls=await claude.use('downloads');
-  if(dls){try{await dls.save({filename:'guesthouse-reservations.csv',data:csv});return}catch(_){}}
-  $('#pt').classList.remove('hide');$('#pt').value=csv;$('#pt').select();
-};
-$('#cp').onclick=async()=>{
-  const t=csvRows().map(r=>r.map(v=>String(v??'').replace(/[\t\n]/g,' ')).join('\t')).join('\n');
-  try{await navigator.clipboard.writeText(t);$('#am').textContent='복사했어요. 구글 시트 A1 셀에 붙여넣기(Ctrl+V) 하세요.'}
-  catch(_){$('#pt').classList.remove('hide');$('#pt').value=t;$('#pt').select();$('#am').textContent='아래 내용을 전체 복사해 구글 시트에 붙여넣으세요.'}
-};
-$('#kg').onclick=async()=>{
-  if(!pub||confirm('보안키가 이미 있습니다. 개인키를 붙여넣어 불러오시겠습니까? (취소 시 새로 만들면 기존 예약은 열 수 없습니다)')){
-    if(pub){const t=prompt('저장해 둔 개인키(JSON)를 붙여넣으세요');if(!t)return;try{priv=JSON.parse(t);localStorage.setItem('gh_priv',t)}catch(_){}
-      refresh();return}
-  }
-  const kp=await crypto.subtle.generateKey(RSA,true,['encrypt','decrypt']);
-  const pj=await crypto.subtle.exportKey('jwk',kp.publicKey),sj=await crypto.subtle.exportKey('jwk',kp.privateKey);
-  await db.collection('config').doc('pub').set({jwk:pj});priv=sj;
-  const t=JSON.stringify(sj);try{localStorage.setItem('gh_priv',t)}catch(_){}
-  const dls=await claude.use('downloads');if(dls){try{await dls.save({filename:'guesthouse-private-key.json',data:t})}catch(_){}}
-  $('#am').textContent='보안키를 만들었어요. 개인키 파일을 안전한 곳에 보관하세요. 분실하면 예약자 정보를 열 수 없습니다.';
-};
-$('#sheet').onclick=()=>window.open('https://sheets.new','_blank','noopener');
-
-
-const CATS=['공지사항','메인 배너','게스트하우스 소개','이용안내','예약절차','안내·문의'],F=[];
-const addF=(c,k,l,sel,long)=>F.push({c,k,l,sel,long});
-addF(0,'notice','공지 문구 (비우면 표시되지 않음)','#notice',1);
-for(let i=1;i<=3;i++){const b='.hero .slide:nth-child('+i+') ';addF(1,'h'+i+'t',i+'번 배너 · 작은 제목',b+'.tag');addF(1,'h'+i+'h',i+'번 배너 · 큰 제목',b+'h1');addF(1,'h'+i+'p',i+'번 배너 · 설명',b+'p',1)}
-addF(2,'a_sub','소개 · 작은 제목','#about .sub');addF(2,'a_h','소개 · 제목','#about h2');addF(2,'a_p','소개 · 설명','#about .about>div:last-child p',1);
-for(let i=1;i<=4;i++){const b='#info .cards .card:nth-child('+i+') ';addF(3,'c'+i+'t','이용안내 '+i+' · 제목',b+'h4');addF(3,'c'+i+'p','이용안내 '+i+' · 내용',b+'p',1)}
-for(let i=1;i<=4;i++){const b='#process .proc>div:nth-child('+i+') ';addF(4,'p'+i+'t','예약절차 '+i+' · 제목',b+'h4');addF(4,'p'+i+'p','예약절차 '+i+' · 내용',b+'p',1)}
-addF(5,'formurl','예약 신청서(구글 폼) 주소 · https:// 로 시작','#formref');addF(5,'cta','하단 안내 문구','.cta h3');addF(5,'note','예약 화면 안내 문구','#book .note',1);
-addF(5,'office','관리사무소 이름','#contact .wrap>div:nth-child(3) span');addF(5,'phone','전화번호','footer a[href^="tel:"]');addF(5,'email','이메일','footer a[href^="mailto:"]');
-const DEF={};let site={},draft={},curCat=0;
-F.forEach(f=>{const e=document.querySelector(f.sel);if(e)DEF[f.k]=e.textContent.trim().replace(f.k==='phone'?/^전화\s*/:f.k==='email'?/^이메일\s*/:/^$/,'')});
-function applySite(v){F.forEach(f=>{const e=document.querySelector(f.sel);if(!e)return;const x=v[f.k]!==undefined?String(v[f.k]):DEF[f.k];if(x===undefined)return;
-  if(f.k==='phone'){e.textContent='전화 '+x;e.href='tel:'+x.replace(/[^0-9+]/g,'')}
-  else if(f.k==='email'){e.textContent='이메일 '+x;e.href='mailto:'+x}
-  else e.textContent=x;
-  if(f.k==='notice')e.classList.toggle('hide',!x.trim())})}
-document.addEventListener('click',e=>{const a=e.target.closest('.formlink');if(!a)return;e.preventDefault();
-  const u=$('#formref').textContent.trim();
-  if(!/^https:\/\//.test(u))return alert('예약 신청서 주소가 아직 설정되지 않았어요. 관리사무소(051-714-3280)로 문의해 주세요.');
-  window.open(u,'_blank','noopener')});
-function buildEditor(){
-  $('#scat').innerHTML=CATS.map((c,i)=>`<button class="btn ${i===curCat?'':'alt'}" data-i="${i}">${c}</button>`).join('');
-  $('#sform').innerHTML=F.filter(f=>f.c===curCat).map(f=>{const v=esc(draft[f.k]??site[f.k]??DEF[f.k]??'');
-    return `<label>${f.l}${f.long?`<textarea data-k="${f.k}">${v}</textarea>`:`<input data-k="${f.k}" value="${v}">`}</label>`}).join('');
-}
-$('#scat').onclick=e=>{const i=e.target.dataset.i;if(i===undefined)return;curCat=+i;buildEditor()};
-$('#sform').oninput=e=>{if(e.target.dataset.k)draft[e.target.dataset.k]=e.target.value};
-$('#acat').onclick=e=>{const v=e.target.dataset.v;if(!v)return;
-  document.querySelectorAll('#acat .btn').forEach(b=>b.classList.toggle('alt',b!==e.target));
-  $('#resvPanel').classList.toggle('hide',v!=='resv');$('#sitePanel').classList.toggle('hide',v!=='site');if(v==='site')buildEditor()};
-$('#ssave').onclick=async()=>{
-  if(!db)return $('#sme').textContent='저장소에 연결되지 않았어요.';
-  try{const vals={...site,...draft};await db.collection('config').doc('site').set({values:vals});draft={};$('#sme').style.color='var(--ok)';$('#sme').textContent='저장했어요. 홈페이지에 반영됩니다.'}
-  catch(_){$('#sme').style.color='var(--bad)';$('#sme').textContent='저장하지 못했어요. claude.ai에 로그인되어 있고 이 페이지의 이용(기여) 권한이 있는지 확인해 주세요.'}
-};
-$('#sreset').onclick=async()=>{
-  if(!db||!confirm('홈페이지 내용을 처음 상태로 되돌릴까요?'))return;
-  try{await db.collection('config').doc('site').delete();draft={};site={};applySite({});buildEditor();$('#sme').style.color='var(--ok)';$('#sme').textContent='처음 내용으로 되돌렸어요.'}
-  catch(_){$('#sme').style.color='var(--bad)';$('#sme').textContent='되돌리지 못했어요.'}
-};
-(()=>{const sl=[...document.querySelectorAll('.slide')],dt=[...document.querySelectorAll('.dots span')];let i=0;
-const go=n=>{i=n;sl.forEach((e,k)=>e.classList.toggle('on',k===n));dt.forEach((e,k)=>e.classList.toggle('on',k===n))};
-dt.forEach((e,k)=>e.onclick=()=>go(k));setInterval(()=>go((i+1)%sl.length),5500)})();
+function mark(){const b=$('.bar'),d=dirty();if(d&&!b)$('#app').insertAdjacentHTML('beforeend',BAR);else if(!d&&b)b.remove()}
+document.addEventListener('input',e=>{
+  const t=e.target,ds=t.dataset;
+  if(ds.k){const[g,k]=ds.k.split('.');D[g][k]=t.type==='number'?+t.value:t.value;mark()}
+  else if(ds.c!==undefined){D.categories[ds.c].name=t.value;mark()}
+  else if(ds.r!==undefined){D.rooms[ds.r][ds.f]=t.type==='number'?+t.value:t.value;mark()}
+});
+document.addEventListener('change',e=>{if(e.target.id==='flt'){filt=e.target.value;render()}});
 render();
-(async()=>{
-  try{
-    db=await claude.use('db');usr=await claude.use('user');
-    if(!db)return;
-    db.collection('config').doc('pub').onSnapshot(d=>{pub=d.exists?d.data().jwk:null},()=>{});
-    db.collection('config').doc('site').onSnapshot(d=>{site=d.exists?(d.data().values||{}):{};applySite(site)},()=>{});
-    db.collection('slots').onSnapshot(s=>{slots={};s.docs.forEach(d=>slots[d.id]=1);render()},()=>{});
-    if(authed)startAdmin();
-  }catch(_){}
-})();
-</script>
-</body>
-</html>
+</script></body></html>
